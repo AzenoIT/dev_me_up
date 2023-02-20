@@ -4,6 +4,8 @@ services:
       context: ./backend_core
     volumes:
       - ./backend_core:/app
+    env_file:
+      - backend_core/envs/.env_django
     ports:
       - 8000:8000
     restart: on-failure
@@ -19,7 +21,7 @@ services:
     env_file:
       - backend_core/envs/.env_db
     ports:
-      - 5433:5432
+      - 5433:5433
     networks:
       - backend_db_network
 
