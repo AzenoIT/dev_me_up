@@ -7,6 +7,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 
 import '../../styles/hamburger.css'
+import {quicksand} from "@/app/fonts";
+
 
 export default function HamburgerMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,7 +22,7 @@ export default function HamburgerMenu() {
 
     return (
         <div className="container">
-            <p className="logo">Dev me up</p>
+            <p className={`${quicksand} logo`}>Dev me up</p>
             <DehazeSharpIcon
                 id="fade-button"
                 className="hamburger"
