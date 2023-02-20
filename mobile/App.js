@@ -6,7 +6,7 @@ import MenuBarBottom from "./components/MenuBarBottom/MenuBarBottom";
 import MenuBarTop from "./components/MenuBarTop/MenuBarTop";
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Main from "./components/Main";
 import Challenge from "./components/Challenge/Challenge";
 import Friends from "./components/Friends/Friends";
@@ -19,15 +19,15 @@ export default function App() {
     return (
         <SafeAreaProvider>
             <PaperProvider theme={theme}>
-        <NavigationContainer>
-                        <Tab.Navigator initialRouteName="Main">
-                            <Tab.Screen name="Home" component={Challenge}/>
-                            <Tab.Screen name="Battle" component={Challenge}/>
-                            <Tab.Screen name="Friends" component={Friends}/>
-                            <Tab.Screen name="Settings" component={ProfileSettings}/>
-                            <Tab.Screen name="Rankings" component={Rankings}/>
-                        </Tab.Navigator>
-                    </NavigationContainer>
+                <NavigationContainer>
+                    <Tab.Navigator initialRouteName="Main">
+                        <Tab.Screen name="Home" component={Challenge}/>
+                        <Tab.Screen name="Battle" component={Challenge}/>
+                        <Tab.Screen name="Friends" component={Friends}/>
+                        <Tab.Screen name="Settings" component={ProfileSettings}/>
+                        <Tab.Screen name="Rankings" component={Rankings}/>
+                    </Tab.Navigator>
+                </NavigationContainer>
             </PaperProvider>
         </SafeAreaProvider>
     );
