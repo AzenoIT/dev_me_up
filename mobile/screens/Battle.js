@@ -1,11 +1,22 @@
-import { Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
 
 function Battle() {
 	return (
-		<View>
-			<Text>Battle screen</Text>
+		<View style={styles.container}>
+			<Text>Battle</Text>
+			<StatusBar style="auto" />
 		</View>
 	);
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+});
 
 export default Battle;
