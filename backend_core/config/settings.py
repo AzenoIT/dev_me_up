@@ -11,17 +11,12 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import os
-import environ
 import dj_database_url
 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# import dj_database_url
-
 BASE_DIR = Path(__file__).resolve().parent.parent
-environ.Env.read_env(os.path.join(BASE_DIR, 'envs', '.env_db'))
-environ.Env.read_env(os.path.join(BASE_DIR, 'envs', '.env_django'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -32,8 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', None)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', None).split(' ')
-
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split()
 
 # Application definition
 
