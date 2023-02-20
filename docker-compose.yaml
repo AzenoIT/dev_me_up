@@ -8,4 +8,4 @@ services:
       - 8000:8000
     restart: on-failure
     env_file:
-      - backend_core/env/.django_envs
+      - backend_core/env/.env_django
