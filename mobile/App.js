@@ -1,10 +1,11 @@
 import {Button, StyleSheet, Text, View} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Provider as PaperProvider, ActivityIndicator, MD2Colors} from 'react-native-paper';
-import {StatusBar} from 'expo-status-bar';
+import {Provider as PaperProvider} from 'react-native-paper';
 
 import {theme} from "./theme/theme";
-import MenuBar from "./components/MenuBar/MenuBar";
+import MenuBarBottom from "./components/MenuBarBottom/MenuBarBottom";
+import Main from "./components/Main";
+import MenuBarTop from "./components/MenuBarTop/MenuBarTop";
 
 
 export default function App() {
@@ -12,14 +13,9 @@ export default function App() {
         <SafeAreaProvider>
             <PaperProvider theme={theme}>
                 <View style={styles.container}>
-                    <Text>Say my name</Text>
-                    <Button icon="camera" title={'elo'}>
-                        Press me
-                    </Button>
-
-                    <ActivityIndicator animating={true} color={MD2Colors.red800}/>
-                    <StatusBar style="auto"/>
-                    <MenuBar/>
+                    <MenuBarTop/>
+                    <Main/>
+                    <MenuBarBottom/>
                 </View>
             </PaperProvider>
         </SafeAreaProvider>

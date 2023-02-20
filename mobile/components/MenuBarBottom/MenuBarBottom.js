@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
-import { Appbar, FAB, useTheme } from 'react-native-paper';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import {StyleSheet} from 'react-native';
+import {Appbar, FAB, useTheme} from 'react-native-paper';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 const BOTTOM_APPBAR_HEIGHT = 80;
 const MEDIUM_FAB_HEIGHT = 56;
 
-const MenuBar = () => {
-    const { bottom } = useSafeAreaInsets();
+const MenuBarBottom = () => {
+    const {bottom} = useSafeAreaInsets();
     const theme = useTheme();
 
     return (
@@ -19,20 +19,25 @@ const MenuBar = () => {
                     backgroundColor: theme.colors.elevation.level2,
                 },
             ]}
-            safeAreaInsets={{ bottom }}
+            safeAreaInsets={{bottom}}
         >
-            <Appbar.Action icon="archive" onPress={() => {}} />
-            <Appbar.Action icon="email" onPress={() => {}} />
-            <Appbar.Action icon="label" onPress={() => {}} />
-            <Appbar.Action icon="delete" onPress={() => {}} />
+            <Appbar.Action icon="archive" onPress={() => {
+            }}/>
+            <Appbar.Action icon="email" onPress={() => {
+            }}/>
+            <Appbar.Action icon="label" onPress={() => {
+            }}/>
+            <Appbar.Action icon="delete" onPress={() => {
+            }}/>
             <FAB
                 mode="flat"
                 size="medium"
                 icon="plus"
-                onPress={() => {}}
+                onPress={() => {
+                }}
                 style={[
                     styles.fab,
-                    { top: (BOTTOM_APPBAR_HEIGHT - MEDIUM_FAB_HEIGHT) / 2 },
+                    {top: (BOTTOM_APPBAR_HEIGHT - MEDIUM_FAB_HEIGHT) / 2},
                 ]}
             />
         </Appbar>
@@ -53,4 +58,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default MenuBar;
+export default MenuBarBottom;
