@@ -1,6 +1,6 @@
 function Battle() {
     return (
-        <div></div>
+        <div>Battle</div>
     );
 }
 

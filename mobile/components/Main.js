@@ -1,4 +1,3 @@
-import Challenge from "./Challenge/Challenge";
 import Question from "./Question/Question";
 
 
