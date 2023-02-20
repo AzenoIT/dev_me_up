@@ -2,10 +2,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Main from "./screens/Main";
-import Battle from "./screens/Battle"
-import Friends from "./screens/Friends"
-import ProfileSettings from "./screens/ProfileSettings"
-import Rankings from "./screens/Rankings"
+import Battle from "./screens/Battle";
+import Friends from "./screens/Friends";
+import ProfileSettings from "./screens/ProfileSettings";
+import Rankings from "./screens/Rankings";
 
 const Stack = createNativeStackNavigator();
 
