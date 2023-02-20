@@ -44,12 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-
+    'drf_spectacular',
     'debug_toolbar',
 
-    # 3rd party
 
-    # Local
     'users.apps.UsersConfig',
 
 ]
@@ -139,3 +137,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Dev me up",
+    "DESCRIPTION": "Not yet",
+    "VERSION": "1.0.0",
+}
