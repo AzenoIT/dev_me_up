@@ -1,11 +1,7 @@
 {
     "_meta": {
         "hash": {
-<<<<<<< HEAD
-            "sha256": "79e9ccc0dfb6f28f690b95f00cff0db28c0bb3056d0f4ac75ce44604548c8146"
-=======
-            "sha256": "eb02418789d156408d146adfb731ab3567699355d1675275b8a03748f4ca1167"
->>>>>>> origin/master
+            "sha256": "9e615ded6d4dc89f7758e4ce63b3b082964124a776d94465251ba86f2df2f0ac"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -28,8 +24,6 @@
             "markers": "python_version >= '3.7'",
             "version": "==3.6.0"
         },
-<<<<<<< HEAD
-=======
         "attrs": {
             "hashes": [
                 "sha256:29e95c7f6778868dbd49170f98f8818f78f3dc5e0e37c0b1f474e3561b240836",
@@ -38,7 +32,6 @@
             "markers": "python_version >= '3.6'",
             "version": "==22.2.0"
         },
->>>>>>> origin/master
         "dj-database-url": {
             "hashes": [
                 "sha256:5c2993b91801c0f78a8b19e642b497b90831124cbade0c265900d4c1037b4730",
@@ -71,7 +64,6 @@
             "index": "pypi",
             "version": "==3.14.0"
         },
-<<<<<<< HEAD
         "djangorestframework-simplejwt": {
             "hashes": [
                 "sha256:4c0d2e2513e12587d93501ac091781684a216c3ee614eb3b5a10586aef5ca845",
@@ -79,7 +71,7 @@
             ],
             "index": "pypi",
             "version": "==5.2.2"
-=======
+        },
         "drf-spectacular": {
             "hashes": [
                 "sha256:789696f9845ef2397c52f66154aec6d96411baf6aa09a5d40c5f0b0e99f6b3d8",
@@ -103,7 +95,6 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==4.17.3"
->>>>>>> origin/master
         },
         "psycopg2": {
             "hashes": [
@@ -124,7 +115,6 @@
             "index": "pypi",
             "version": "==2.9.5"
         },
-<<<<<<< HEAD
         "pyjwt": {
             "hashes": [
                 "sha256:69285c7e31fc44f68a1feb309e948e0df53259d579295e6cfe2b1792329f05fd",
@@ -132,7 +122,7 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==2.6.0"
-=======
+        },
         "pyrsistent": {
             "hashes": [
                 "sha256:016ad1afadf318eb7911baa24b049909f7f3bb2c5b1ed7b6a8f21db21ea3faa8",
@@ -165,7 +155,6 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==0.19.3"
->>>>>>> origin/master
         },
         "pytz": {
             "hashes": [
@@ -174,8 +163,6 @@
             ],
             "version": "==2022.7.1"
         },
-<<<<<<< HEAD
-=======
         "pyyaml": {
             "hashes": [
                 "sha256:01b45c0191e6d66c470b6cf1b9531a771a83c1c4208272ead47a3ae4f2f603bf",
@@ -222,7 +209,6 @@
             "markers": "python_version >= '3.6'",
             "version": "==6.0"
         },
->>>>>>> origin/master
         "sqlparse": {
             "hashes": [
                 "sha256:0323c0ec29cd52bceabc1b4d9d579e311f3e4961b98d174201d5622a23b85e34",
@@ -230,8 +216,6 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==0.4.3"
-<<<<<<< HEAD
-=======
         },
         "uritemplate": {
             "hashes": [
@@ -240,7 +224,6 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==4.1.1"
->>>>>>> origin/master
         }
     },
     "develop": {}
