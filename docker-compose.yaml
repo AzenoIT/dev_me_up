@@ -10,6 +10,7 @@ services:
     ports:
       - 8000:8000
     restart: on-failure
+
     networks:
       - backend_db_network
     depends_on:

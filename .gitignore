@@ -1,2 +1,4 @@
 .idea
 .vscode
+
+backend_core/envs/.env_django
