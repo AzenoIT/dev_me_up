@@ -1,6 +1,10 @@
+import {NavLink} from "react-router-dom";
+
 function Main() {
     return (
-        <div></div>
+        <div>
+                <NavLink to='/battle'>Main to Battle</NavLink>
+        </div>
     );
 }
 
