@@ -7,3 +7,5 @@ services:
     ports:
       - 8000:8000
     restart: on-failure
+    env_file:
+      - ./env/.env_user
