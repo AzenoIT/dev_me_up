@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django = "==4.1.7"
 django-debug-toolbar = "==3.8.1"
+djangorestframework = "==3.14.0"
 drf-spectacular = "==0.25.1"
 
 [dev-packages]
