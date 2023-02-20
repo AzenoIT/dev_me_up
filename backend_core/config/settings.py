@@ -55,7 +55,9 @@ INSTALLED_APPS = [
     # Local
     'users.apps.UsersConfig',
     'technologies.apps.TechnologiesConfig',
-
+    'rank_histories.apps.RankHistoriesConfig',
+    'players.apps.PlayersConfig',
+    'gamesets.apps.GamesetsConfig',
 ]
 
 MIDDLEWARE = [
