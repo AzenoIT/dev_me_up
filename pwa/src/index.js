@@ -13,11 +13,14 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Main />,
+        children: [
+            {
+                path: "/battle",
+                element: <Battle/>
+            }
+        ]
     },
-    {
-        path: "/battle",
-        element: <Battle/>
-    }
+
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,40 +1,52 @@
 import {NavigationContainer} from "@react-navigation/native";
-import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
-import Main from "./screens/Main";
 import Battle from "./screens/Battle";
-import Friends from "./screens/Friends";
-import ProfileSettings from "./screens/ProfileSettings";
-import Rankings from "./screens/Rankings";
 import Login from "./screens/Login";
 import SignUp from "./screens/SingUp";
 import {AuthProvider} from "./context/AuthProvider";
 import useAuth from "./hooks/useAuth";
 
-const Stack = createNativeStackNavigator();
+import {StyleSheet, View} from 'react-native';
+import {NavigationContainer} from "@react-navigation/native";
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Challenge from "./components/Challenge/Challenge";
+import Friends from "./components/Friends/Friends";
+import ProfileSettings from "./components/ProfileSettings/ProfileSettings";
+import Rankings from "./components/Rankings/Rankings";
 
+const Tab = createBottomTabNavigator();
 export default function App() {
 const {auth} = useAuth();
     return (
         <NavigationContainer>
             <AuthProvider>
-                <Stack.Navigator initialRouteName="Main">
+                <Tab.Navigator initialRouteName="Main">
                     {!auth ? (
                         <>
-                            <Stack.Screen name="Home" component={Main}/>
-                            <Stack.Screen name="Battle" component={Battle}/>
-                            <Stack.Screen name="Friends" component={Friends}/>
-                            <Stack.Screen name="Settings" component={ProfileSettings}/>
-                            <Stack.Screen name="Rankings" component={Rankings}/>
+                            <Tab.Screen name="Home" component={Challenge}/>
+                            <Tab.Screen name="Battle" component={Challenge}/>
+                            <Tab.Screen name="Friends" component={Friends}/>
+                            <Tab.Screen name="Settings" component={ProfileSettings}/>
+                            <Tab.Screen name="Rankings" component={Rankings}/>
                         </>
                     ) : (
                         <>
-                            <Stack.Screen name="SignUp" component={SignUp}/>
-                            <Stack.Screen name="Login" component={Login}/>
+                            <Tab.Screen name="SignUp" component={SignUp}/>
+                            <Tab.Screen name="Login" component={Login}/>
                         </>
                     )}
-                </Stack.Navigator>
+                </Tab.Navigator>
             </AuthProvider>
         </NavigationContainer>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});
+

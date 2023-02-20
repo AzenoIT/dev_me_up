@@ -1,6 +1,6 @@
 function Battle() {
     return (
-        <div>Battle</div>
+        <div>hdwp2</div>
     );
 }
 
