@@ -1,2 +1,6 @@
 .idea
 .vscode
+
+
+**/*.pec
+backend_core/db.sqlite3
