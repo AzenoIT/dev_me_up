@@ -4,4 +4,4 @@
 **/*.pyc
 db.sqlite3
 
-../env/.env_user
+envs/
