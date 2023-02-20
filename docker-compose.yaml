@@ -1,5 +1,5 @@
 services:
-  backend_e_menu:
+  backend_dev_me_up:
     build:
       context: ./backend_core
     volumes:
