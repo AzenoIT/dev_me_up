@@ -1,6 +1,6 @@
 import {Text} from "react-native";
 
-function SingUp() {
+function SignUp() {
     return (
         <Text>
             Załóż konto
@@ -8,4 +8,4 @@ function SingUp() {
     );
 }
 
-export default SingUp;
+export default SignUp;

@@ -1,5 +1,5 @@
-import Login from "./screens/Login";
-import SignUp from "./screens/SingUp";
+import Login from "./components/Login/Login";
+import SignUp from "./components/SignUp/SignUp";
 import {AuthProvider} from "./context/AuthProvider";
 import useAuth from "./hooks/useAuth";
 
