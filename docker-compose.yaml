@@ -1,0 +1,9 @@
+services:
+  backend_e_menu:
+    build:
+      context: ./backend_core
+    volumes:
+      - ./backend_core:/app
+    ports:
+      - 8000:8000
+    restart: on-failure
