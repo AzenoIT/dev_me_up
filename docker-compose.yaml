@@ -13,8 +13,16 @@ services:
 
     networks:
       - backend_db_network
+      - redis_network
     depends_on:
       - backend_db
+
+  redis:
+    image: 'redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - redis_network
 
   backend_db:
     image: postgres:15-alpine
@@ -27,9 +35,9 @@ services:
     networks:
       - backend_db_network
 
-
 networks:
   backend_db_network:
+  redis_network:
 
 volumes:
     backend_db:

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 import os
 import dj_database_url
+from celery import Celery
 
 from pathlib import Path
 
@@ -52,12 +53,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
-    'django_celery_results',
-    'django_celery_beat',
 
     # Local
     'users.apps.UsersConfig',
     'sendmail.apps.SendmailConfig',
+    'django_celery_results',
+    'django_celery_beat',
+
 
 ]
 
@@ -171,7 +173,7 @@ EMAIL_HOST_USER = 'email'
 EMAIL_HOST_PASSWORD = 'password'
 
 # Celery configuration
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_BROKER_URL = 'redis://0.0.0.0:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
