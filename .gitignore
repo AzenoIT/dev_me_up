@@ -1,6 +1,2 @@
 .idea
 .vscode
-
-
-**/*.pyc
-backend_core/db.sqlite3
