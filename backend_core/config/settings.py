@@ -52,13 +52,12 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'drf_spectacular',
 
-
     # Local
     'users.apps.UsersConfig',
     'technologies.apps.TechnologiesConfig',
+    'rank_histories.apps.RankHistoriesConfig',
     'players.apps.PlayersConfig',
-
-
+    'gamesets.apps.GamesetsConfig',
 ]
 
 MIDDLEWARE = [
