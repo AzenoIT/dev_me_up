@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 
     # Local
     'users.apps.UsersConfig',
+    'technologies.apps.TechnologiesConfig',
 
 ]
 
