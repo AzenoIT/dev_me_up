@@ -2,5 +2,5 @@
 .vscode
 
 
-**/*.pec
+**/*.pyc
 backend_core/db.sqlite3
