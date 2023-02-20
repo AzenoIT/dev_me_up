@@ -4,6 +4,32 @@ services:
       context: ./backend_core
     volumes:
       - ./backend_core:/app
+    env_file:
+      - ./backend_core/envs/.env_django
+      - ./backend_core/envs/.env_db
     ports:
       - 8000:8000
     restart: on-failure
+
+    networks:
+      - backend_db_network
+    depends_on:
+      - backend_db
+
+  backend_db:
+    image: postgres:15-alpine
+    volumes:
+      - backend_db:/var/lib/postgresql/data
+    env_file:
+      - ./backend_core/envs/.env_db
+    ports:
+      - 5432:5432
+    networks:
+      - backend_db_network
+
+
+networks:
+  backend_db_network:
+
+volumes:
+    backend_db:
