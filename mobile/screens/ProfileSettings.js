@@ -1,11 +1,22 @@
-import { Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
 
-function ProfileSettings() {
+function ProfileSettins() {
 	return (
-		<View>
-			<Text>Profile Settings screen</Text>
+		<View style={styles.container}>
+			<Text>ProfileSettins</Text>
+			<StatusBar style="auto" />
 		</View>
 	);
 }
 
-export default ProfileSettings;
+const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+});
+
+export default ProfileSettins;
