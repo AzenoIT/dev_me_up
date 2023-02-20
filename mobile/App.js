@@ -1,6 +1,3 @@
-import {NavigationContainer} from "@react-navigation/native";
-
-import Battle from "./screens/Battle";
 import Login from "./screens/Login";
 import SignUp from "./screens/SingUp";
 import {AuthProvider} from "./context/AuthProvider";
