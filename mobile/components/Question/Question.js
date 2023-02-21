@@ -21,7 +21,7 @@ function Question() {
     } = useCountdown({ isPlaying: true, duration: totalTime, colors: '#abc' })
     async function getQuestions() {
         try {
-            return await axiosPrivate.get(`/questions/tech/`);
+            return await fetch(`/questions/`);
         } catch(error){
             console.error(error);
         }
@@ -101,27 +101,26 @@ const styles = StyleSheet.create({
         margin: 10,
     },
     responses_container: {
-        height: '67%',
         flex: 1,
         backgroundColor: "white",
         justifyContent: "space-between",
+        height: '100%'
     },
     container: {
         backgroundColor: "white",
-        justifyContent: "space-around"
+        height: '85%'
     },
     content: {
-        marginBottom: 30
     },
     answerCard: {
-        margin: 5
+        marginTop: 20
     },
     card: {
         marginLeft: 20,
-        marginRight: 20
+        marginRight: 20,
+        height: '100%'
     },
     question: {
-        marginBottom: 20
     },
     hdn: {
     },
