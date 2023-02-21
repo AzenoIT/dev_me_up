@@ -23,6 +23,7 @@ const router = createBrowserRouter([
             {
                 path: 'intro',
                 element: (<Intro/>)
+
             },
             {
                 path: "category",
