@@ -54,12 +54,14 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
+    'django_redis',
+    'django_celery_results',
+    'django_celery_beat',
 
     # Local
     'users.apps.UsersConfig',
     'sendmail.apps.SendmailConfig',
-    'django_celery_results',
-    'django_celery_beat',
+
 
 
 ]
@@ -167,5 +169,5 @@ SPECTACULAR_SETTINGS = {
 
 # Celery configuration
 
-CELERY_BROKER_URL = 'redis://0.0.0.0:6379/0'
-CELERY_RESULT_BACKEND = 'redis://0.0.0.0:6379/0'
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/'
+RESULT_BACKEND = 'redis://127.0.0.1:6379/'

@@ -18,7 +18,7 @@ services:
       - backend_db
 
   redis:
-    image: 'redis:latest'
+    image: 'redis:6-alpine'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
     networks:
