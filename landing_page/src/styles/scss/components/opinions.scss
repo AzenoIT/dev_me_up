@@ -1,9 +1,10 @@
-.container {
+@import '../helpers/media-queries';
+
+.container_opinions {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url("../../../images/background.png");
-
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -31,6 +32,7 @@
 }
 
 .btnAppStore {
+    text-align: center;
     margin-bottom: 20px;
 }
 

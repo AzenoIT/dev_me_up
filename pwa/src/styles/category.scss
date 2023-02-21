@@ -1,22 +1,35 @@
-.box {
-    background-color: #DFDEDE;
-
-    h1 {
-        font-size: 36px;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 400;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    .nav-button {
+        color: #6750A4;
+        background-color: #FFFBFE;
+        border-radius: 100px;
+        padding: 10px 24px;
+        line-height: 20px;
+        margin: 5px;
+        &:hover {
+            background-color: #7755D7;
+            color: white;
+        }
     }
+}
+.nav-title {
+    font-size: 36px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
 
     .box-shadow {
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
     }
 
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 100px;
-    }
+
 
     nav {
         display: flex;
@@ -70,4 +83,3 @@
             display: flex
         }
     }
-}
