@@ -6,7 +6,7 @@ User = get_user_model()
 
 
 class UserAdminConfig(UserAdmin):
-    list_display = ('email', 'username', 'is_active', 'is_staff',)
+    list_display = ('id', 'email', 'username', 'is_active', 'is_staff',)
     list_filter = ('email', 'username', 'is_active', 'is_staff',)
     ordering = ('-last_login',)
     search_fields = ('email', 'username',)
