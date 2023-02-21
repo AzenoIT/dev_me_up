@@ -1,13 +1,12 @@
 import './App.css';
-import Main from "./components/Main/Main";
+import Category from "./components/Category/Category";
 import Battle from "./components/Battle/Battle";
 
 
 function App() {
     return (
         <div>
-            <Main/>
-            <Battle/>
+            <Category/>
         </div>
     );
 }

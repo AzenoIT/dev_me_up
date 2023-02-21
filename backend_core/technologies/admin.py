@@ -2,4 +2,4 @@ from django.contrib import admin
 
 from . import models
 
-admin.site.register(models.Technologies)
+admin.site.register(models.Technology)
