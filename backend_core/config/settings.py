@@ -63,7 +63,7 @@ INSTALLED_APPS = [
     'applications.apps.ApplicationsConfig',
     'infographics.apps.InfographicsConfig',
     'questions.apps.QuestionsConfig',
-
+    'quizzes.apps.QuizzesConfig',
 ]
 
 MIDDLEWARE = [
