@@ -15,3 +15,15 @@ class GameSetSerializer(serializers.ModelSerializer):
                   'add_answer1',
                   'add_answer2',
                   'add_answer3')
+
+class GameSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Game
+        fields = ('id',
+                  'player_id_1',
+                  'player_id_2',
+                  'result,'
+                  'date_start',
+                  'date_end',
+                  'game_sets')
+
