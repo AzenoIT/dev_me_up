@@ -1,6 +1,8 @@
 from django.contrib.auth import get_user_model
 from rest_framework.serializers import ModelSerializer
 
+from .models import UserFriend
+
 
 class CustomUserSerializer(ModelSerializer):
     class Meta:
@@ -11,6 +13,13 @@ class CustomUserSerializer(ModelSerializer):
         }
 
     def create(self, validated_data):
-        print(validated_data)
         instance = self.Meta.model.objects.create_user(**validated_data)
         return instance
+
+
+class UserFriendListSerializer(ModelSerializer):
+    friend = CustomUserSerializer()
+
+    class Meta:
+        model = UserFriend
+        fields = ('friend', 'approved')
