@@ -5,8 +5,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from . import serializers
-from .models import CustomUser
-from .permissions import IsUser
 from .serializers import CustomUserSerializer
 
 
