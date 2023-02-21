@@ -6,7 +6,6 @@ import Image from "next/image";
 import google from '../../images/Badgegoogle.png'
 import apple from '../../images/Badgeapple.png'
 
-
 function Opinions() {
     return (
         <div className='container'>
