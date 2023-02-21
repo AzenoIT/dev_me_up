@@ -6,10 +6,9 @@ import callApi from "../../helpers/api";
 
 const totalTime = 17;
 
-function Question() {
+function Question(tech) {
     const theme = useTheme();
     const [reveal, setReveal] = useState(false);
-    const [questionList, setQuestionList] = useState('tra');
     const {
         path,
         pathLength,
@@ -23,10 +22,11 @@ function Question() {
     } = useCountdown({isPlaying: true, duration: totalTime, colors: '#abc'})
 
     useEffect(() => {
-        callApi('/')
+        callApi({endpoint: `/questions/${tech}/1`})
             .then((response) => {
                 setQuestionList(response)
-            });
+            }).catch((error) => {
+        });
 
         return () => {
         }
@@ -75,7 +75,7 @@ function Question() {
                     style={styles.question}
                 >
                     Python python python python python python python python python
-                    python{JSON.stringify(questionList)}</Text>
+                    python</Text>
                 <Divider/>
             </Card.Content>
             <Card.Actions style={styles.container}>
