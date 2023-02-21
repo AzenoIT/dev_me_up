@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     'rank_histories.apps.RankHistoriesConfig',
     'players.apps.PlayersConfig',
     'gamesets.apps.GamesetsConfig',
+    'applications.apps.ApplicationsConfig',
 ]
 
 MIDDLEWARE = [
