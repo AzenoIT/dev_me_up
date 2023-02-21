@@ -20,9 +20,8 @@ class CreateUserAPIView(CreateAPIView):
 
 class UserFriendListAPIView(ListAPIView):
     queryset = models.UserFriend.objects.all()
-#    serializer_class = serializers.UserFriendListSerializer
 
     def get(self, request, *args, **kwargs):
         user_id = request.user.id
-        serializer = serializers.UserFriendListSerializer(self.queryset.filter(user_id=user_id), many=True)
+        serializer = serializers.UserFriendListSerializer(self.queryset.filter(user__pk=user_id), many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
