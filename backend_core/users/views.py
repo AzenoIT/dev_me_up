@@ -9,6 +9,8 @@ from rest_framework.response import Response
 
 from . import serializers
 from . import models
+from .models import UserFriend
+from .serializers import UserFriendAddSerializer
 
 
 class CreateUserAPIView(CreateAPIView):
@@ -54,11 +56,9 @@ class GetUserAPIView(RetrieveAPIView):
         return Response(serializer.data)
 
 
-# TODO - fields
 class UserFriendAddAPIView(CreateAPIView):
-    queryset = models.UserFriend.objects.all()
-    serializer_class = serializers.UserFriendListSerializer
-    permission_class = [IsAuthenticated]
+    queryset = UserFriend.objects.all()
+    serializer_class = UserFriendAddSerializer
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
