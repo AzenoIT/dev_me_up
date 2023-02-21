@@ -6,20 +6,18 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import Main from "./components/Main/Main";
-import Battle from "./components/Battle/Battle";
+import Category from "./components/Category/Category";
+import Tutorial from "./components/Tutorial/Tutorial";
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <Main />,
-        children: [
-            {
-                path: "/battle",
-                element: <Battle/>
-            }
-        ]
+        path: "/category",
+        element: <Category />
     },
+    {
+        path: "/tutorial",
+        element: <Tutorial />
+    }
 
 ])
 

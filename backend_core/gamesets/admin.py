@@ -9,8 +9,6 @@ class GameSetAdmin(admin.ModelAdmin):
     list_filter = ('difficulty_level', 'question')
     ordering = ('difficulty_level',)
 
-admin.site.register(models.SourceSet)
-admin.site.register(models.GameSet, GameSetAdmin)
 
 class GameAdmin(admin.ModelAdmin):
     fields = ('result', 'date_start', 'end')
@@ -19,4 +17,7 @@ class GameAdmin(admin.ModelAdmin):
     list_filter = ('result', 'date_start', 'date_end')
     ordering = ('result', 'date_start', 'date_end')
 
+
+admin.site.register(models.SourceSet)
+admin.site.register(models.GameSet, GameSetAdmin)
 admin.site.register(models.Game, GameAdmin)
