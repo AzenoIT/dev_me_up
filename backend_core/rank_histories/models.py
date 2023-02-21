@@ -6,5 +6,8 @@ class PlayerRankHistory(models.Model):
     rank_change_date = models.DateTimeField(auto_now_add=True)
     player = models.ForeignKey('players.Player', on_delete=models.DO_NOTHING, related_name='%(class)s')
 
+    class Meta:
+        verbose_name_plural = 'Player Ranks Histories'
+
     def __str__(self):
         return f'{self.new_value}'
