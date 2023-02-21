@@ -1,5 +1,10 @@
 import {Quicksand, Roboto} from "@next/font/google";
 
+export const roboto700 = Roboto({
+    weight: '700',
+    subsets: ['latin']
+})
+
 export const roboto500 = Roboto({
     weight: '500',
     subsets: ['latin']
