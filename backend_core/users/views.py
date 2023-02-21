@@ -6,6 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import UpdateAPIView
 from rest_framework.generics import CreateAPIView, RetrieveAPIView
 from rest_framework.response import Response
+from rest_framework.validators import UniqueTogetherValidator
 
 from . import serializers
 from . import models
