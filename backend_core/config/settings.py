@@ -62,6 +62,8 @@ INSTALLED_APPS = [
     'gamesets.apps.GamesetsConfig',
     'applications.apps.ApplicationsConfig',
     'infographics.apps.InfographicsConfig',
+    'questions.apps.QuestionsConfig',
+
 ]
 
 MIDDLEWARE = [
