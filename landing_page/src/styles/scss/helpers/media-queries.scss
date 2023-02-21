@@ -16,3 +16,16 @@ $grid-breakpoints: (
         @content;
     }
 }
+
+
+.hide-on-desktop {
+    @media (min-width: 991px) {
+        display: none;
+    }
+}
+
+.hide-on-mobile {
+    @media (max-width: 992px) {
+        display: none;
+    }
+}
