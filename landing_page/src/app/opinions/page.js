@@ -12,6 +12,7 @@ function Opinions() {
         <div className='container'>
             <h2 className={`${roboto500.className} hdl`}>Zabawa i&nbsp;nauka w jednym</h2>
             <p className={`${roboto300.className} text`}>Sprawdź swoją wiedzę rywalizując&nbsp;ze znajomymi</p>
+
             <a href='https://www.apple.com/pl/app-store/' className='btnAppStore'>
                 <Image src={apple} alt='Apple picture'/></a>
             <a href='https://play.google.com/store/games?hl=pl&gl=US' className='btnGooglePlay'>
