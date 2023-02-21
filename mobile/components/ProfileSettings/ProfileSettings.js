@@ -1,10 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
-function ProfileSettins() {
+function ProfileSettings() {
 	return (
 		<View style={styles.container}>
-			<Text>ProfileSettins</Text>
+			<Text>ProfileSettings</Text>
 			<StatusBar style="auto" />
 		</View>
 	);
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default ProfileSettins;
+export default ProfileSettings;
