@@ -1,8 +1,8 @@
-from .models import Technologies
+from .models import Technology
 from rest_framework import serializers
 
 
 class TechnologiesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Technologies
+        model = Technology
         fields = ('name', 'id')

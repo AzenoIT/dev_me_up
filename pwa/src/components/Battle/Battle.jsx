@@ -1,6 +1,10 @@
+import {Container} from "@mui/material";
+
 function Battle() {
     return (
-        <div>hdwp2</div>
+        <Container fixed>
+            <h1>Dev me up</h1>
+        </Container>
     );
 }
 

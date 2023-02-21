@@ -6,7 +6,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 
-import '../../styles/hamburger.css'
+import '../../styles/scss/components/hamburger.scss'
 import {quicksand} from "@/app/fonts";
 
 
