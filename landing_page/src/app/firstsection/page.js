@@ -1,21 +1,22 @@
 "use client";
 
-// import { Button, Grid, Stack } from "@mui/material";
+import "../../styles/scss/helpers/buttons.scss";
 
-import { Button } from "@mui/material/Button";
-import "./../../styles/firstsection.css"
+// import {roboto300, roboto500} from "@/app/fonts";
+import "../../styles/scss/components/firstsection.scss"
+import {roboto300, roboto500, teko500} from "@/app/fonts";
 
 export default function FirstSection() {
-    return (<div>
-        <h1 className='hd1'>Graj Rywalizuj Ucz się</h1>
-        <h3 className='hd3'>Sprawdź swoją wiedzę rywalizując ze znajomymi.</h3>
-        <div>
-            <button className='btn-1'>Pobierz aplikację</button>
-            <button className='btn-2'>Newsletter</button>
+    return (
+        <div className='box_section'>
+            <h1 className={`${teko500.className} hd1`}>
+                <p className="hd1-indent">Graj</p>
+                <p className="hd1-center">Rywalizuj</p>
+                <p className="hd1-indent2">Ucz się</p>
+            </h1>
+            <button className='btn_newsletter_add btn_download'>Pobierz aplikację</button>
+            <button className='btn_newsletter_add'>Newsletter</button>
         </div>
-
-    </div>)
-
-
+    )
 }
 
