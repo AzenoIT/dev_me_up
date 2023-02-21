@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from . import models
+from ..players.serializers import PlayerSerializer
 
 
 class GameSetSerializer(serializers.ModelSerializer):
@@ -17,6 +18,9 @@ class GameSetSerializer(serializers.ModelSerializer):
                   'add_answer3')
 
 class GameSerializer(serializers.ModelSerializer):
+    player_id_1 = PlayerSerializer()
+    player_id_2 = PlayerSerializer()
+
     class Meta:
         model = models.Game
         fields = ('id',
