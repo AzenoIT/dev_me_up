@@ -18,7 +18,6 @@ class GameSet(models.Model):
     add_answer1 = models.CharField(max_length=255)
     add_answer2 = models.CharField(max_length=255)
     add_answer3 = models.CharField(max_length=255)
-
     def __str__(self):
         return self.question
 
@@ -27,9 +26,10 @@ class Game(models.Model):
     player_id_1 = models.ForeignKey('players.Player', on_delete=models.DO_NOTHING, related_name='+')
     player_id_2 = models.ForeignKey('players.Player', on_delete=models.DO_NOTHING, related_name='+')
     result = models.IntegerField()
-    date_start = models.DateTimeField()
-    date_end = models.DateTimeField()
+    answer_player_1 = models.BooleanField(null=True)
+    answer_player_2 = models.BooleanField(null=True)
     game_sets = models.ForeignKey('GameSet', on_delete=models.CASCADE, related_name='%(class)s')
+    quiz = models.ForeignKey('quizzes.Quiz', on_delete=models.CASCADE, related_name='%(class)s', default=None)
 
     def __str__(self):
         return f"{self.player_id_1} vs. {self.player_id_2}"

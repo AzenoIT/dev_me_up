@@ -1,23 +1,24 @@
 import 'react-native-gesture-handler';
 
-import {AuthProvider} from "./context/AuthProvider";
-import useAuth from "./hooks/useAuth";
-
 import {StyleSheet} from 'react-native';
 import {NavigationContainer} from "@react-navigation/native";
 
 import {Provider as MenuProvider} from 'react-native-paper';
-import Router from "./components/Layout/Router";
+import {AxiosProvider} from "./context/AxiosContext";
+import {AuthProvider} from "./context/AuthContext";
+
+import Outlet from "./Outlet";
 
 
 export default function App() {
-    const {auth} = useAuth();
     return (
         <NavigationContainer>
             <AuthProvider>
-                <MenuProvider>
-                    <Router/>
-                </MenuProvider>
+                <AxiosProvider>
+                    <MenuProvider>
+                        <Outlet />
+                    </MenuProvider>
+                </AxiosProvider>
             </AuthProvider>
         </NavigationContainer>
     );

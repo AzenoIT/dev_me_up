@@ -1,12 +1,12 @@
 @import "../helpers/variables";
 
-.container {
+.container_hamburger {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: toRem(20px) toRem(40px) toRem(25px) toRem(15px);
-
 }
+
 .logo{
     font-style: normal;
     font-weight: 400;
@@ -33,4 +33,25 @@
 .menu_item:hover{
     background: #E8DEF8;
     border-radius: toRem(100px);
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #424141;
+    padding-top: toRem(40px);
+    padding-bottom: toRem(40px);
+    border-radius: 0 0 toRem(30px) toRem(30px);
+    box-shadow: inset 0 4px 22px 4px rgba(0, 0, 0, 0.6);
+
+    .logo{
+        color: #FFFFFF;
+        margin-left: toRem(60px);
+        line-height: 45px;
+    }
+
+    .btn_newsletter_add{
+        margin-right: toRem(39px);
+    }
 }
