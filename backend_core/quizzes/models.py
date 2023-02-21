@@ -1,6 +1,6 @@
 from django.db import models
 
-class Quizzes(models.Model):
+class Quiz(models.Model):
     start_date = models.DateTimeField(auto_now_add=True)
     duration_minutes = models.PositiveIntegerField()
     end_status = models.BooleanField(default=False)
