@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from backend_core.questions.models import Question
+from . import models
 
 
 class QuestionAdmin(admin.ModelAdmin):
@@ -11,4 +11,4 @@ class QuestionAdmin(admin.ModelAdmin):
     ordering = ('-creation_date',)
 
 
-admin.site.register(Question)
+admin.site.register(models.Question)
