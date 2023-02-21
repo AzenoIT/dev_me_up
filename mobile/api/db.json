@@ -1,14 +1,32 @@
 {
   "questions": {
-  "tech":
-    "javascript", "qas": [
-  {
-    "question": "What is?",
-    "answer": "JS"
+    "author": 1,
+    "question": "Another question",
+    "answer": "Elo answer",
+    "decks": 1,
+    "category": "js",
+    "difficulty": 1,
+    "rating": 2137,
+    "tags": [
+      1
+    ]
   },
-  {
-    "question": "What is?",
-    "answer": "JS"
-  }
-]}
+  "userNames": [
+    {
+      "id": 1,
+      "name": "kocham-PIS"
+    },
+    {
+      "id": 2,
+      "name": "imadło"
+    },
+    {
+      "id": 3,
+      "name": "orlen-lite"
+    },
+    {
+      "id": 4,
+      "name": "Janusz Kowalski"
+    }
+  ]
 }
