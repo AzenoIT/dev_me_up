@@ -23,7 +23,6 @@ function Router() {
             <Stack.Screen name="Rankings" component={Rankings}/>
             <Stack.Screen name="SignUp" component={SignUp}/>
             <Stack.Screen name="Login" component={Login}/>
-            <Stack.Screen name="Question" component={Question}/>
         </Stack.Navigator>
     );
 }
