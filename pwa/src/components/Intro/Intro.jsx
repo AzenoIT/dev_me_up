@@ -13,6 +13,7 @@ import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import CachedIcon from '@mui/icons-material/Cached';
 import {adjectives, animals, uniqueNamesGenerator} from "unique-names-generator";
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 const inputTheme = createTheme({
     palette: {
@@ -88,19 +89,20 @@ function Intro() {
                         <Typography>Play as a guest</Typography>
                     </Button>
 
-                    <ColorButton
-                        style={{minWidth: '100%', borderRadius: '5%', margin: '20% 1% 0 1%'}}
-                    >
-                        <LoginIcon/>
-                        <Typography>Login</Typography>
-                    </ColorButton>
+                    <Link to={'/login'} style={{minWidth: '100%', textDecoration: 'none'}}>
+                        <ColorButton style={{minWidth: '100%', borderRadius: '5%', margin: '20% 0 0 0'}}>
+                            <LoginIcon/>
+                            <Typography>Login</Typography>
+                        </ColorButton>
+                    </Link>
 
-                    <ColorButton
-                        style={{minWidth: '100%', borderRadius: '5%', margin: '5% 1% 0 1%'}}
-                    >
-                        <VpnKeyIcon/>
-                        <Typography>SignUp</Typography>
-                    </ColorButton>
+                    <Link to={'/register'} style={{minWidth: '100%', textDecoration: 'none'}}>
+                        <ColorButton style={{minWidth: '100%', borderRadius: '5%', margin: '5% 0 0 0'}}>
+                            <VpnKeyIcon/>
+                            <Typography>SignUp</Typography>
+                        </ColorButton>
+                    </Link>
+
                 </div>
             </div>
         </ThemeProvider>
