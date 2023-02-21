@@ -59,11 +59,11 @@ INSTALLED_APPS = [
     'technologies.apps.TechnologiesConfig',
     'rank_histories.apps.RankHistoriesConfig',
     'players.apps.PlayersConfig',
-    'gamesets.apps.GamesetsConfig',
+    'gamesets.apps.GamesetsConfig'
     'applications.apps.ApplicationsConfig',
     'infographics.apps.InfographicsConfig',
     'questions.apps.QuestionsConfig',
-
+    'quizzes.apps.QuizzesConfig',
 ]
 
 MIDDLEWARE = [
