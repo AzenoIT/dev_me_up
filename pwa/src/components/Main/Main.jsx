@@ -1,18 +1,91 @@
 import {NavLink} from "react-router-dom";
 
 import '../../styles/main.scss'
+import {Button, Stack} from "@mui/material";
+import React from "react";
 
 function Main() {
     return (
-        <div className='body'>
-            <header>
+        <div className='box'>
+            <div className='box-shadow'>
+                <div className='header'>
+                    <h1>
+                        Dev me up
+                    </h1>
+                    <nav>
+                        <Button className='nav-button' variant='contained'>Pobierz aplikację</Button>
+                        <Button className='nav-button' variant='contained'>Newsletter</Button>
+                        <Button className='nav-button' variant='contained'>Załóż konto</Button>
+                        <Button className='nav-button' variant='contained'>Zaloguj</Button>
+                    </nav>
+                </div>
+            </div>
+            <div className='box-shadow'>
+                <div className='categories'>
+                    <div className='card'>
+                        <h2>Kategoria</h2>
+                        <p>opis kategorii</p>
+                    </div>
+                    <div className='card'>
+                        <h2>Kategoria</h2>
+                        <p>opis kategorii</p>
+                    </div>
+                    <div className='card'>
+                        <h2>Kategoria</h2>
+                        <p>opis kategorii</p>
+                    </div>
+                    <div className='card'>
+                        <h2>Kategoria</h2>
+                        <p>opis kategorii</p>
+                    </div>
+                    <div className='card'>
+                        <h2>Kategoria</h2>
+                        <p>opis kategorii</p>
+                    </div>
+                </div>
+            </div>
+            <div className='box-shadow'>
+               <div className='cards'>
+                   <div className='card'>
+                       <h2>Easy</h2>
+                       <p>opis kategorii</p>
+                   </div>
+                   <div className='card'>
+                       <h2>Medium</h2>
+                       <p>opis kategorii</p>
+                   </div>
+                   <div className='card'>
+                       <h2>Hard</h2>
+                       <p>opis kategorii</p>
+                   </div>
+               </div>
+            </div>
+            <div className='box-shadow'>
+                <div className='cards'>
+                    <div className='card'>
+                    <h2>
+                        Tutorial
+                    </h2>
+                    </div>
+                    <div className='card'>
+                        <h2>
+                            Graj versus
+                        </h2>
+                    </div>
+                    <div className='card'>
+                        <h2>
+                            Graj
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div className='footer'>
                 <nav>
-                    <NavLink to='/'>Main Page</NavLink>
-                    <NavLink to='/battle'>Battle</NavLink>
-                    <NavLink to='/ranking'>Ranking</NavLink>
-                    <NavLink to='/profile'>Profile</NavLink>
+                    <a href="">Kontakt</a>
+                    <a href="">Info</a>
+                    <a href="">Inne</a>
                 </nav>
-            </header>
+            </div>
         </div>
     );
 }
