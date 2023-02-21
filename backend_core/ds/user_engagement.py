@@ -27,3 +27,16 @@ for i in range(1, 31):
     # retention rate for that day
     retention_rate = subsequent_sessions / first_session['user_id'].nunique()
     retention.append(retention_rate)
+
+# visualization the data
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 10))
+ax1.plot(daily_active_user, label='daily_active_user')
+ax1.plot(weekly_active_user, label='weekly_active_user')
+ax1.plot(monthly_active_user, label='monthly_active_user')
+ax1.plot()
+ax1.set_xlabel('Date')
+ax1.set_ylabel('Active Users')
+ax2.plot(range(1, 31), retention)
+ax2.set_xlabel('Days Since First Session')
+ax2.set_ylabel('Retention Rate')
+plt.show()
