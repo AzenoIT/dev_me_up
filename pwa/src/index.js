@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Category from "./components/Category/Category";
 import Tutorial from "./components/Tutorial/Tutorial";
+import Layout from "./components/Layout/Layout";
+import Intro from "./components/Intro/Intro";
 
 const router = createBrowserRouter([
     {
@@ -17,8 +19,21 @@ const router = createBrowserRouter([
     {
         path: "/tutorial",
         element: <Tutorial />
+    },
+    {
+        path: '/',
+        element: <Layout/>,
+        children: [
+            {
+                path: 'intro',
+                element: (<Intro/>)
+            },
+            {
+                path: 'homepage',
+                element: (<div>homepage</div>)
+            },
+        ]
     }
-
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

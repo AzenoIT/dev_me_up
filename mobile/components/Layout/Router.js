@@ -6,7 +6,6 @@ import ProfileSettings from "../ProfileSettings/ProfileSettings";
 import Rankings from "../Rankings/Rankings";
 import SignUp from "../SignUp/SignUp";
 import Login from "../Login/Login";
-import WelcomeScreen from "../WelcomeScreen/WelcomeScreen";
 import TechChoice from "../TechChoice/TechChoice";
 
 function Router() {

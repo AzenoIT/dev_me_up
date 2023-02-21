@@ -22,6 +22,7 @@ function AzMenu({visible, closeMenu, openMenu}) {
 				/>
 			</Menu>
 		);
+
 }
 
 export default AzMenu;
