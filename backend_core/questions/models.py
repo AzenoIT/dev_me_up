@@ -7,6 +7,7 @@ class Question(models.Model):
     wrong_answer_1 = models.CharField(max_length=300)
     wrong_answer_2 = models.CharField(max_length=300)
     wrong_answer_3 = models.CharField(max_length=300)
+    difficulty_level = models.PositiveIntegerField()
     technology = models.ForeignKey('technologies.Technology', on_delete=models.DO_NOTHING, related_name='%(class)s')
 
     def __str__(self):
