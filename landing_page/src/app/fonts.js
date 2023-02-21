@@ -1,4 +1,4 @@
-import {Quicksand, Roboto} from "@next/font/google";
+import {Quicksand, Roboto, Teko} from "@next/font/google";
 
 export const roboto700 = Roboto({
     weight: '700',
@@ -17,5 +17,10 @@ export const roboto300 = Roboto({
 
 export const quicksand = Quicksand({
     weight: '400',
+    subsets: ['latin']
+})
+
+export const teko500 = Teko({
+    weight: '500',
     subsets: ['latin']
 })

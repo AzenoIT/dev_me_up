@@ -12,7 +12,6 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import EventIcon from "@mui/icons-material/Event";
 import SearchIcon from "@mui/icons-material/Search";
-import {ThemeProvider, createTheme} from '@mui/material/styles';
 
 export default function MenuAppBar() {
     const [auth, setAuth] = React.useState(true);
@@ -30,17 +29,7 @@ export default function MenuAppBar() {
         setAnchorEl(null);
     };
 
-    const lightTheme = createTheme({
-        palette: {
-            mode: 'light',
-            primary: {
-                main: '#e1e1e1',
-            },
-        },
-    });
-
     return (
-        <ThemeProvider theme={lightTheme}>
             <Box sx={{flexGrow: 1}}>
                 <FormGroup>
                     <FormControlLabel
@@ -112,6 +101,5 @@ export default function MenuAppBar() {
                     </Toolbar>
                 </AppBar>
             </Box>
-        </ThemeProvider>
     );
 }

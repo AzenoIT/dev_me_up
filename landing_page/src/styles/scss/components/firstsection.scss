@@ -1,0 +1,45 @@
+@import "../helpers/variables";
+
+.box_section {
+  background-image: url("../../../images/mac_icon_1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: toRem(15px) toRem(30px);
+
+
+  .hd1 {
+    font-style: normal;
+    font-size: toRem(96px);
+    line-height: 62px;
+    text-align: center;
+    color: #000;
+    margin-bottom: toRem(372px);
+    margin-top: toRem(53px);
+
+    .hd1-indent{
+      text-align: start;
+      margin-left: 40px;
+      margin-bottom: 5px;
+      margin-top: 0;
+    }
+
+    .hd1-center{
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .hd1-indent2{
+      text-align: end;
+      margin: 0;
+    }
+  }
+
+  .btn_newsletter_add{
+    border: none;
+    margin-bottom: toRem(90px);
+  }
+  .btn_download {
+    margin-right: toRem(39px);
+  }
+}

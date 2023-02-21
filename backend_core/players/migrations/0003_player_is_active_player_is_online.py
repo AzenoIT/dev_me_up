@@ -13,11 +13,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='player',
             name='is_active',
-            field=models.FloatField(default=False),
+            field=models.BooleanField(default=False),
         ),
         migrations.AddField(
             model_name='player',
             name='is_online',
-            field=models.FloatField(default=False),
+            field=models.BooleanField(default=False),
         ),
     ]

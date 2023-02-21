@@ -9,6 +9,7 @@ import {
 import Category from "./components/Category/Category";
 import Tutorial from "./components/Tutorial/Tutorial";
 import Layout from "./components/Layout/Layout";
+import Intro from "./components/Intro/Intro";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: 'intro',
-                element: (<div>Intro</div>)
+                element: (<Intro/>)
             },
             {
                 path: 'homepage',
