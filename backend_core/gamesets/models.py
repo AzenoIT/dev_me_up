@@ -11,7 +11,7 @@ class SourceSet(models.Model):
 
 class GameSet(models.Model):
     source_set = models.ForeignKey('SourceSet', on_delete=models.DO_NOTHING, related_name='%(class)s')
-    technologies = models.ForeignKey('technologies.Technologies', on_delete=models.DO_NOTHING, related_name='%(class)s')
+    technologies = models.ForeignKey('technologies.Technology', on_delete=models.DO_NOTHING)
 
     difficulty_level = models.FloatField()
     question = models.CharField(max_length=255)
