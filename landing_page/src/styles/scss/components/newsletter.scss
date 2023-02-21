@@ -1,0 +1,36 @@
+@import "../helpers/buttons";
+
+.box_newsletters {
+    background-color: #DFDEDE;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../../images/newsletter_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom toRem(23px) right 0;
+    padding: toRem(15px) toRem(30px);
+    box-sizing: border-box;
+
+}
+
+.hdl_newsletter {
+    font-style: normal;
+    font-size: toRem(64px);
+    line-height: toRem(62px);
+    margin-bottom: toRem(11px);
+    text-align: center;
+}
+
+.text_newsletter {
+    margin-top: 0;
+    font-size: toRem(20px);
+    text-align: center;
+    margin-bottom: toRem(340px);
+
+}
+
+.btn_newsletter_add{
+    margin-bottom: toRem(90px);
+}

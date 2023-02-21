@@ -1,0 +1,137 @@
+html, body {
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.25rem 2.5rem 1.5625rem 0.9375rem;
+}
+
+.logo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 2.8125rem;
+  margin: 0;
+}
+
+.menu_hamburger {
+  border-radius: 1rem;
+  margin-top: 0.9375rem;
+  padding: 3.125rem;
+}
+
+.menu_item {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #1D192B;
+  padding: 1.5625rem;
+}
+
+.menu_item:hover {
+  background: #E8DEF8;
+  border-radius: 6.25rem;
+}
+
+html, body {
+  font-size: 16px;
+}
+
+.btn_newsletter_add {
+  color: #6750A4;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.25rem;
+  background: linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05)), #FFFBFE;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+  padding: 10px 24px;
+  text-decoration: none;
+}
+
+.box_newsletters {
+  background-color: #DFDEDE;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../../images/newsletter_bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom 1.4375rem right 0;
+  padding: 0.9375rem 1.875rem;
+  box-sizing: border-box;
+}
+
+.hdl_newsletter {
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 3.875rem;
+  margin-bottom: 0.6875rem;
+  text-align: center;
+}
+
+.text_newsletter {
+  margin-top: 0;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 21.25rem;
+}
+
+.btn_newsletter_add {
+  margin-bottom: 5.625rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../../images/background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 95px 30px;
+}
+
+.hdl {
+  /*font-family: sans-serif;*/
+  font-style: normal;
+  font-size: 64px;
+  line-height: 62px;
+  margin-bottom: 11px;
+  text-align: center;
+}
+
+.text {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 201px;
+  text-align: center;
+}
+
+.btnAppStore {
+  margin-bottom: 20px;
+  padding: 17px;
+  background: #FFF;
+  color: #000;
+  border-radius: 10px;
+  border: 1px solid #000;
+  width: 209px;
+  height: 68px;
+  text-decoration: none;
+}
+
+.btnGooglePlay {
+  padding: 17px;
+  background: #FFF;
+  border-color: #000;
+  color: #000;
+  border-radius: 10px;
+  width: 246px;
+  height: 72px;
+}
+
+/*# sourceMappingURL=style.css.map */

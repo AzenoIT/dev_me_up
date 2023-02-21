@@ -1,6 +1,6 @@
 'use client'
 
-import '../../styles/opinions.css'
+import '../../styles/scss/components/opinions.scss'
 import {Button, SvgIcon} from "@mui/material";
 import AppleIcon from '@mui/icons-material/Apple';
 import ShopIcon from '@mui/icons-material/Shop';
