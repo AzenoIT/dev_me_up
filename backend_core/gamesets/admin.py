@@ -11,5 +11,5 @@ class GameSetAdmin(admin.ModelAdmin):
 
 admin.site.register(models.SourceSet)
 admin.site.register(models.GameSet, GameSetAdmin)
-admin.site.register(models.Game, GameSetAdmin)
+admin.site.register(models.Game)
 
