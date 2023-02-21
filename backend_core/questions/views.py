@@ -1,12 +1,11 @@
 
 from rest_framework import generics
 
+from ds.question_set_generator import question_set_generator
 from .models import Question
 from .serializers import QuestionSerializer
 
 
 class TenQuestionsListAPIView(generics.ListAPIView):
     serializer_class = QuestionSerializer
-
-    def get_queryset(self):
-        return Question.objects.all()[0:10]
+    queryset = Question.objects.all()
