@@ -11,7 +11,7 @@ import Tutorial from "./components/Tutorial/Tutorial";
 
 const router = createBrowserRouter([
     {
-        path: "/category",
+        path: "/",
         element: <Category />
     },
     {
