@@ -48,12 +48,6 @@ class GetUserAPIView(RetrieveAPIView):
     queryset = get_user_model().objects.all()
     serializer_class = serializers.CustomUserSerializer
 
-
-class GetUserAPIView(RetrieveAPIView):
-    permission_classes = [IsAuthenticated]
-    queryset = get_user_model().objects.all()
-    serializer_class = serializers.CustomUserSerializer
-
     def retrieve(self, request, *args, **kwargs):
         serializer = self.serializer_class(request.user)
         return Response(serializer.data)
