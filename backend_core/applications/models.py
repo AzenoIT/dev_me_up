@@ -14,4 +14,4 @@ class Application(models.Model):
     accounts = models.ManyToManyField('users.CustomUser', related_name='%(class)s')
 
     def __str__(self):
-        return self.name
+        return self.device_identity
