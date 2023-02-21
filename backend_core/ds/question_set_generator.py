@@ -1,5 +1,6 @@
-from ..players.models import Player
-from ..questions.models import Question
+from gamesets.models import GameSet
+from technologies.models import Technology
+from players.models import Player
 
 
 def question_set_generator(technology, player1_id, player2_id):
@@ -32,7 +33,7 @@ def question_set_generator(technology, player1_id, player2_id):
     else:
         dif_range = (question_lvl_avg - 1, question_lvl_avg + 1)
 
-    questions_base = Question.objects.filter(technology=technology, difficulty_level__range=dif_range)
+    questions_base = GameSet.objects.filter(technologies=technology, difficulty_level__range=dif_range)
 
     set_len = questions_base.count()
 
@@ -40,5 +41,12 @@ def question_set_generator(technology, player1_id, player2_id):
         question_set = questions_base.order_by('?')[0:10]
         return question_set
     else:
-        question_set = Question.objects.filter(technology=technology).order_by('-difficulty_level')[0:10]
+        question_set = GameSet.objects.filter(technologies=technology).order_by('-difficulty_level')[0:10]
         return question_set
+
+tech = Technology.objects.get(pk=1)
+player_1 = Player.objects.get(pk=1)
+player_2 = Player.objects.get(pk=2)
+
+
+
