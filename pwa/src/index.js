@@ -13,10 +13,6 @@ import Intro from "./components/Intro/Intro";
 
 const router = createBrowserRouter([
     {
-        path: "/category",
-        element: <Category />
-    },
-    {
         path: "/tutorial",
         element: <Tutorial />
     },
@@ -27,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: 'intro',
                 element: (<Intro/>)
+            },
+            {
+                path: "category",
+                element: <Category />
             },
             {
                 path: 'homepage',
