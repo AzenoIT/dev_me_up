@@ -7,6 +7,7 @@ import Rankings from "../Rankings/Rankings";
 import SignUp from "../SignUp/SignUp";
 import Login from "../Login/Login";
 import WelcomeScreen from "../WelcomeScreen/WelcomeScreen";
+import Question from "../Question/Question";
 
 function Router() {
     return (
@@ -14,8 +15,8 @@ function Router() {
                          screenOptions={{
                              header: (props) => <AzAppBar {...props} />,
                          }}>
+            <Stack.Screen name="Question" component={Question}/>
             <Stack.Screen name="Welcome!" component={WelcomeScreen}/>
-            <Stack.Screen name="Friends" component={Friends}/>
             <Stack.Screen name="Profile" component={ProfileSettings}/>
             <Stack.Screen name="Rankings" component={Rankings}/>
             <Stack.Screen name="SignUp" component={SignUp}/>

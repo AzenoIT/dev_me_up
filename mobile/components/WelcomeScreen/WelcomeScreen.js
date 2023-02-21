@@ -2,7 +2,7 @@ import SignUp from "../SignUp/SignUp";
 import Login from "../Login/Login";
 import {Button, useTheme} from "react-native-paper";
 import {TextInput, View} from "react-native";
-import {link} from "../../helpers/helpers";
+import {goTo} from "../../helpers/router";
 import {StyleSheet} from "react-native";
 import {useState} from "react";
 
@@ -45,7 +45,7 @@ function WelcomeScreen({navigation}) {
             <Button
                 icon="account-eye-outline"
                 mode="contained"
-                onPress={link(navigation, "Battle")}
+                onPress={goTo(navigation, "Battle")}
                 style={styles.play_btn}
             >
                 Play as a guest
@@ -53,7 +53,7 @@ function WelcomeScreen({navigation}) {
             <Button
                 icon="login"
                 mode="contained"
-                onPress={link(navigation, "Login")}
+                onPress={goTo(navigation, "Login")}
                 style={styles.btn}
             >
                 Login
@@ -61,7 +61,7 @@ function WelcomeScreen({navigation}) {
             <Button
                 icon="key"
                 mode="contained"
-                onPress={link(navigation, "SignUp")}
+                onPress={goTo(navigation, "SignUp")}
                 style={styles.btn}
             >
                 SignUp
