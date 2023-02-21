@@ -5,6 +5,7 @@ import {TextInput, View} from "react-native";
 import {link} from "../../helpers/helpers";
 import {StyleSheet} from "react-native";
 import {useState} from "react";
+import TechChoice from "../TechChoice/TechChoice";
 
 
 function WelcomeScreen({navigation}) {
@@ -32,42 +33,42 @@ function WelcomeScreen({navigation}) {
     })
 
     return (
-        <View style={styles.container}>
-            <TextInput
-                label="guestName"
-                value={guestName}
-                onChangeText={(guestName) => setGuestName(guestName)}
-                placeholder={"Choose a guest name to play as"}
-                type={"outlined"}
-                style={styles.input}
-            />
+			<View style={styles.container}>
+				<TextInput
+					label="guestName"
+					value={guestName}
+					onChangeText={(guestName) => setGuestName(guestName)}
+					placeholder={"Choose a guest name to play as"}
+					type={"outlined"}
+					style={styles.input}
+				/>
 
-            <Button
-                icon="account-eye-outline"
-                mode="contained"
-                onPress={link(navigation, "Battle")}
-                style={styles.play_btn}
-            >
-                Play as a guest
-            </Button>
-            <Button
-                icon="login"
-                mode="contained"
-                onPress={link(navigation, "Login")}
-                style={styles.btn}
-            >
-                Login
-            </Button>
-            <Button
-                icon="key"
-                mode="contained"
-                onPress={link(navigation, "SignUp")}
-                style={styles.btn}
-            >
-                SignUp
-            </Button>
-        </View>
-    );
+				<Button
+					icon="account-eye-outline"
+					mode="contained"
+					onPress={link(navigation, "TechChoice")}
+					style={styles.play_btn}
+				>
+					Play as a guest
+				</Button>
+				<Button
+					icon="login"
+					mode="contained"
+					onPress={link(navigation, "Login")}
+					style={styles.btn}
+				>
+					Login
+				</Button>
+				<Button
+					icon="key"
+					mode="contained"
+					onPress={link(navigation, "SignUp")}
+					style={styles.btn}
+				>
+					SignUp
+				</Button>
+			</View>
+		);
 }
 
 export default WelcomeScreen;
