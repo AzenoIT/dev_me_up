@@ -11,7 +11,7 @@ import Question from "../Question/Question";
 
 function Router() {
     return (
-        <Stack.Navigator initialRouteName="Home"
+        <Stack.Navigator initialRouteName="Profile"
                          screenOptions={{
                              header: (props) => <AzAppBar {...props} />,
                          }}>

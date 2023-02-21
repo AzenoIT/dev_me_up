@@ -160,5 +160,45 @@
       "id": 4,
       "name": "Janusz Kowalski"
     }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "username": "Kolaborant 2137",
+      "score": 2137,
+      "badges": [
+        {
+          "id": 1,
+          "level": 1,
+          "amount": 313
+        },
+        {
+          "id": 2,
+          "level": 2,
+          "amount": 33
+        },
+        {
+          "id": 3,
+          "level": 3,
+          "amount": 0
+        }
+      ],
+      "technologies": [
+        {
+          "id": 1,
+          "name": "python",
+          "level": "guru"
+        },
+        {
+          "id": 2,
+          "name": "html",
+          "level": "junior"
+        }
+      ],
+      "isSearchVisible": true,
+      "isRankingVisible": true,
+      "theme": true,
+      "avatar": "link.jpg"
+    }
   ]
 }
