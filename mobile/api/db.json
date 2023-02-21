@@ -1,6 +1,6 @@
 {
-  "questions": {
-    "js": [
+  "questions": [
+    ["js", [
       {
         "id": 1,
         "question": "Question?",
@@ -70,8 +70,8 @@
         ],
         "difficulty": 1
       }
-    ],
-    "python": [
+    ]],
+    ["python", [
       {
         "id": 1,
         "question": "QuestionP?",
@@ -141,8 +141,8 @@
         ],
         "difficulty": 3
       }
-    ]
-  },
+    ]]
+  ],
   "userNames": [
     {
       "id": 1,

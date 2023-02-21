@@ -1,11 +1,11 @@
-from ..players.models import Player
-from ..questions.models import Question
+from players.models import Player
+from questions.models import Question
 
 
 def question_set_generator(technology, player1_id, player2_id):
     """player1 is an actual player, player2 might be either live player or bot"""
-    player1_data = Player.objects.get(id=player1_id)
-    player2_data = Player.objects.get(id=player2_id)
+    player1_data = Player.objects.get(pk=player1_id)
+    player2_data = Player.objects.get(pk=player2_id)
 
     if player1_data.rank is not None:
         average_scoring = (player2_data.rank + player1_data.rank)/2
