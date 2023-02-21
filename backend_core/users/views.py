@@ -54,6 +54,7 @@ class GetUserAPIView(RetrieveAPIView):
         return Response(serializer.data)
 
 
+# TODO - fields
 class UserFriendAddAPIView(CreateAPIView):
     queryset = models.UserFriend.objects.all()
     serializer_class = serializers.UserFriendListSerializer
@@ -64,4 +65,3 @@ class UserFriendAddAPIView(CreateAPIView):
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-
