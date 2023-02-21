@@ -43,10 +43,3 @@ def question_set_generator(technology, player1_id, player2_id):
     else:
         question_set = GameSet.objects.filter(technologies=technology).order_by('-difficulty_level')[0:10]
         return question_set
-
-tech = Technology.objects.get(pk=1)
-player_1 = Player.objects.get(pk=1)
-player_2 = Player.objects.get(pk=2)
-
-
-
