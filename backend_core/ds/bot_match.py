@@ -1,6 +1,6 @@
 import random
 
-from ..players.models import Player
+from players.models import Player
 
 
 def match_bot(player_id):
