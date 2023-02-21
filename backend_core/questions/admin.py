@@ -4,10 +4,10 @@ from backend_core.questions.models import Question
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    fields = ('questions', 'answers', 'technologies')
-    list_display = ('pk', 'questions', 'answers', 'technologies')
-    search_fields = ('questions',)
-    list_filter = ('questions', 'technologies')
+    fields = ('question', 'answer', 'technologies')
+    list_display = ('pk', 'question', 'answer', 'technologies')
+    search_fields = ('question',)
+    list_filter = ('question', 'technologies')
     ordering = ('-creation_date',)
 
 
