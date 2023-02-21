@@ -10,7 +10,7 @@ import apple from '../../images/Badgeapple.png'
 
 function Opinions() {
     return (
-        <div className='container'>
+        <div className='container_opinions'>
             <h2 className={`${roboto500.className} hdl`}>Zabawa i&nbsp;nauka w jednym</h2>
             <p className={`${roboto300.className} text`}>Sprawdź swoją wiedzę rywalizując&nbsp;ze znajomymi</p>
 
