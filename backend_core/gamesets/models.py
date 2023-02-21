@@ -24,8 +24,8 @@ class GameSet(models.Model):
 
 
 class Game(models.Model):
-    player_id_1 = models.ForeignKey('players.Player', on_delete=models.CASCADE, related_name='+')
-    player_id_2 = models.ForeignKey('players.Player', on_delete=models.CASCADE, related_name='+')
+    player_id_1 = models.ForeignKey('players.Player', on_delete=models.DO_NOTHING, related_name='+')
+    player_id_2 = models.ForeignKey('players.Player', on_delete=models.DO_NOTHING, related_name='+')
     result = models.IntegerField()
     date_start = models.DateTimeField()
     date_end = models.DateTimeField()
