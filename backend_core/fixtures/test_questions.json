@@ -1,0 +1,1939 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-02-21T17:05:19.388Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Python",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-02-21T17:05:35.492Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "What is Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-02-21T17:06:07.332Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "2",
+      "object_repr": "What is a variable in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-02-21T17:06:42.737Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "3",
+      "object_repr": "What is the difference between \"==\" and \"is\" in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-02-21T17:07:53.318Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "4",
+      "object_repr": "What is the difference between a list and a tuple in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-02-21T17:08:35.930Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "5",
+      "object_repr": "How do you print something in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-02-21T17:09:55.665Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "6",
+      "object_repr": "How do you define a function in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-02-21T17:11:02.687Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "7",
+      "object_repr": "How do you comment code in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-02-21T17:11:35.063Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "8",
+      "object_repr": "What is a for loop in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-02-21T17:12:30.705Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "9",
+      "object_repr": "What is a while loop in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-02-21T17:14:39.840Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "10",
+      "object_repr": "What is a dictionary in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-02-21T17:15:29.814Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "11",
+      "object_repr": "What is the difference between a function and a method in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-02-21T17:16:06.806Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "12",
+      "object_repr": "How do you handle errors in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-02-21T17:16:49.331Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "13",
+      "object_repr": "What is the difference between \"append\" and \"extend\" in Python lists?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-02-21T17:17:33.413Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "14",
+      "object_repr": "What is a lambda function in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-02-21T17:18:28.240Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "15",
+      "object_repr": "How do you sort a list in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-02-21T17:19:04.727Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "16",
+      "object_repr": "What is a generator in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-02-21T17:19:37.894Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "17",
+      "object_repr": "What is a decorator in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-02-21T17:20:40.346Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "18",
+      "object_repr": "What is a set in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-02-21T17:21:37.426Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "19",
+      "object_repr": "What is a module in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-02-21T17:22:40.446Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "20",
+      "object_repr": "What is the output of the following code?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-02-21T17:23:57.432Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "21",
+      "object_repr": "What is the difference between a shallow copy and a deep copy in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-02-21T17:25:24.679Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "22",
+      "object_repr": "What is a context manager in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-02-21T17:26:25.133Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "23",
+      "object_repr": "What is the GIL in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-02-21T17:26:52.441Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "24",
+      "object_repr": "What is the difference between a coroutine and a generator in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-02-21T17:27:46.558Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "25",
+      "object_repr": "What is the purpose of the \"if name == 'main'\" block in a Python program?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-02-21T17:28:46.608Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "26",
+      "object_repr": "What is monkey patching in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-02-21T17:29:13.410Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "27",
+      "object_repr": "What is a metaclass in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-02-21T17:29:47.390Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "28",
+      "object_repr": "What is the difference between the \"is\" and \"==\" operators in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-02-21T17:30:28.117Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "29",
+      "object_repr": "What are decorators in Python and how do they work?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-02-21T17:30:57.215Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "30",
+      "object_repr": "What is a metacircular evaluator in Python?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-02-21T17:31:26.954Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "26",
+      "object_repr": "What is monkey patching in Python?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Difficulty level\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-02-21T17:31:34.978Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "27",
+      "object_repr": "What is a metaclass in Python?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Difficulty level\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-02-21T17:31:42.326Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "28",
+      "object_repr": "What is the difference between the \"is\" and \"==\" operators in Python?",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Difficulty level\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2023-02-21T17:40:03.389Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "Java-Script",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2023-02-21T17:40:13.503Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "31",
+      "object_repr": "What is JavaScript?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2023-02-21T17:40:43.093Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "32",
+      "object_repr": "What is the purpose of a semicolon in JavaScript?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2023-02-21T17:42:15.636Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "33",
+      "object_repr": "What is the output of the following code? console.log(5 + \"5\");",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2023-02-21T17:42:49.165Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "34",
+      "object_repr": "What is the difference between \"==\" and \"===\" in JavaScript?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2023-02-21T17:43:28.009Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "35",
+      "object_repr": "What is the difference between \"let\" and \"var\" in JavaScript?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2023-02-21T17:45:04.498Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "36",
+      "object_repr": "What is a closure in JavaScript?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2023-02-21T17:45:58.164Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "37",
+      "object_repr": "What is the output of the following code? let arr = [1, 2, 3, 4, 5]; arr.splice(1, 2); console.log(arr);",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2023-02-21T17:46:41.951Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "38",
+      "object_repr": "What is the purpose of the \"this\" keyword in JavaScript?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2023-02-21T17:47:16.133Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "39",
+      "object_repr": "What is the difference between \"call\" and \"apply\" in JavaScript?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2023-02-21T17:47:53.004Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "40",
+      "object_repr": "What is a promise in JavaScript?",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 6,
+      "codename": "add_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 6,
+      "codename": "change_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 6,
+      "codename": "delete_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 6,
+      "codename": "view_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add user friend",
+      "content_type": 7,
+      "codename": "add_userfriend"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change user friend",
+      "content_type": 7,
+      "codename": "change_userfriend"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete user friend",
+      "content_type": 7,
+      "codename": "delete_userfriend"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view user friend",
+      "content_type": 7,
+      "codename": "view_userfriend"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add technologies to players",
+      "content_type": 8,
+      "codename": "add_technologiestoplayers"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change technologies to players",
+      "content_type": 8,
+      "codename": "change_technologiestoplayers"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete technologies to players",
+      "content_type": 8,
+      "codename": "delete_technologiestoplayers"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view technologies to players",
+      "content_type": 8,
+      "codename": "view_technologiestoplayers"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add technology",
+      "content_type": 9,
+      "codename": "add_technology"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change technology",
+      "content_type": 9,
+      "codename": "change_technology"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete technology",
+      "content_type": 9,
+      "codename": "delete_technology"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view technology",
+      "content_type": 9,
+      "codename": "view_technology"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add player rank history",
+      "content_type": 10,
+      "codename": "add_playerrankhistory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change player rank history",
+      "content_type": 10,
+      "codename": "change_playerrankhistory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete player rank history",
+      "content_type": 10,
+      "codename": "delete_playerrankhistory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view player rank history",
+      "content_type": 10,
+      "codename": "view_playerrankhistory"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add player",
+      "content_type": 11,
+      "codename": "add_player"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change player",
+      "content_type": 11,
+      "codename": "change_player"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete player",
+      "content_type": 11,
+      "codename": "delete_player"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view player",
+      "content_type": 11,
+      "codename": "view_player"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add source set",
+      "content_type": 12,
+      "codename": "add_sourceset"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change source set",
+      "content_type": 12,
+      "codename": "change_sourceset"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete source set",
+      "content_type": 12,
+      "codename": "delete_sourceset"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view source set",
+      "content_type": 12,
+      "codename": "view_sourceset"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add game set",
+      "content_type": 13,
+      "codename": "add_gameset"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change game set",
+      "content_type": 13,
+      "codename": "change_gameset"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete game set",
+      "content_type": 13,
+      "codename": "delete_gameset"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view game set",
+      "content_type": 13,
+      "codename": "view_gameset"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add game",
+      "content_type": 14,
+      "codename": "add_game"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change game",
+      "content_type": 14,
+      "codename": "change_game"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete game",
+      "content_type": 14,
+      "codename": "delete_game"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view game",
+      "content_type": 14,
+      "codename": "view_game"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add device information",
+      "content_type": 15,
+      "codename": "add_deviceinformation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change device information",
+      "content_type": 15,
+      "codename": "change_deviceinformation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete device information",
+      "content_type": 15,
+      "codename": "delete_deviceinformation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view device information",
+      "content_type": 15,
+      "codename": "view_deviceinformation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add application",
+      "content_type": 16,
+      "codename": "add_application"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change application",
+      "content_type": 16,
+      "codename": "change_application"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete application",
+      "content_type": 16,
+      "codename": "delete_application"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can view application",
+      "content_type": 16,
+      "codename": "view_application"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can add infographic",
+      "content_type": 17,
+      "codename": "add_infographic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can change infographic",
+      "content_type": 17,
+      "codename": "change_infographic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+      "name": "Can delete infographic",
+      "content_type": 17,
+      "codename": "delete_infographic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+      "name": "Can view infographic",
+      "content_type": 17,
+      "codename": "view_infographic"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+      "name": "Can add question",
+      "content_type": 18,
+      "codename": "add_question"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+      "name": "Can change question",
+      "content_type": 18,
+      "codename": "change_question"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+      "name": "Can delete question",
+      "content_type": 18,
+      "codename": "delete_question"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+      "name": "Can view question",
+      "content_type": 18,
+      "codename": "view_question"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "users",
+      "model": "customuser"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "users",
+      "model": "userfriend"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "technologies",
+      "model": "technologiestoplayers"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "technologies",
+      "model": "technology"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "rank_histories",
+      "model": "playerrankhistory"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "players",
+      "model": "player"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "gamesets",
+      "model": "sourceset"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "gamesets",
+      "model": "gameset"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "gamesets",
+      "model": "game"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "applications",
+      "model": "deviceinformation"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "applications",
+      "model": "application"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "infographics",
+      "model": "infographic"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "questions",
+      "model": "question"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "0xyy5jno3vhcx2geig8rd3xmlzi6b6vb",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2pBBwKku3fcMZGAYqRpISrsy3l2bdKHb_977LxVoXUpYe57DxOqijDr8bpHSI9cN8J3qrenU6jJPUW-K3mnXY-P8vO7u30GhXr61MCEPaKwMkIk8MrM_iQhkOHtLNjJASg7BebAOnU_EXhAMGiQ5qvcHAxA4JA:1pUVzu:66VrhaZA3F5fa-WDxmlVK4Q1ACYZH1cXi1msyDYhEaY",
+      "expire_date": "2023-03-07T17:00:10.282Z"
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$Qg6T7YM8CuE2JWvxlw9136$OsmPRHxfUIDxeORYNgLOSAGesrOkrE3sViHLoV6hbXE=",
+      "last_login": "2023-02-21T17:00:10.201Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-02-21T16:59:46.399Z",
+      "email": "a@a.pl",
+      "username": "aa",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "technologies.technology",
+    "pk": 1,
+    "fields": {
+      "name": "Python"
+    }
+  },
+  {
+    "model": "technologies.technology",
+    "pk": 2,
+    "fields": {
+      "name": "Java-Script"
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 1,
+    "fields": {
+      "question": "What is Python?",
+      "correct_answer": "A programming language commonly used for web development",
+      "wrong_answer_1": "A database management system",
+      "wrong_answer_2": "A graphics rendering engine",
+      "wrong_answer_3": "A text editor",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 2,
+    "fields": {
+      "question": "What is a variable in Python?",
+      "correct_answer": "A named storage location for data",
+      "wrong_answer_1": "A keyword that indicates a function",
+      "wrong_answer_2": "A data structure used to store multiple items of the same type",
+      "wrong_answer_3": "A special type of function that returns a value",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 3,
+    "fields": {
+      "question": "What is the difference between \"==\" and \"is\" in Python?",
+      "correct_answer": "\"==\" compares values, while \"is\" compares object identity",
+      "wrong_answer_1": "They are the same thing",
+      "wrong_answer_2": "\"is\" compares values, while \"==\" compares object identity",
+      "wrong_answer_3": "They both compare object identity and are interchangeable",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 4,
+    "fields": {
+      "question": "What is the difference between a list and a tuple in Python?",
+      "correct_answer": "A list is mutable, while a tuple is immutable",
+      "wrong_answer_1": "A list can only contain elements of the same type, while a tuple can contain elements of different types",
+      "wrong_answer_2": "A list can be nested, while a tuple cannot be nested",
+      "wrong_answer_3": "There is no difference between a list and a tuple",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 5,
+    "fields": {
+      "question": "How do you print something in Python?",
+      "correct_answer": "print()",
+      "wrong_answer_1": "console.log()",
+      "wrong_answer_2": "console.print()",
+      "wrong_answer_3": "log()",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 6,
+    "fields": {
+      "question": "How do you define a function in Python?",
+      "correct_answer": "def function_name(arguments):",
+      "wrong_answer_1": "function_name(arguments):",
+      "wrong_answer_2": "function function_name(arguments):",
+      "wrong_answer_3": "def(arguments) function_name:",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 7,
+    "fields": {
+      "question": "How do you comment code in Python?",
+      "correct_answer": "# Single-line comments",
+      "wrong_answer_1": "// Single-line comments",
+      "wrong_answer_2": "/* Multi-line comments */",
+      "wrong_answer_3": "<!-- Single-line comments -->",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 8,
+    "fields": {
+      "question": "What is a for loop in Python?",
+      "correct_answer": "A loop that iterates over a sequence of elements",
+      "wrong_answer_1": "A loop that executes a set number of times",
+      "wrong_answer_2": "A loop that executes until a condition is met",
+      "wrong_answer_3": "A loop that executes only once",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 9,
+    "fields": {
+      "question": "What is a while loop in Python?",
+      "correct_answer": "A loop that executes until a condition is met",
+      "wrong_answer_1": "A loop that executes a set number of times",
+      "wrong_answer_2": "A loop that iterates over a sequence of elements",
+      "wrong_answer_3": "A loop that executes only once",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 10,
+    "fields": {
+      "question": "What is a dictionary in Python?",
+      "correct_answer": "A data structure that stores a collection of key-value pairs",
+      "wrong_answer_1": "A data structure that stores a sequence of elements",
+      "wrong_answer_2": "A data structure that stores a hierarchy of elements",
+      "wrong_answer_3": "A data structure that stores elements in a tree-like structure",
+      "difficulty_level": 1,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 11,
+    "fields": {
+      "question": "What is the difference between a function and a method in Python?",
+      "correct_answer": "A function is called with arguments, while a method is called with a self parameter",
+      "wrong_answer_1": "A function is defined inside a class, while a method is defined outside a class",
+      "wrong_answer_2": "A function returns a value, while a method modifies the object it belongs to",
+      "wrong_answer_3": "A function is defined with the \"def\" keyword, while a method is defined with the \"method\" keyword",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 12,
+    "fields": {
+      "question": "How do you handle errors in Python?",
+      "correct_answer": "Using try-except blocks",
+      "wrong_answer_1": "Using switch statements",
+      "wrong_answer_2": "Using if-else statements",
+      "wrong_answer_3": "Using for loops",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 13,
+    "fields": {
+      "question": "What is the difference between \"append\" and \"extend\" in Python lists?",
+      "correct_answer": "\"append\" adds an element to the end of the list, while \"extend\" adds another list to the end of the list",
+      "wrong_answer_1": "\"append\" adds a list to the end of another list, while \"extend\" adds an element to the end of the list",
+      "wrong_answer_2": "\"append\" and \"extend\" are interchangeable and do the same thing",
+      "wrong_answer_3": "\"append\" and \"extend\" both remove the last element of a list",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 14,
+    "fields": {
+      "question": "What is a lambda function in Python?",
+      "correct_answer": "A function that is defined with the \"lambda\" keyword and has no name",
+      "wrong_answer_1": "A function that can be called with an arbitrary number of arguments",
+      "wrong_answer_2": "A function that can be used to generate random numbers",
+      "wrong_answer_3": "A function that can be used to modify the state of an object",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 15,
+    "fields": {
+      "question": "How do you sort a list in Python?",
+      "correct_answer": "Using the \"sorted\" function",
+      "wrong_answer_1": "Using the \"sort\" method of a list",
+      "wrong_answer_2": "Using the \"reverse\" method of a list",
+      "wrong_answer_3": "Using the \"shuffle\" function of the \"random\" module",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 16,
+    "fields": {
+      "question": "What is a generator in Python?",
+      "correct_answer": "A function that yields a sequence of values, one at a time, rather than returning them all at once",
+      "wrong_answer_1": "A function that generates random numbers",
+      "wrong_answer_2": "A data structure that stores a hierarchy of elements",
+      "wrong_answer_3": "A function that can be used to modify the state of an object",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 17,
+    "fields": {
+      "question": "What is a decorator in Python?",
+      "correct_answer": "A function that takes another function as input and returns a modified version of that function",
+      "wrong_answer_1": "A function that can be used to generate random numbers",
+      "wrong_answer_2": "A function that can be used to modify the state of an object",
+      "wrong_answer_3": "A function that takes a list as input and returns a sorted list",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 18,
+    "fields": {
+      "question": "What is a set in Python?",
+      "correct_answer": "A data structure that stores a collection of unique elements with no particular order",
+      "wrong_answer_1": "A data structure that stores a sequence of elements",
+      "wrong_answer_2": "A data structure that stores a collection of key-value pairs",
+      "wrong_answer_3": "A data structure that stores a hierarchy of elements",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 19,
+    "fields": {
+      "question": "What is a module in Python?",
+      "correct_answer": "A file containing Python code that can be imported and used in another Python program",
+      "wrong_answer_1": "A function that generates random numbers",
+      "wrong_answer_2": "A data structure that stores a collection of key-value pairs",
+      "wrong_answer_3": "Lambda function",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 20,
+    "fields": {
+      "question": "What is the output of the following code?",
+      "correct_answer": "A. [7, 9, 11, 13, 15]",
+      "wrong_answer_1": "B. [1, 2, 3, 4, 5]",
+      "wrong_answer_2": "C. [6, 7, 8, 9, 10]",
+      "wrong_answer_3": "D. [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+      "difficulty_level": 2,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 21,
+    "fields": {
+      "question": "What is the difference between a shallow copy and a deep copy in Python?",
+      "correct_answer": "A shallow copy creates a new object that references the original object, while a deep copy creates a new object with new memory that is an exact copy of the original object",
+      "wrong_answer_1": "A shallow copy creates a new object with new memory that is an exact copy of the original object, while a deep copy creates a new object that references the original object",
+      "wrong_answer_2": "A shallow copy creates a new object that is a partial copy of the original object, while a deep copy creates a new object that is a full copy of the original object",
+      "wrong_answer_3": "A shallow copy and a deep copy are the same thing",
+      "difficulty_level": 3,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 22,
+    "fields": {
+      "question": "What is a context manager in Python?",
+      "correct_answer": "A construct that enables resource acquisition and release",
+      "wrong_answer_1": "A function that can be used to modify the state of an object",
+      "wrong_answer_2": "A function that takes a list as input and returns a sorted list",
+      "wrong_answer_3": "A data structure that stores a collection of key-value pairs",
+      "difficulty_level": 3,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 23,
+    "fields": {
+      "question": "What is the GIL in Python?",
+      "correct_answer": "A lock that prevents multiple threads from executing Python code at once",
+      "wrong_answer_1": "A construct that enables resource acquisition and release",
+      "wrong_answer_2": "A data structure that stores a collection of key-value pairs",
+      "wrong_answer_3": "A function that takes a list as input and returns a sorted list",
+      "difficulty_level": 3,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 24,
+    "fields": {
+      "question": "What is the difference between a coroutine and a generator in Python?",
+      "correct_answer": "A coroutine is a special type of generator that can receive input, while a generator only yields output",
+      "wrong_answer_1": "A generator is a special type of coroutine that can receive input, while a coroutine only yields output",
+      "wrong_answer_2": "A coroutine and a generator are the same thing",
+      "wrong_answer_3": "A coroutine is a function that can be used to modify the state of an object, while a generator is a function that yields a sequence of values, one at a time",
+      "difficulty_level": 3,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 25,
+    "fields": {
+      "question": "What is the purpose of the \"if name == 'main'\" block in a Python program?",
+      "correct_answer": "To check whether the program is being run as the main module or as a module imported by another program",
+      "wrong_answer_1": "To define the main function of the program",
+      "wrong_answer_2": "To import the main module of the program",
+      "wrong_answer_3": "To terminate the program if a specific condition is not met",
+      "difficulty_level": 3,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 26,
+    "fields": {
+      "question": "What is monkey patching in Python?",
+      "correct_answer": "A technique used to dynamically modify the behavior of a function or method at runtime",
+      "wrong_answer_1": "A technique used to fix syntax errors in a function or method",
+      "wrong_answer_2": "A technique used to optimize the performance of a function or method",
+      "wrong_answer_3": "A technique used to restrict access to a function or method",
+      "difficulty_level": 4,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 27,
+    "fields": {
+      "question": "What is a metaclass in Python?",
+      "correct_answer": "A class that provides methods for creating other classes",
+      "wrong_answer_1": "A class that defines the behavior of other classes",
+      "wrong_answer_2": "A class that represents a collection of classes",
+      "wrong_answer_3": "A class that provides methods for accessing and modifying the attributes of other classes",
+      "difficulty_level": 4,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 28,
+    "fields": {
+      "question": "What is the difference between the \"is\" and \"==\" operators in Python?",
+      "correct_answer": "The \"is\" operator checks if two objects are the same object, while the \"==\" operator checks if two objects are equivalent",
+      "wrong_answer_1": "The \"is\" operator compares the values of two objects, while the \"==\" operator compares the memory addresses of two objects",
+      "wrong_answer_2": "The \"==\" operator compares the values of two objects, while the \"is\" operator compares the memory addresses of two objects",
+      "wrong_answer_3": "The \"==\" operator checks if two objects are the same object, while the \"is\" operator checks if two objects are equivalent",
+      "difficulty_level": 4,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 29,
+    "fields": {
+      "question": "What are decorators in Python and how do they work?",
+      "correct_answer": "Decorators are functions that modify the behavior of other functions, by wrapping them with additional functionality",
+      "wrong_answer_1": "Decorators are special classes that can be used to modify the behavior of other classes",
+      "wrong_answer_2": "Decorators are modules that can be used to extend the functionality of Python",
+      "wrong_answer_3": "Decorators are built-in Python functions that can be used to modify the behavior of other built-in functions",
+      "difficulty_level": 4,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 30,
+    "fields": {
+      "question": "What is a metacircular evaluator in Python?",
+      "correct_answer": "A function that implements an interpreter for a programming language in the same language",
+      "wrong_answer_1": "A function that evaluates the behavior of other functions",
+      "wrong_answer_2": "A function that can be used to create other functions",
+      "wrong_answer_3": "A function that defines the behavior of other functions",
+      "difficulty_level": 4,
+      "technology": 1
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 31,
+    "fields": {
+      "question": "What is JavaScript?",
+      "correct_answer": "A client-side programming language",
+      "wrong_answer_1": "A markup language",
+      "wrong_answer_2": "A database language",
+      "wrong_answer_3": "SQl dialect",
+      "difficulty_level": 1,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 32,
+    "fields": {
+      "question": "What is the purpose of a semicolon in JavaScript?",
+      "correct_answer": "To end a statement",
+      "wrong_answer_1": "To start a statement",
+      "wrong_answer_2": "To comment out a line of code",
+      "wrong_answer_3": "To declare a variable",
+      "difficulty_level": 1,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 33,
+    "fields": {
+      "question": "What is the output of the following code? console.log(5 + \"5\");",
+      "correct_answer": "\"55\"",
+      "wrong_answer_1": "55",
+      "wrong_answer_2": "10",
+      "wrong_answer_3": "\"10\"",
+      "difficulty_level": 1,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 34,
+    "fields": {
+      "question": "What is the difference between \"==\" and \"===\" in JavaScript?",
+      "correct_answer": "\"==\" compares the values of two variables, while \"===\" compares both the values and the types of the variables",
+      "wrong_answer_1": "\"===\" compares the values of two variables, while \"==\" compares both the values and the types of the variables",
+      "wrong_answer_2": "There is no difference between \"==\" and \"===\"",
+      "wrong_answer_3": "\"==\" and \"===\" are both used for assignment",
+      "difficulty_level": 1,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 35,
+    "fields": {
+      "question": "What is the difference between \"let\" and \"var\" in JavaScript?",
+      "correct_answer": "\"let\" is block-scoped, while \"var\" is function-scoped",
+      "wrong_answer_1": "There is no difference between \"let\" and \"var\"",
+      "wrong_answer_2": "\"var\" is block-scoped, while \"let\" is function-scoped",
+      "wrong_answer_3": "\"let\" is used to declare constant variables, while \"var\" is used to declare variables that can be reassigned",
+      "difficulty_level": 2,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 36,
+    "fields": {
+      "question": "What is a closure in JavaScript?",
+      "correct_answer": "A function that retains access to variables in its parent scope",
+      "wrong_answer_1": "A function that has no name",
+      "wrong_answer_2": "A function that can be called multiple times with different arguments",
+      "wrong_answer_3": "A function that returns another function",
+      "difficulty_level": 2,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 37,
+    "fields": {
+      "question": "What is the output of the following code? let arr = [1, 2, 3, 4, 5]; arr.splice(1, 2); console.log(arr);",
+      "correct_answer": "[1, 2, 5]",
+      "wrong_answer_1": "[1, 2, 3, 4, 5]",
+      "wrong_answer_2": "[2, 3]",
+      "wrong_answer_3": "[3, 4]",
+      "difficulty_level": 2,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 38,
+    "fields": {
+      "question": "What is the purpose of the \"this\" keyword in JavaScript?",
+      "correct_answer": "To refer to the object that the function belongs to",
+      "wrong_answer_1": "To refer to the global object",
+      "wrong_answer_2": "To refer to the parent object of the current object",
+      "wrong_answer_3": "To refer to the object that was passed as an argument to the function",
+      "difficulty_level": 3,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 39,
+    "fields": {
+      "question": "What is the difference between \"call\" and \"apply\" in JavaScript?",
+      "correct_answer": "\"apply\" is used to pass arguments to a function as an array, while \"call\" is used to pass arguments to a function individually",
+      "wrong_answer_1": "There is no difference between \"call\" and \"apply\"",
+      "wrong_answer_2": "\"call\" is used to pass arguments to a function as an array, while \"apply\" is used to pass arguments to a function individually",
+      "wrong_answer_3": "\"call\" and \"apply\" are both used to define and call functions in JavaScript",
+      "difficulty_level": 3,
+      "technology": 2
+    }
+  },
+  {
+    "model": "questions.question",
+    "pk": 40,
+    "fields": {
+      "question": "What is a promise in JavaScript?",
+      "correct_answer": "An object that represents a value that may not be available yet",
+      "wrong_answer_1": "A function that is called when an error occurs in JavaScript",
+      "wrong_answer_2": "A built-in JavaScript data type that represents an array of values",
+      "wrong_answer_3": "A keyword used to define asynchronous functions in JavaScript",
+      "difficulty_level": 4,
+      "technology": 2
+    }
+  }
+]
