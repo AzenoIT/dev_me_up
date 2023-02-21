@@ -7,6 +7,80 @@
 	},
 	"item": [
 		{
+			"name": "JWT",
+			"item": [
+				{
+					"name": "User Get Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"adam@o.pl\",\n    \"password\": \"dev_me_up\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/token/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Get Token Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"adam@o.pl\",\n    \"password\": \"dev_me_up\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "User",
 			"item": [
 				{
@@ -16,7 +90,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"oOoOoOoOo\",\n    \"email\": \"oOo@o.pl\",\n    \"password\": \"dev_me_up\",\n    \"first_name\": \"OoOoO\",\n    \"last_name\": \"oooOOOooo\"\n}",
+							"raw": "{\n    \"username\": \"oOoOoOoOo\",\n    \"email\": \"adam@o.pl\",\n    \"password\": \"dev_me_up\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
