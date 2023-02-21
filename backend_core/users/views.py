@@ -1,11 +1,7 @@
 from django.contrib.auth import get_user_model
 from rest_framework import status
-<<<<<<< HEAD
 from rest_framework.generics import CreateAPIView, UpdateAPIView
-=======
 from rest_framework.generics import CreateAPIView, RetrieveAPIView
-from rest_framework.permissions import IsAuthenticated
->>>>>>> 90df9f2e6185bc56617424a63776203df4bfa2ef
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 
