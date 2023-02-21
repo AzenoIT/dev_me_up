@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "92f76070-1940-4c86-9ac0-dec3bbcdb80c",
+		"_postman_id": "fc2e0896-7fb5-41b6-b5d2-bbec86dc0a90",
 		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24410131"
+		"_exporter_id": "19471961"
 	},
 	"item": [
 		{
@@ -111,6 +111,86 @@
 								"api",
 								"v1",
 								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc2OTgxMDUzLCJpYXQiOjE2NzY5ODA3NTMsImp0aSI6IjQ4M2U2ZmE4OWU4MjQyMWZhMGE1NTg4ZDI5ZmFiZjdlIiwidXNlcl9pZCI6NX0.Cd9K1SbKO0ZBRfevKOjIlvN9xSS99WAPKk9lYZDDNKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test3.com\",\n    \"password\": \"qwert123!\",\n    \"username\": \"testuser000323230\",\n    \"first_name\": \"\",\n    \"last_name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/users/5/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"5",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user get tokens",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@test3.com\",\n    \"password\": \"qwert123!\",\n    \"username\": \"testuser3333333\",\n    \"first_name\": \"\",\n    \"last_name\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/api/token/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"api",
+								"token",
 								""
 							]
 						}

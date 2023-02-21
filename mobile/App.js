@@ -1,38 +1,24 @@
-import Login from "./components/Login/Login";
-import SignUp from "./components/SignUp/SignUp";
-import {AuthProvider} from "./context/AuthProvider";
-import useAuth from "./hooks/useAuth";
+import 'react-native-gesture-handler';
 
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {NavigationContainer} from "@react-navigation/native";
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Challenge from "./components/Challenge/Challenge";
-import Friends from "./components/Friends/Friends";
-import ProfileSettings from "./components/ProfileSettings/ProfileSettings";
-import Rankings from "./components/Rankings/Rankings";
 
-const Tab = createBottomTabNavigator();
+import {Provider as MenuProvider} from 'react-native-paper';
+import {AxiosProvider} from "./context/AxiosContext";
+import {AuthProvider} from "./context/AuthContext";
+
+import Outlet from "./Outlet";
+
+
 export default function App() {
-const {auth} = useAuth();
     return (
         <NavigationContainer>
             <AuthProvider>
-                <Tab.Navigator initialRouteName="Main">
-                    {!auth ? (
-                        <>
-                            <Tab.Screen name="Home" component={Challenge}/>
-                            <Tab.Screen name="Battle" component={Challenge}/>
-                            <Tab.Screen name="Friends" component={Friends}/>
-                            <Tab.Screen name="Settings" component={ProfileSettings}/>
-                            <Tab.Screen name="Rankings" component={Rankings}/>
-                        </>
-                    ) : (
-                        <>
-                            <Tab.Screen name="SignUp" component={SignUp}/>
-                            <Tab.Screen name="Login" component={Login}/>
-                        </>
-                    )}
-                </Tab.Navigator>
+                <AxiosProvider>
+                    <MenuProvider>
+                        <Outlet />
+                    </MenuProvider>
+                </AxiosProvider>
             </AuthProvider>
         </NavigationContainer>
     );
