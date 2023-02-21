@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "fc2e0896-7fb5-41b6-b5d2-bbec86dc0a90",
+		"_postman_id": "81e6f6a5-6597-4a16-8f3c-37c633676f85",
 		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19471961"
+		"_exporter_id": "25165670"
 	},
 	"item": [
 		{
@@ -191,6 +191,36 @@
 								"v1",
 								"api",
 								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Infographic",
+			"item": [
+				{
+					"name": "Infographic all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/infographics/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"infographics",
 								""
 							]
 						}
