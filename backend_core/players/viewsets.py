@@ -22,13 +22,16 @@ class PlayerViewSet(ViewSet):
         return Response(serializer.data)
 
     def partial_update(self, request, pk=None):
-        pass
+        player = get_object_or_404(queryset=self.queryset, pk=pk)
+        serializer = serializers.PlayerSerializer(player, data=request.data, partial=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(status=status.HTTP_200_OK)
 
     # TODO change float to bool
     def destroy(self, request, pk=None):
         player = get_object_or_404(queryset=self.queryset, pk=pk)
         player.is_active = 0.0
-        # serializer = serializers.PlayerSerializer(player)
         player.save()
         return Response(status=status.HTTP_200_OK)
 
