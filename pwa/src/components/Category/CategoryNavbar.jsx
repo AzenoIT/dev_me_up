@@ -2,6 +2,7 @@ import {AppBar, Box, styled, Toolbar, Typography} from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
+import IconButton from "@mui/material/IconButton";
 
 const StyledToolBar = styled(Toolbar)({
     display: "flex",
@@ -11,21 +12,32 @@ const StyledToolBar = styled(Toolbar)({
 })
 
 const NavBox = styled(Box)({
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'center'
 })
 
-function Navbar() {
+const NavTypo = styled(Typography)({
+    fontSize: '22px',
+    fontWeight: '400',
+    fontFamily: 'Roboto, sans-serif'
+})
+
+function CategoryNavbar() {
     return (
         <AppBar position='sticky'>
             <StyledToolBar>
                 <NavBox>
-                    <ArrowBackIcon/>
-                    <Typography>Wybór technologii</Typography>
+                    <IconButton>
+                        <ArrowBackIcon/>
+                    </IconButton>
+                    <NavTypo>Wybór technologii</NavTypo>
                 </NavBox>
-                <MenuIcon/>
+                <IconButton>
+                    <MenuIcon/>
+                </IconButton>
             </StyledToolBar>
         </AppBar>
     );
 }
 
-export default Navbar;
+export default CategoryNavbar;

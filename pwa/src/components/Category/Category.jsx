@@ -1,34 +1,38 @@
 import '../../styles/main.scss'
-import {Container, Grid, Paper, styled} from "@mui/material";
+import {Container, Grid, Icon, Paper, styled} from "@mui/material";
 import React from "react";
-import Navbar from "../Category/Navbar";
-
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(8),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    borderRadius: '16px',
-}));
-
-
+import CategoryNavbar from "./CategoryNavbar";
+import {Image} from "@mui/icons-material";
+import images from './photos'
+import IconButton from "@mui/material/IconButton";
 
 const GridContainer = styled(Container)({
-    marginTop: '10px',
+    marginTop: '20px',
     marginBottom: '10px'
 })
 
+const Item = styled(Paper)({
+    backgroundColor: '#FFFBFE',
+    borderRadius: '16px',
+    aspectRatio: '1/1',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+})
 
 function Category() {
     return (
         <>
-            <Navbar/>
-            <GridContainer>
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                    {Array.from(Array(24)).map((_, index) => (
-                        <Grid item xs={2} sm={4} md={4} key={index}>
-                            <Item>Nazwa</Item>
+            <CategoryNavbar/>
+            <GridContainer sm={{
+                flexGrow: 1
+            }}>
+                <Grid container spacing={2}>
+                    {images.map((item) => (
+                        <Grid item xs={6} sm={4} md={3} key={item}>
+                                <Item>
+                                    <img src={item} alt="" style={{width: '90%', height: '90%',}}/>
+                                </Item>
                         </Grid>
                     ))}
                 </Grid>

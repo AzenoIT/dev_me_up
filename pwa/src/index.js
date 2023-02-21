@@ -12,7 +12,7 @@ import Layout from "./components/Layout/Layout";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/category",
         element: <Category />
     },
     {
