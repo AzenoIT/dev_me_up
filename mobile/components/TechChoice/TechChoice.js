@@ -1,95 +1,126 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { Card, IconButton, Checkbox } from "react-native-paper";
-import { useState } from "react";
+import { StyleSheet, View } from "react-native";
+import { Avatar, Button, Card, Text } from "react-native-paper";
+import SelectDropdown from "react-native-select-dropdown";
 
-const techStack = [
-	{
-		name: "Python",
-		key: "py",
-		copy: "Naucz się xyz. Będzie super",
-		img: "",
-	},
-	{
-		name: "JavaScript",
-		key: "js",
-		copy: "Zostań królem frontendu w 2h",
-		img: "",
-	},
-	{
-		name: "Go Lang",
-		key: "gl",
-		copy: "Zacznij naukę, albo idź do domu",
-		img: "",
-	},
-	{
-		name: "Rust",
-		key: "ru",
-		copy: "Nowy hype, nie zardzewiej",
-		img: "",
-	},
-];
+import { useState } from "react";
+import { TouchableOpacity } from "react-native-gesture-handler";
+
+const levels = ["don't train", "junior", "mid", "senior", "principle"];
 
 function TechChoice() {
-	const [isSelected, setIsSelected] = useState(false);
-	const [checkedTech, setCheckedTech] = useState(
+	const [techStack, setTechStack] = useState([
 		{
+			id: 1,
 			name: "Python",
-			key: "py",
-			copy: "Naucz się xyz. Będzie super",
-			img: "",
-			checked: false
+			active: false,
+			showSelect: false,
+			level: "",
+			logo: "120",
 		},
 		{
-			name: "JavaScript",
-			key: "js",
-			copy: "Zostań królem frontendu w 2h",
-			img: "",
-			checked: false
+			id: 2,
+			name: "Java Script",
+			active: false,
+			showSelect: false,
+			level: "",
+			logo: "331",
 		},
 		{
-			name: "Go Lang",
-			key: "gl",
-			copy: "Zacznij naukę, albo idź do domu",
-			img: "",
-			checked: false
+			id: 3,
+			name: "PhpStorm",
+			active: false,
+			showSelect: false,
+			level: "",
+			logo: "211",
 		},
 		{
-			name: "Rust",
-			key: "ru",
-			copy: "Nowy hype, nie zardzewiej",
-			img: "",
-			checked: false
-		}
-	);
+			id: 4,
+			name: "MS DOS",
+			active: false,
+			showSelect: false,
+			level: "",
+			logo: "121",
+		},
+		{
+			id: 5,
+			name: "C#",
+			active: false,
+			showSelect: false,
+			level: "",
+			logo: "136",
+		},
+		{
+			id: 6,
+			name: "CSS",
+			active: false,
+			showSelect: false,
+			level: "",
+			logo: "117",
+		},
+	]);
 
 	return (
 		<View style={styles.container}>
-			<Text>TechChoice</Text>
+			{/* <Text variant="titleLarge">Wybierz z technologie</Text> */}
+			<View style={styles.grid}>
+				{techStack.map((item) => (
+					<View key={item.id}>
+						<TouchableOpacity
+						// onPress={
+						// 	() =>
+						// 		setTechStack((prevState) => {
+						// 			const modifiedState = prevState.map((element) => {
+						// 				element.id === item.id
+						// 					? {
+						// 							...element,
+						// 							showSelect: true,
+						// 					  }
+						// 					: item;
+						// 			});
+						// 			return modifiedState;
+						// 		})
 
-			{/* {techStack.map((item) => (
-				<Card.Title
-					title={item.name}
-					key={item.name}
-					subtitle={item.copy}
-					right={(props) => (
-						<IconButton
-							{...props}
-							icon={isSelected ? "heart" : "heart-outline"}
-							onPress={() => setIsSelected(!isSelected)}
-						/>
-					)}
-				/>
-			))} */}
-
-			{techStack.map((item) => (
-				<Checkbox.Item
-					label={item.name}
-					key={item.key}
-					status={checkedTech[`${item.key}`] ? "checked" : "unchecked"}
-					onPress={() => checkedTech(!setCheckedTech)}
-				/>
-			))}
+						// 	// {}
+						// }
+						>
+							<View style={styles.card}>
+								{!item.showSelect ? (
+									<Card>
+										<Card.Content>
+											<Text variant="titleLarge" style={styles.title}>
+												{item.name}
+											</Text>
+											{/* <Text variant="bodyMedium">Card content</Text> */}
+										</Card.Content>
+										<Card.Cover
+											style={styles.picture}
+											source={{ uri: `https://picsum.photos/${item.logo}` }}
+										/>
+									</Card>
+								) : (
+									<SelectDropdown
+										data={levels}
+										onSelect={(selectedItem, index) => {
+											console.log(selectedItem, index);
+											item.level = selectedItem;
+										}}
+										buttonTextAfterSelection={(selectedItem, index) => {
+											// text represented after item is selected
+											// if data array is an array of objects then return selectedItem.property to render after item is selected
+											return selectedItem;
+										}}
+										rowTextForSelection={(item, index) => {
+											// text represented for each item in dropdown
+											// if data array is an array of objects then return item.property to represent item in dropdown
+											return item;
+										}}
+									/>
+								)}
+							</View>
+						</TouchableOpacity>
+					</View>
+				))}
+			</View>
 		</View>
 	);
 }
@@ -100,6 +131,30 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 		alignItems: "center",
 		justifyContent: "center",
+		padding: 10,
+	},
+
+	grid: {
+		flex: 1,
+		rowGap: 4,
+		columnGap: 4,
+		flexWrap: "wrap",
+	},
+
+	card: {
+		// marginTop: 10,
+		margin: 10,
+	},
+
+	title: {
+		fontWeight: "bold",
+		textAlign: "center",
+		marginBottom: 6
+	},
+
+	picture: {
+		width: 180,
+		height: 180,
 	},
 });
 
