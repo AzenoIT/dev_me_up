@@ -1,7 +1,6 @@
 'use client'
 
 import '../../styles/opinions.css'
-
 import {Button} from "@mui/material";
 
 

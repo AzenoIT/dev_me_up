@@ -1,0 +1,51 @@
+
+
+.hd1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 62px;
+    align-items: center;
+    text-align: center;
+    color: #000;
+}
+
+.hd3 {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000;
+
+}
+
+.btn-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 157px;
+    height: 40px;
+    left: 23px;
+    top: 721px;
+    border-radius: 100px;
+}
+
+.btn-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    position: absolute;
+    width: 117px;
+    height: 40px;
+    left: 219px;
+    top: 721px;
+    border-radius: 100px;
+}
