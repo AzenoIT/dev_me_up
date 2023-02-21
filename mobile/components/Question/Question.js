@@ -4,11 +4,13 @@ import {useEffect, useState} from "react";
 import {CountdownCircleTimer, useCountdown} from 'react-native-countdown-circle-timer'
 import callApi from "../../helpers/api";
 
-const totalTime = 17;
+const totalTime = 20;
 
 function Question(tech) {
     const theme = useTheme();
     const [reveal, setReveal] = useState(false);
+    const [qna, setQna] = useState([]);
+    const [count, setCount] = useState(1);
     const {
         path,
         pathLength,
@@ -24,7 +26,7 @@ function Question(tech) {
     useEffect(() => {
         callApi({endpoint: `/questions/${tech}/1`})
             .then((response) => {
-                setQuestionList(response)
+                setQna(response)
             }).catch((error) => {
         });
 
@@ -68,14 +70,14 @@ function Question(tech) {
 
     return (
         <Card style={styles.card}>
-            <Card.Title title={'Pytanie1'} style={styles.hdn}/>
+            <Card.Title title={`Pytanie ${count}`} style={styles.hdn}/>
 
             <Card.Content style={styles.content}>
                 <Text
                     style={styles.question}
                 >
-                    Python python python python python python python python python
-                    python</Text>
+
+                </Text>
                 <Divider/>
             </Card.Content>
             <Card.Actions style={styles.container}>
@@ -112,7 +114,7 @@ function Question(tech) {
                         {reveal === false ? (
                             < CountdownCircleTimer
                             isPlaying
-                            duration={7}
+                            duration={totalTime}
                             colors={['#004777', '#F7B801', '#A30000', '#A30000']}
                             colorsTime={[7, 5, 2, 0]}
                             size={80}

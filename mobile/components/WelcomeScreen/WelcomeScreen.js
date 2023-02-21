@@ -74,7 +74,7 @@ function WelcomeScreen({navigation}) {
             <Button
                 icon="account-eye-outline"
                 mode="contained"
-                onPress={goTo(navigation, "Battle")}
+                onPress={goTo(navigation, "Question")}
                 style={styles.play_btn}
             >
                 Play as a guest

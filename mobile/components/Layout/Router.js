@@ -15,8 +15,8 @@ function Router() {
                          screenOptions={{
                              header: (props) => <AzAppBar {...props} />,
                          }}>
-            <Stack.Screen name="Question" component={Question}/>
             <Stack.Screen name="Welcome!" component={WelcomeScreen}/>
+            <Stack.Screen name="Question" component={Question}/>
             <Stack.Screen name="Profile" component={ProfileSettings}/>
             <Stack.Screen name="Rankings" component={Rankings}/>
             <Stack.Screen name="SignUp" component={SignUp}/>
