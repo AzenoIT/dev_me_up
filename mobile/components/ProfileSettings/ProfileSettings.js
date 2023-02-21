@@ -1,19 +1,83 @@
 import {StatusBar} from "expo-status-bar";
 import {SafeAreaView, ScrollView, StyleSheet, Text, View} from "react-native"
 import {Avatar, Button, TextInput, List, Switch, Divider, useTheme} from 'react-native-paper';
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {goTo} from "../../helpers/router";
+import {useNavigation} from "@react-navigation/native";
+import {getData, storeData} from "../../helpers/storage_helpers";
+import callApi from "../../helpers/api";
 
 function ProfileSettings() {
-    const [text, setText] = useState("Masturbator1000");
-    const [isSearchVisible, setIsSearchVisible] = useState(true);
-    const [isRankingVisible, setIsRankingVisible] = useState(true);
+    const [text, setText] = useState("");
+    const [isSearchVisible, setIsSearchVisible] = useState(false);
+    const [isRankingVisible, setIsRankingVisible] = useState(false);
     const [isDark, setIsDark] = useState(false);
+    const [rank, setRank] = useState(0);
+    const [profile, setProfile] = useState({});
+
+    const navigation = useNavigation();
 
     const theme = useTheme();
 
-    const onToggleSearchVisible = () => setIsSearchVisible(!isSearchVisible);
-    const onToggleRankingVisible = () => setIsRankingVisible(!isRankingVisible);
-    const onToggleDark = () => setIsDark(!isDark);
+    useEffect(() => {
+        handleData().catch(console.log);
+    }, []);
+
+    async function handleData() {
+        let data = await getData('profile');
+
+        if (!data) {
+            data = await callApi({
+                endpoint: '/players/1'
+            });
+        }
+
+        setState(data);
+    }
+
+    const setState = async (data) => {
+        setText(data?.username);
+        setIsSearchVisible(data?.isSearchVisible);
+        setIsRankingVisible(data?.isRankingVisible);
+        setIsDark(data?.theme);
+        setRank(data?.score);
+        setProfile(data);
+
+        await storeData('profile', data);
+    }
+
+    const updateStorage = async (key, value) => {
+        await storeData('profile', {
+            ...profile,
+            [key]: value
+        });
+    }
+
+    const onToggleSearchVisible = async () => {
+        const newSearchVisible = !isSearchVisible;
+
+        setIsSearchVisible(newSearchVisible)
+        await updateStorage('isSearchVisible', newSearchVisible);
+    };
+    const onToggleRankingVisible = async () => {
+        const newRankingVisible = !isRankingVisible;
+        setIsRankingVisible(newRankingVisible);
+
+        await updateStorage('isRankingVisible', newRankingVisible);
+    };
+    const onToggleDark = async () => {
+        const newTheme = !isDark;
+        setIsDark(newTheme);
+
+        await updateStorage('theme', newTheme);
+    }
+
+    const handleInput = async (text) => {
+        setText(text);
+
+        await updateStorage('username', text);
+    }
+
 
     return (
         <SafeAreaView style={styles.containerSafe}>
@@ -30,25 +94,25 @@ function ProfileSettings() {
                             label="Nazwa użytkownika"
                             value={text}
                             mode='outlined'
-                            onChangeText={text => setText(text)}
+                            onChangeText={handleInput}
                         />
                     </View>
                     <View style={styles(theme).containerScore}>
-                        <Text style={styles(theme).scoreTitle}>1522</Text>
+                        <Text style={styles(theme).scoreTitle}>{rank}</Text>
                         <Text style={styles(theme).scoreLabel}>Twoje punkty</Text>
                     </View>
                     <View style={styles(theme).containerScore}>
                         <Button
                             style={styles(theme).button}
                             mode="elevated"
-                            onPress={() => console.log('Pressed')}
+                            onPress={goTo(navigation, 'Metryki')}
                         >
                             Twoje statystyki
                         </Button>
                         <Button
                             style={styles(theme).button}
                             mode="elevated"
-                            onPress={() => console.log('Pressed')}
+                            onPress={goTo(navigation, 'Wybór tematów')}
                         >
                             Wybierz technologie
                         </Button>

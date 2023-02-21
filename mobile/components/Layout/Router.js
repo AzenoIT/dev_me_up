@@ -12,17 +12,17 @@ import TechChoice from "../TechChoice/TechChoice";
 
 function Router() {
     return (
-        <Stack.Navigator initialRouteName="Welcome"
+        <Stack.Navigator initialRouteName="Strona główna"
                          screenOptions={{
                              header: (props) => <AzAppBar {...props} />,
                          }}>
-            <Stack.Screen name="Welcome" component={WelcomeScreen}/>
-            <Stack.Screen name="Question" component={Question}/>
-            <Stack.Screen name="TechChoice" component={TechChoice}/>
-            <Stack.Screen name="Profile" component={ProfileSettings}/>
-            <Stack.Screen name="Rankings" component={Rankings}/>
-            <Stack.Screen name="SignUp" component={SignUp}/>
-            <Stack.Screen name="Login" component={Login}/>
+            <Stack.Screen name='Strona główna' component={WelcomeScreen}/>
+            <Stack.Screen name='Pytanie' component={Question}/>
+            <Stack.Screen name='Wybór tematów' component={TechChoice}/>
+            <Stack.Screen name='Profil' component={ProfileSettings}/>
+            <Stack.Screen name='Metryki' component={Rankings}/>
+            <Stack.Screen name='Rejestracja' component={SignUp}/>
+            <Stack.Screen name='Logowanie' component={Login}/>
         </Stack.Navigator>
     );
 }
