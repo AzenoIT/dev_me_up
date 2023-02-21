@@ -12,7 +12,7 @@ import Friends from "./components/Friends/Friends";
 import ProfileSettings from "./components/ProfileSettings/ProfileSettings";
 import Rankings from "./components/Rankings/Rankings";
 import Battle from "./components/Battle/Battle";
-import OnboardingTest from "./components/OnboardingTest/OnboardingTest";
+import OnboardingSetup from "./components/OnboardingSetup/OnboardingSetup";
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -34,7 +34,7 @@ export default function App() {
 							/>
 							<Tab.Screen
 								name="Onboarding"
-								component={OnboardingTest}
+								component={OnboardingSetup}
 								options={{
 									tabBarIcon: () => (
 										<Ionicons name="home-outline" color="blue" size={22} />
