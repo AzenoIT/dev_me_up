@@ -55,7 +55,7 @@ function OnboardingSetup() {
 			<List.Section title="Sprawdź się devie!">
 				<RadioButton.Group value={category} onValueChange={setCategory}>
 					{categories.map((category) => (
-						<RadioButton.Item label={category.name} value={category.value} />
+						<RadioButton.Item key={category.name} label={category.name} value={category.value} />
 					))}
 				</RadioButton.Group>
 			</List.Section>

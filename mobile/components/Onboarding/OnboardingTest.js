@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 function OnboardingTest() {
 	return (
 		<View style={styles.container}>
-			<Text>Friends</Text>
+			<Text>Pierwsze pytanie</Text>
 			<StatusBar style="auto" />
 		</View>
 	);

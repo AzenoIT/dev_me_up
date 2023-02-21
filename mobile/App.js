@@ -2,19 +2,20 @@ import Login from "./components/Login/Login";
 import SignUp from "./components/SignUp/SignUp";
 import { AuthProvider } from "./context/AuthProvider";
 import useAuth from "./hooks/useAuth";
-
-import { StyleSheet, View } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { NavigationContainer } from "@react-navigation/native";
+
+import { StyleSheet } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "./components/Home/Home";
 import Friends from "./components/Friends/Friends";
 import ProfileSettings from "./components/ProfileSettings/ProfileSettings";
 import Rankings from "./components/Rankings/Rankings";
 import Battle from "./components/Battle/Battle";
-import OnboardingSetup from "./components/OnboardingSetup/OnboardingSetup";
+import OnboardingSetup from "./components/Onboarding/OnboardingSetup";
 
 const Tab = createBottomTabNavigator();
+
 export default function App() {
 	const { auth } = useAuth();
 	return (

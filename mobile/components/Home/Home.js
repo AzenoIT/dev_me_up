@@ -3,32 +3,34 @@ import { View, StyleSheet } from "react-native";
 
 function Home({ navigation }) {
 	return (
-		<View style={styles.container}>
-			<IconButton
-				style={styles.avatar}
-				icon="account"
-				size={140}
-				onPress={() => ({})}
-			/>
-			<View style={styles.btn_container}>
-				<FAB
-					icon="application-edit-outline"
-					onPress={() => navigation.navigate("Onboarding")}
-					label={"Onboarding"}
+		<>
+			<View style={styles.container}>
+				<IconButton
+					style={styles.avatar}
+					icon="account"
+					size={140}
+					onPress={() => ({})}
 				/>
-				<FAB
-					icon="account-search-outline"
-					onPress={() => navigation.navigate("Battle")}
-					label={"Find a battle"}
-				/>
-				<FAB
-					icon="account-heart"
-					style={styles.fab}
-					onPress={() => navigation.navigate("Friends")}
-					label={"Challenge a friend"}
-				/>
+				<View style={styles.btn_container}>
+					<FAB
+						icon="application-edit-outline"
+						onPress={() => navigation.navigate("Onboarding")}
+						label={"Onboarding"}
+					/>
+					<FAB
+						icon="account-search-outline"
+						onPress={() => navigation.navigate("Battle")}
+						label={"Find a battle"}
+					/>
+					<FAB
+						icon="account-heart"
+						style={styles.fab}
+						onPress={() => navigation.navigate("Friends")}
+						label={"Challenge a friend"}
+					/>
+				</View>
 			</View>
-		</View>
+		</>
 	);
 }
 
