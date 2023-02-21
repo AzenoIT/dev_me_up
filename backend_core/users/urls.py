@@ -13,6 +13,5 @@ urlpatterns = [
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('users/<int:pk>/', views.UserUpdateAPIView.as_view(), name='update_user'),
-
-
+    path('userfriends/', views.UserFriendListAPIView.as_view(), name='userfriends'),
 ]
