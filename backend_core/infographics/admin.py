@@ -3,10 +3,10 @@ from django.contrib import admin
 from .models import Infographic
 
 class InfoAdmin(admin.ModelAdmin):
-    fields = ('name', 'value')
+    fields = ('name', 'information')
     list_display = ('name',)
-    search_fields = ('name', 'value')
-    list_filter = ('name', 'value')
+    search_fields = ('name', 'information')
+    list_filter = ('name', 'information')
     ordering = ('name',)
 
 admin.site.register(Infographic, InfoAdmin)
