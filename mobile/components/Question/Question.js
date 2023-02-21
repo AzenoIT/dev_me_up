@@ -1,14 +1,15 @@
-import {Button, Card, Divider, ProgressBar, Text, useTheme} from 'react-native-paper';
-import {StyleSheet, View, Animated} from "react-native";
-import {useEffect, useRef, useState} from "react";
-import {axiosPrivate} from "../../helpers/axios";
-import { CountdownCircleTimer, useCountdown } from 'react-native-countdown-circle-timer'
+import {Card, Divider, Text, useTheme} from 'react-native-paper';
+import {StyleSheet, View} from "react-native";
+import {useEffect, useState} from "react";
+import {CountdownCircleTimer, useCountdown} from 'react-native-countdown-circle-timer'
+import callApi from "../../helpers/api";
 
 const totalTime = 17;
 
 function Question() {
     const theme = useTheme();
-    const [questionList, setQuestionList] = useState('');
+    const [reveal, setReveal] = useState(false);
+    const [questionList, setQuestionList] = useState('tra');
     const {
         path,
         pathLength,
@@ -18,25 +19,52 @@ function Question() {
         elapsedTime,
         size,
         strokeWidth,
-    } = useCountdown({ isPlaying: true, duration: totalTime, colors: '#abc' })
-    async function getQuestions() {
-        try {
-            return await fetch(`/questions/`);
-        } catch(error){
-            console.error(error);
-        }
-    }
+        onUpdate
+    } = useCountdown({isPlaying: true, duration: totalTime, colors: '#abc'})
+
     useEffect(() => {
-        const controller = new AbortController();
-        getQuestions(controller.signal)
+        callApi('/')
             .then((response) => {
-                setQuestionList(response.data.results || [])
+                setQuestionList(response)
             });
 
         return () => {
-            controller.abort();
         }
     }, [])
+
+    const styles = StyleSheet.create({
+        answer: {
+            margin: 10,
+        },
+        correctAnswer: {
+            backgroundColor: theme.colors.error
+        },
+        responses_container: {
+            flex: 1,
+            backgroundColor: "white",
+            justifyContent: "space-between",
+            height: '100%'
+        },
+        container: {
+            backgroundColor: "white",
+            height: '85%'
+        },
+        content: {},
+        answerCard: {
+            marginTop: 20
+        },
+        card: {
+            marginLeft: 20,
+            marginRight: 20,
+            height: '100%'
+        },
+        question: {},
+        hdn: {},
+        countdown: {
+            margin: 15,
+            alignItems: "center"
+        }
+    })
 
     return (
         <Card style={styles.card}>
@@ -46,7 +74,8 @@ function Question() {
                 <Text
                     style={styles.question}
                 >
-                    Python python python python python python python python python python</Text>
+                    Python python python python python python python python python
+                    python{JSON.stringify(questionList)}</Text>
                 <Divider/>
             </Card.Content>
             <Card.Actions style={styles.container}>
@@ -59,7 +88,7 @@ function Question() {
                         >Odpowiedź A</Text>
                     </Card>
                     <Card
-                        style={styles.answerCard}
+                        style={reveal ? styles.correctAnswer : styles.answerCard}
                     >
                         <Text
                             style={styles.answer}
@@ -80,15 +109,24 @@ function Question() {
                         >Odpowiedź D</Text>
                     </Card>
                     <View style={styles.countdown}>
-                        <CountdownCircleTimer
-                        isPlaying
-                        duration={7}
-                        colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-                        colorsTime={[7, 5, 2, 0]}
-                        size={80}
-                    >
+                        {reveal === false ? (
+                            < CountdownCircleTimer
+                            isPlaying
+                            duration={7}
+                            colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+                            colorsTime={[7, 5, 2, 0]}
+                            size={80}
+                            onUpdate={(time) => {
+                                if(!time) {
+                                    setReveal(true);
+                                }
+                            }}
+                            >
                         {({remainingTime}) => <Text>{remainingTime}</Text>}
-                    </CountdownCircleTimer>
+                            </CountdownCircleTimer>
+                        ) : (
+                        <></>
+                        )}
                     </View>
                 </View>
             </Card.Actions>
@@ -96,38 +134,6 @@ function Question() {
     );
 }
 
-const styles = StyleSheet.create({
-    answer: {
-        margin: 10,
-    },
-    responses_container: {
-        flex: 1,
-        backgroundColor: "white",
-        justifyContent: "space-between",
-        height: '100%'
-    },
-    container: {
-        backgroundColor: "white",
-        height: '85%'
-    },
-    content: {
-    },
-    answerCard: {
-        marginTop: 20
-    },
-    card: {
-        marginLeft: 20,
-        marginRight: 20,
-        height: '100%'
-    },
-    question: {
-    },
-    hdn: {
-    },
-    countdown: {
-        margin: 15,
-        alignItems: "center"
-    }
-})
+
 
 export default Question;
