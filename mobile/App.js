@@ -10,6 +10,7 @@ import Challenge from "./components/Challenge/Challenge";
 import Friends from "./components/Friends/Friends";
 import ProfileSettings from "./components/ProfileSettings/ProfileSettings";
 import Rankings from "./components/Rankings/Rankings";
+import TechChoice from "./components/TechChoice/TechChoice";
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -20,7 +21,7 @@ const {auth} = useAuth();
                 <Tab.Navigator initialRouteName="Main">
                     {!auth ? (
                         <>
-                            <Tab.Screen name="Home" component={Challenge}/>
+                            <Tab.Screen name="Tech" component={TechChoice}/>
                             <Tab.Screen name="Battle" component={Challenge}/>
                             <Tab.Screen name="Friends" component={Friends}/>
                             <Tab.Screen name="Settings" component={ProfileSettings}/>
