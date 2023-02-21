@@ -11,11 +11,11 @@ import Question from "../Question/Question";
 
 function Router() {
     return (
-        <Stack.Navigator initialRouteName="Profile"
+        <Stack.Navigator initialRouteName="Welcome"
                          screenOptions={{
                              header: (props) => <AzAppBar {...props} />,
                          }}>
-            <Stack.Screen name="Welcome!" component={WelcomeScreen}/>
+            <Stack.Screen name="Welcome" component={WelcomeScreen}/>
             <Stack.Screen name="Question" component={Question}/>
             <Stack.Screen name="Profile" component={ProfileSettings}/>
             <Stack.Screen name="Rankings" component={Rankings}/>
