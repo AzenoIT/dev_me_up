@@ -1,0 +1,36 @@
+@import "../helpers/variables";
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: toRem(20px) toRem(40px) toRem(25px) toRem(15px);
+
+}
+.logo{
+    font-style: normal;
+    font-weight: 400;
+    font-size: toRem(36px);
+    line-height: toRem(45px);
+    margin: 0;
+}
+
+.menu_hamburger{
+    border-radius: toRem(16px);
+    margin-top: toRem(15px);
+    padding: toRem(50px);
+
+}
+
+.menu_item{
+    font-weight: 500;
+    font-size: toRem(14px);
+    line-height: toRem(20px);
+    color: #1D192B;
+    padding: toRem(25px);
+}
+
+.menu_item:hover{
+    background: #E8DEF8;
+    border-radius: toRem(100px);
+}

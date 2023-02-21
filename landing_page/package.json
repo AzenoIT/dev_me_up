@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sass": "sass --watch ./src/styles/main.scss ./src/styles/css/style.css"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -15,8 +16,11 @@
     "@mui/material": "^5.11.10",
     "@next/font": "^13.1.6",
     "next": "13.1.6",
+    "normalize.css": "^8.0.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.58.3"
+
   },
   "devDependencies": {
     "@svgr/webpack": "^6.5.1"
