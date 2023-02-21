@@ -27,11 +27,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', None)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split()
 
 if DEBUG:
     import socket  # only if you haven't already imported this
+
     hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
     INTERNAL_IPS = [ip[: ip.rfind(".")] + ".1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
 
@@ -159,6 +159,8 @@ if os.environ.get('DJ_DB_LOGGING', 'False') == 'True':
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
@@ -174,3 +176,5 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:8000',
     'http://localhost:3000',
 ]
+
+# Simple JWT
