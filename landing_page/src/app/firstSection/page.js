@@ -10,6 +10,8 @@ import google from "@/images/Badgegoogle.png";
 import apple_qr from "@/images/apple_qr.png";
 import google_qr from "@/images/google_qr.png";
 import smartphone from "@/images/smartphone.png"
+import "../../styles/scss/helpers/title.scss";
+
 
 
 export default function FirstSection() {
@@ -23,7 +25,7 @@ export default function FirstSection() {
                 </h1>
                 <div className='buttons_first_section'>
                     <a href="#download" className='btn_newsletter_add btn_download'>Pobierz aplikację</a>
-                    <a href="#newsletter3" className='btn_newsletter_add'>Newsletter</a>
+                    <a href="#newsletter" className='btn_newsletter_add'>Newsletter</a>
                 </div>
             </div>
             <div className='hide-on-mobile desktop_page'>

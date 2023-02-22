@@ -2,8 +2,8 @@
 
 import "../../styles/scss/components/newsletter.scss";
 import "../../styles/scss/helpers/buttons.scss";
-import {roboto300, roboto400, roboto500} from "@/app/fonts";
-import {dividerClasses} from "@mui/material";
+import {roboto300, roboto400, roboto500, teko400} from "@/app/fonts";
+
 
 
 function Newsletter() {
@@ -17,12 +17,20 @@ function Newsletter() {
                     <a href="" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
                 </div>
             </div>
-            <div className="hide-on-mobile input_box">
 
-                <input className={`${roboto400.className} input_desktop`} type='text' name='email'
-                       placeholder='Tu wprowadź swój adres e-mail'/>
-                <a href="" className={`${roboto400.className} btn_send`}>Zapisz się</a>
+            <div className="hide-on-mobile">
+                <div className='h1_box_desktop'>
+                    <h1 className={`${teko400.className} h1_desktop`}>
+                        Zapisz się na Newsletter
+                    </h1>
+                </div>
+                <div className="input_box">
+                    <input className={`${roboto400.className} input_desktop`} type='text' name='email'
+                           placeholder='Tu wprowadź swój adres e-mail'/>
+                    <a href="" className={`${roboto400.className} btn_send`}>Zapisz się</a>
+                </div>
             </div>
+
 
         </>
     )

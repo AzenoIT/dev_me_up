@@ -134,13 +134,6 @@ a {
   background-color: #DFDEDE;
   height: 100%;
 }
-.desktop_page .h1_box_desktop .h1_desktop {
-  font-size: 13.75rem;
-  text-align: center;
-  color: white;
-  text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
-  margin: 0;
-}
 .desktop_page .phone_and_buttons {
   display: flex;
   justify-content: space-between;
