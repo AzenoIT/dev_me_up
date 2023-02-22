@@ -55,9 +55,10 @@
 .desktop_page {
     padding: toRem(60px);
     background-color: #DFDEDE;
+    height: 100%;
 
     .h1_desktop {
-        font-size: toRem(200px);
+        font-size: toRem(220px);
         text-align: center;
         color: white;
         text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
@@ -77,15 +78,10 @@
         }
     }
 
-    .info_and_buttons {
+    .phone_and_buttons {
         display: flex;
         justify-content: space-between;
-
-        //.board {
-        //    width: 200px;
-        //    height: 100px;
-        //    background-color: black;
-        //}
+        align-items: center;
 
         .buttons_download {
             display: flex;

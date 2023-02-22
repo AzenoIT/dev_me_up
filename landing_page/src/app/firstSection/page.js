@@ -33,7 +33,7 @@ export default function FirstSection() {
                     </div>
                     <p className='p2_desktop'>rywalizuj</p>
                 </h1>
-                <div className='info_and_buttons'>
+                <div className='phone_and_buttons'>
                     <Image  src={smartphone} alt='smartphone'/>
                     <div className='buttons_download '>
                         <div className='google_download'>

@@ -106,9 +106,10 @@ html, body {
 .desktop_page {
   padding: 3.75rem;
   background-color: #DFDEDE;
+  height: 100%;
 }
 .desktop_page .h1_desktop {
-  font-size: 12.5rem;
+  font-size: 13.75rem;
   text-align: center;
   color: white;
   text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
@@ -125,21 +126,22 @@ html, body {
 .desktop_page .h1_desktop .p2_desktop {
   margin: 0;
 }
-.desktop_page .info_and_buttons {
+.desktop_page .phone_and_buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.desktop_page .info_and_buttons .buttons_download {
+.desktop_page .phone_and_buttons .buttons_download {
   display: flex;
   flex-direction: row;
 }
-.desktop_page .info_and_buttons .buttons_download .google_download {
+.desktop_page .phone_and_buttons .buttons_download .google_download {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 2.0625rem;
 }
-.desktop_page .info_and_buttons .buttons_download .apple_download {
+.desktop_page .phone_and_buttons .buttons_download .apple_download {
   display: flex;
   flex-direction: column;
   align-items: center;
