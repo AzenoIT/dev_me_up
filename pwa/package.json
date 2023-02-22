@@ -16,6 +16,7 @@
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
+    "unique-names-generator": "^4.7.1",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
