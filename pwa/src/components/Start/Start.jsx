@@ -10,7 +10,6 @@ const ButtonCta = styled(Button) ({
     borderRadius: '16px',
     color: '#6750A4',
     outlineColor: '#6750A4',
-    height: '40px',
     textTransform: 'none',
     width: '330px',
     height: '40px',
@@ -32,16 +31,16 @@ const ButtonWrapper = styled(Box) ({
     marginBottom: "30px"
 })
 
-
 function Start() {
     return (
+        <Box sx={{backgroundColor: "#F6F6F6"}}>
         <Container
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 minHeight: '100vh',
                 maxWidth: '600px',
-                paddingTop: "50px"
+                paddingTop: "50px",
             }}>
                 <Box sx={{width: "150px", height: "150px", margin: "0 auto"}}
                 component="img" 
@@ -68,6 +67,7 @@ function Start() {
                     </ButtonWrapper>
                 </Box>
         </Container>
+        </Box>
     );
 }
 
