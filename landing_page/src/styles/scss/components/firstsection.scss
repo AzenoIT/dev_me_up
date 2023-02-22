@@ -1,45 +1,98 @@
 @import "../helpers/variables";
 
 .box_section {
-  background-image: url("../../../images/mac_icon_1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: toRem(15px) toRem(30px);
+    background-image: url("../../../images/smartphone.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: toRem(15px) toRem(30px);
+    background-color: #DFDEDE;
 
 
-  .hd1 {
-    font-style: normal;
-    font-size: toRem(96px);
-    line-height: 62px;
-    text-align: center;
-    color: #000;
-    margin-bottom: toRem(372px);
-    margin-top: toRem(53px);
+    .hd1 {
+        font-style: normal;
+        font-size: toRem(96px);
+        line-height: 62px;
+        text-align: center;
+        color: #000;
+        margin-bottom: toRem(372px);
 
-    .hd1-indent{
-      text-align: start;
-      margin-left: 40px;
-      margin-bottom: 5px;
-      margin-top: 0;
+        .hd1-indent {
+            text-align: start;
+            margin-left: 40px;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .hd1-center {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .hd1-indent2 {
+            text-align: end;
+            margin: 0;
+        }
     }
 
-    .hd1-center{
-      text-align: center;
-      margin-top: 0;
-      margin-bottom: 5px;
-    }
-    .hd1-indent2{
-      text-align: end;
-      margin: 0;
-    }
-  }
+    .buttons_first_section {
+        display: flex;
+        justify-content: center;
 
-  .btn_newsletter_add{
-    border: none;
-    margin-bottom: toRem(90px);
-  }
-  .btn_download {
-    margin-right: toRem(39px);
-  }
+        .btn_newsletter_add {
+            border: none;
+            margin-bottom: toRem(90px);
+        }
+
+        .btn_download {
+            margin-right: toRem(39px);
+        }
+    }
+}
+
+.desktop_page {
+    padding: toRem(60px);
+    background-color: #DFDEDE;
+    height: 100%;
+
+    .h1_box_desktop {
+
+        .h1_desktop {
+            font-size: toRem(220px);
+            text-align: center;
+            color: white;
+            text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
+            margin: 0;
+        }
+    }
+
+
+    .phone_and_buttons {
+        display: flex;
+        justify-content: space-between;
+
+        .buttons_download {
+            display: flex;
+            justify-content: end;
+            align-items: end;
+
+            .buttons_wrapper {
+                display: flex;
+
+                .google_download {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-right: toRem(33px);
+                }
+
+                .apple_download {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
 }

@@ -3,7 +3,7 @@ import {Container, Grid, Icon, Paper, styled} from "@mui/material";
 import React from "react";
 import images from './photos'
 
-const GridContainer = styled(Container)({
+export const GridContainer = styled(Container)({
     marginTop: '20px',
     marginBottom: '10px'
 })

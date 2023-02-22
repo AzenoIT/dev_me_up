@@ -1,7 +1,10 @@
+import uuid
+
 from django.db import models
 
 
 class Player(models.Model):
+    uuid = models.UUIDField(default=uuid.uuid4, editable=False, db_index=True)
     nick = models.CharField(max_length=30)
     rank = models.FloatField()
     is_active = models.BooleanField(default=False)
