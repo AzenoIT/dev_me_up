@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "cb5fe35e-b6ad-45bc-8883-040991ad53e5",
-		"name": "dev_me_up",
+		"_postman_id": "0e41f640-e0a8-401d-8a19-298646bb3c44",
+		"name": "dev_me_up Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19471961"
+		"_exporter_id": "24531894"
 	},
 	"item": [
 		{
@@ -165,36 +165,6 @@
 			]
 		},
 		{
-			"name": "Infographic",
-			"item": [
-				{
-					"name": "Infographic all",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://0.0.0.0:8000/api/v1/infographics/",
-							"protocol": "http",
-							"host": [
-								"0",
-								"0",
-								"0",
-								"0"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"v1",
-								"infographics",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Player",
 			"item": [
 				{
@@ -326,8 +296,140 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Player Random Nick GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/generate-nick/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"generate-nick",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
+		},
+		{
+			"name": "UserFriend",
+			"item": [
+				{
+					"name": "USERFRIENDS list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3NDM1MjQ0LCJpYXQiOjE2NzcwMDMyNDQsImp0aSI6ImNiZDU3YzkzYzE5OTRiNjhhNTMwNjIyM2U4YTVkYTdkIiwidXNlcl9pZCI6MX0.PnOLtvsxzUiL0P5cHhgYcOCaF1XcByzbCvRsU9FcWV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/userfriends",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"userfriends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERFRIENDS ADD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3NDQyMjEwLCJpYXQiOjE2NzcwMTAyMTAsImp0aSI6IjRhNmU5MGFiNTExMjQzZTY5MjdmYzQzZDQ0M2IzNDE4IiwidXNlcl9pZCI6MX0.v5LWn2zHBgE9oTAqH3D4Xchk-Zy_BL1GD7lgSN9bQng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": 1,\n    \"friend\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/userfriends_add/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"userfriends_add",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3NDI4NDkwLCJpYXQiOjE2NzY5OTY0OTAsImp0aSI6Ijg3MjkyMmNmMDcyNTQ1Njc4YzRmMTQxZmY3ZDYwODY2IiwidXNlcl9pZCI6MX0.hZ-hRsirc1Ys6zbhh7ZHiZaAaDfbB0EFIN5834REbbM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
