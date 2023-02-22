@@ -2,9 +2,8 @@
 
 import "../../styles/scss/helpers/buttons.scss";
 
-// import {roboto300, roboto500} from "@/app/fonts";
 import "../../styles/scss/components/firstsection.scss"
-import {roboto300, roboto500, teko500} from "@/app/fonts";
+import {teko500} from "@/app/fonts";
 
 export default function FirstSection() {
     return (

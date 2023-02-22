@@ -1,4 +1,5 @@
 html, body {
+  scroll-behavior: smooth;
   font-size: 16px;
 }
 
@@ -6,10 +7,12 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.25rem 2.5rem 1.5625rem 0.9375rem;
+  padding: 2.5rem 2.5rem 1.5625rem 0.9375rem;
+  background: #DFDEDE;
 }
 
 .logo {
+  position: relative;
   font-style: normal;
   font-weight: 400;
   font-size: 2.25rem;
@@ -43,19 +46,31 @@ html, body {
   background: #424141;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  padding-left: 3.75rem;
   border-radius: 0 0 1.875rem 1.875rem;
   box-shadow: inset 0 4px 22px 4px rgba(0, 0, 0, 0.6);
 }
+.navigation .container-logo {
+  display: flex;
+  align-items: center;
+}
 .navigation .logo {
   color: #FFFFFF;
-  margin-left: 3.75rem;
   line-height: 45px;
+  margin-left: 0.6875rem;
+  margin-right: 0.3125rem;
 }
 .navigation .btn_newsletter_add {
   margin-right: 2.4375rem;
+  margin-bottom: 0;
+}
+.navigation .container-btn {
+  display: flex;
+  align-items: center;
 }
 
 html, body {
+  scroll-behavior: smooth;
   font-size: 16px;
 }
 
@@ -158,6 +173,76 @@ html, body {
 
 .btnGooglePlay {
   margin-bottom: 94px;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+.box_section {
+  background-image: url("../../../images/mac_icon_1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0.9375rem 1.875rem;
+}
+.box_section .hd1 {
+  font-style: normal;
+  font-size: 6rem;
+  line-height: 62px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 23.25rem;
+  margin-top: 3.3125rem;
+}
+.box_section .hd1 .hd1-indent {
+  text-align: start;
+  margin-left: 40px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.box_section .hd1 .hd1-center {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.box_section .hd1 .hd1-indent2 {
+  text-align: end;
+  margin: 0;
+}
+.box_section .btn_newsletter_add {
+  border: none;
+  margin-bottom: 5.625rem;
+}
+.box_section .btn_download {
+  margin-right: 2.4375rem;
+}
+
+.container_end {
+  padding: 5.625rem 1.875rem;
+  background-image: url("../../../images/devmeup2.png");
+  background-color: #DFDEDE;
+  background-repeat: no-repeat;
+  background-position: bottom 3.125rem right 40px;
+}
+
+.hdl_end {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0.6875rem;
+  line-height: 3.90625rem;
+}
+
+.text_end {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.65625rem;
+  margin-bottom: 20.5625rem;
+}
+
+.btn_download {
+  margin-right: 1.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,28 +1,32 @@
 @import "../helpers/variables";
 
+
 .container_hamburger {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: toRem(20px) toRem(40px) toRem(25px) toRem(15px);
+    padding: toRem(40px) toRem(40px) toRem(25px) toRem(15px);
+    background: #DFDEDE;
 }
 
-.logo{
+.logo {
+    position: relative;
     font-style: normal;
     font-weight: 400;
     font-size: toRem(36px);
     line-height: toRem(45px);
     margin: 0;
+
 }
 
-.menu_hamburger{
+.menu_hamburger {
     border-radius: toRem(16px);
     margin-top: toRem(15px);
     padding: toRem(50px);
 
 }
 
-.menu_item{
+.menu_item {
     font-weight: 500;
     font-size: toRem(14px);
     line-height: toRem(20px);
@@ -30,28 +34,41 @@
     padding: toRem(25px);
 }
 
-.menu_item:hover{
+.menu_item:hover {
     background: #E8DEF8;
     border-radius: toRem(100px);
 }
 
-.navigation{
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #424141;
     padding-top: toRem(40px);
     padding-bottom: toRem(40px);
+    padding-left: toRem(60px);
     border-radius: 0 0 toRem(30px) toRem(30px);
     box-shadow: inset 0 4px 22px 4px rgba(0, 0, 0, 0.6);
 
-    .logo{
+    .container-logo{
+        display: flex;
+        align-items: center;
+    }
+    .logo {
         color: #FFFFFF;
-        margin-left: toRem(60px);
         line-height: 45px;
+        margin-left: toRem(11px);
+        margin-right: toRem(5px);
+
     }
 
-    .btn_newsletter_add{
+    .btn_newsletter_add {
         margin-right: toRem(39px);
+        margin-bottom: 0;
+    }
+
+    .container-btn {
+        display: flex;
+        align-items: center;
     }
 }
