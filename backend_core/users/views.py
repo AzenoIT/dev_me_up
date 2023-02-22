@@ -62,7 +62,19 @@ class UserFriendAddAPIView(CreateAPIView):
     serializer_class = UserFriendAddSerializer
 
     def create(self, request, *args, **kwargs):
+        queryset = UserFriend.objects.all()
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        self.perform_create(serializer)
+        friends = queryset.values_list('friend_id')
+        friend_list = []
+
+        for friend in friends:
+            friend_list.append(friend[0])
+
+        if serializer.data.get('friend') not in friend_list:
+            serializer = self.get_serializer(data=request.data)
+            serializer.is_valid()
+            serializer.save()
+        else:
+            print('you already have this friend')
         return Response(serializer.data, status=status.HTTP_201_CREATED)

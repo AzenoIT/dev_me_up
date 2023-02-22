@@ -23,7 +23,6 @@ class UserFriendListSerializer(ModelSerializer):
     class Meta:
         model = UserFriend
         fields = ('friend', 'approved')
-        excluded = ('password', 'name',)
 
 
 class UserFriendAddSerializer(ModelSerializer):
