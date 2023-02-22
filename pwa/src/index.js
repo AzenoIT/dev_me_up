@@ -14,8 +14,18 @@ import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import Profile from "./components/Profile/Profile";
 import {AuthProvider} from "./context/AuthProvider";
+import Start from "./components/Start/Start";
+import Start2 from "./components/Start/Start2";
 
 const router = createBrowserRouter([
+    {
+      path: '/start',
+      element: <Start/>
+    },
+    {
+      path: '/start2',
+      element: <Start2/>
+    },
     {
         path: "/tutorial",
         element: <Tutorial/>
