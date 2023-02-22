@@ -50,10 +50,6 @@ def programming_intern_badge(player_id):
         pass
 
 
-def check_badges():
-    pass
-
-
 def bully_badge(player_id):
     pass
 
