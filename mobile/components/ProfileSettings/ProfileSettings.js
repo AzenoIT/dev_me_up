@@ -1,9 +1,11 @@
-import {StatusBar} from "expo-status-bar";
-import {SafeAreaView, ScrollView, StyleSheet, Text, View} from "react-native"
-import {Avatar, Button, TextInput, List, Switch, Divider, useTheme} from 'react-native-paper';
 import {useEffect, useState} from "react";
-import {goTo} from "../../helpers/router";
+import {SafeAreaView, ScrollView, StyleSheet, Text, View} from "react-native"
+
+import {StatusBar} from "expo-status-bar";
+import {Avatar, Button, TextInput, List, Switch, Divider, useTheme} from 'react-native-paper';
 import {useNavigation} from "@react-navigation/native";
+
+import {goTo} from "../../helpers/router";
 import {getData, storeData} from "../../helpers/storage_helpers";
 import callApi from "../../helpers/api";
 

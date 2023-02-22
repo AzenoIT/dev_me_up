@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react";
 import {Button, useTheme, TextInput, Text} from "react-native-paper";
 import {Image, SafeAreaView, ScrollView, View, StyleSheet} from "react-native";
-import {goTo} from "../../helpers/router";
-import callApi from "../../helpers/api";
 
-import {StatusBar} from "expo-status-bar";
+import {StatusBar} from "expo-status-bar"
+    ;
+import callApi from "../../helpers/api";
+import {goTo} from "../../helpers/router";
 import {getData, storeData} from "../../helpers/storage_helpers";
 import {playerData} from "../../helpers/playerData";
 
@@ -37,8 +38,7 @@ function WelcomeScreen({navigation}) {
 
     const handleIntro = async () => {
         let data = await getData('intro');
-
-        if (!data) {
+        if (data) {
             navigation.navigate('Nowa gra')
         }
     }
@@ -46,7 +46,7 @@ function WelcomeScreen({navigation}) {
     const saveAndGo = async () => {
         const player = {...playerData, username: guestName};
         await storeData('profile', player);
-
+        // TODO: should be invoked from useEffect, because store does not work.
         navigation.navigate('Wybór tematów');
     }
 
