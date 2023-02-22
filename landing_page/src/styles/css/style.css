@@ -59,6 +59,100 @@ html, body {
   font-size: 16px;
 }
 
+.box_section {
+  background-image: url("../../../images/mac_icon_1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0.9375rem 1.875rem;
+}
+.box_section .hd1 {
+  font-style: normal;
+  font-size: 6rem;
+  line-height: 62px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 23.25rem;
+  margin-top: 3.3125rem;
+}
+.box_section .hd1 .hd1-indent {
+  text-align: start;
+  margin-left: 40px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.box_section .hd1 .hd1-center {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.box_section .hd1 .hd1-indent2 {
+  text-align: end;
+  margin: 0;
+}
+.box_section .buttons_first_section {
+  display: flex;
+  justify-content: center;
+}
+.box_section .buttons_first_section .btn_newsletter_add {
+  border: none;
+  margin-bottom: 5.625rem;
+}
+.box_section .buttons_first_section .btn_download {
+  margin-right: 2.4375rem;
+}
+
+.desktop_page {
+  padding: 3.75rem;
+  background-color: #DFDEDE;
+}
+.desktop_page .h1_desktop {
+  font-size: 12.5rem;
+  text-align: center;
+  color: white;
+  text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
+  margin: 0;
+}
+.desktop_page .h1_desktop .p_desktop {
+  margin-bottom: 0.0625rem;
+  margin-top: 0;
+}
+.desktop_page .h1_desktop .paragraphs_desktop {
+  display: flex;
+  justify-content: center;
+}
+.desktop_page .h1_desktop .p2_desktop {
+  margin: 0;
+}
+.desktop_page .info_and_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.desktop_page .info_and_buttons .board {
+  width: 200px;
+  height: 100px;
+  background-color: black;
+}
+.desktop_page .info_and_buttons .buttons_download {
+  display: flex;
+  flex-direction: row;
+}
+.desktop_page .info_and_buttons .buttons_download .google_download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2.0625rem;
+}
+.desktop_page .info_and_buttons .buttons_download .apple_download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html, body {
+  font-size: 16px;
+}
+
 .btn_newsletter_add {
   color: #6750A4;
   font-style: normal;
@@ -158,6 +252,37 @@ html, body {
 
 .btnGooglePlay {
   margin-bottom: 94px;
+}
+
+.container_end {
+  padding: 5.625rem 1.875rem;
+  background-image: url("../../../images/devmeup2.png");
+  background-color: #DFDEDE;
+  background-repeat: no-repeat;
+  background-position: bottom 3.125rem right 40px;
+}
+
+.hdl_end {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0.6875rem;
+  line-height: 3.90625rem;
+}
+
+.text_end {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.65625rem;
+  margin-bottom: 20.5625rem;
+}
+
+.btn_download {
+  margin-right: 1.875rem;
+}
+
+.buttons_end {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
