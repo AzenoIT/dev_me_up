@@ -4,12 +4,12 @@ import Box from "@mui/material/Box";
 import AwardGold from '../../images/badges/AwardGold.svg';
 import AwardGold2 from '../../images/badges/AwardGold2.svg';
 import AwardSilver from '../../images/badges/AwardSilver.svg';
-import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import {useLocalStorage} from "../../hooks/useLocalStorage";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -74,8 +74,15 @@ const ButtonProfile = styled(Button)({
 })
 
 function Profile() {
-    const [profileState, setProfileState] = useState(useLocalStorage('profile')[0]);
-    const setProfileLocalStorage = useLocalStorage('profile')[1]
+    const [profileState, setProfileState] = useState(useLocalStorage('profile')[0] || '');
+    const setProfileLocalStorage = useLocalStorage('profile', '')[1];
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!profileState) {
+            navigate('/intro');
+        }
+    }, [])
 
     function handleUserNameChange(event) {
         setProfileState({...profileState, username: event.target.value});
@@ -95,13 +102,10 @@ function Profile() {
     return (
         <Container>
             <Stack direction='column' alignItems='center'>
-                {/*<Box>*/}
-                {/*    <Avatar src={avatar}/>*/}
-                {/*</Box>*/}
                 <Avatar src={avatar}/>
-                <TextField id="outlined-basic" label='username' variant="outlined" value={profileState.username}
+                <TextField id="outlined-basic" label='username' variant="outlined" value={profileState?.username}
                            onChange={(event) => handleUserNameChange(event)}/>
-                <h2>{profileState.score}</h2>
+                <h2>{profileState?.score}</h2>
                 <p>Twoje punkty</p>
                 <Box>
                     <img src={AwardGold} alt=""/>
@@ -122,7 +126,7 @@ function Profile() {
                                 <FormControlLabel
                                     control={<IOSSwitch sx={{m: 1}}/>}
                                     label={'Czy chcesz być wyszukiwany?'}
-                                    checked={profileState.isSearchVisible}
+                                    checked={profileState?.isSearchVisible}
                                     onChange={(event, checked) => {
                                         handleCheckBoxes('isSearchVisible', checked)
                                     }}
@@ -137,7 +141,7 @@ function Profile() {
                                 <FormControlLabel
                                     control={<IOSSwitch sx={{m: 1}}/>}
                                     label={'Czy chcesz być dodany do rankingu globalnego?'}
-                                    checked={profileState.isRankingVisible}
+                                    checked={profileState?.isRankingVisible}
                                     onChange={(event, checked) => {
                                         handleCheckBoxes('isRankingVisible', checked)
                                     }}
@@ -151,7 +155,7 @@ function Profile() {
                                 <FormControlLabel
                                     control={<IOSSwitch sx={{m: 1}}/>}
                                     label={'Dark Mode'}
-                                    checked={profileState.theme}
+                                    checked={profileState?.theme}
                                     onChange={(event, checked) => {
                                         handleCheckBoxes('theme', checked)
                                     }}
