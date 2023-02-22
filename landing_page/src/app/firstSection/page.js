@@ -34,7 +34,7 @@ export default function FirstSection() {
                 </div>
                 <div className='phone_and_buttons'>
                     <Image src={smartphone} alt='smartphone' width={900} height={800}/>
-                    <div className='buttons_download '>
+                    <div className='buttons_download'>
                         <div className='buttons_wrapper'>
                             <div className='google_download'>
                                 <Image src={apple_qr} alt='QR_apple'/>

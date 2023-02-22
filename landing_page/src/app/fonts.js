@@ -31,3 +31,10 @@ export const teko400 = Teko({
     weight: '400',
     subsets: ['latin']
 })
+
+export const teko300 = Teko({
+    subsets: ['latin'],
+    style: ['normal'],
+    weight: '300',
+    display: 'swap'
+})
