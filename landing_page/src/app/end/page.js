@@ -1,11 +1,12 @@
 import {roboto300, roboto500} from "@/app/fonts";
 import "../../styles/scss/helpers/buttons.scss";
 import "../../styles/scss/components/end.scss";
+import "../../styles/scss/helpers/media-queries.scss"
 
 
 function EndSection(props) {
     return (
-        <div className="container_end">
+        <div className="hide-on-desktop container_end">
             <h2 className={`${roboto500.className} hdl_end`}>Zabawa i&nbsp;nauka w jednym</h2>
             <p className={`${roboto300.className} text_end`}>Sprawdź swoją wiedzę rywalizując ze znajomymi.</p>
 
