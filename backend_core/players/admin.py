@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Player, Badge, PlayersToBadge
+from .models import Player
 
 
 class PlayerAdmin(admin.ModelAdmin):
@@ -11,5 +11,3 @@ class PlayerAdmin(admin.ModelAdmin):
     ordering = ('-rank',)
 
 admin.site.register(Player, PlayerAdmin)
-admin.site.register(Badge)
-admin.site.register(PlayersToBadge)
