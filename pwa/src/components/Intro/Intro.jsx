@@ -29,7 +29,6 @@ const ColorButton = styled(Button)(({theme}) => ({
     },
 }));
 
-
 function Intro() {
     const [guestNick, setGuestNick] = useState('');
 
@@ -82,10 +81,7 @@ function Intro() {
                         </Button>
                     </div>
 
-                    <Button
-                        variant="contained"
-                        style={{minWidth: '100%', borderRadius: '5%', margin: '5% 1% 0 1%'}}
-                    >
+                    <Button variant="contained" style={{minWidth: '100%', borderRadius: '5%', margin: '5% 1% 0 1%'}}>
                         <Typography>Play as a guest</Typography>
                     </Button>
 
@@ -102,7 +98,6 @@ function Intro() {
                             <Typography>SignUp</Typography>
                         </ColorButton>
                     </Link>
-
                 </div>
             </div>
         </ThemeProvider>

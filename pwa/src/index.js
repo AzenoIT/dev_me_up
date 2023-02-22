@@ -10,6 +10,9 @@ import Category from "./components/Category/Category";
 import Tutorial from "./components/Tutorial/Tutorial";
 import Layout from "./components/Layout/Layout";
 import Intro from "./components/Intro/Intro";
+import Register from "./components/Auth/Register";
+import Login from "./components/Auth/Login";
+import {AuthProvider} from "./context/AuthProvider";
 
 const router = createBrowserRouter([
     {
@@ -27,15 +30,15 @@ const router = createBrowserRouter([
             },
             {
                 path: "category",
-                element: <Category />
+                element: <Category/>
             },
             {
                 path: 'login',
-                element: (<div>login</div>)
+                element: (<Login/>)
             },
             {
                 path: 'register',
-                element: (<div>register</div>)
+                element: (<Register/>)
             },
         ]
     }
@@ -44,7 +47,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <RouterProvider router={router}/>
+        <AuthProvider>
+            <RouterProvider router={router}/>
+        </AuthProvider>
     </React.StrictMode>
 );
 
