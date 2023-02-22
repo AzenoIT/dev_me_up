@@ -7,7 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "server": "json-server --watch api/db.json --port 3001",
-    "serverExt": "json-server --watch api/db.json --port 3001 --host 192.168.8.137",
+    "serverExt": "json-server --watch api/db.json --port 3001 --host 192.168.8.135",
     "web": "expo start --web"
   },
   "dependencies": {
