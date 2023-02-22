@@ -3,9 +3,6 @@
 .box_newsletters {
     background-color: #DFDEDE;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-image: url("../../../images/newsletter_bg.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -32,17 +29,41 @@
 
 }
 
-.btn_newsletter_add{
+.btn_newsletter_box {
     display: flex;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
+}
+
+.btn_newsletter_add{
     margin-bottom: toRem(74px);
 }
 
-.input_desktop {
-    background: #FFFFFF;
-    width: 426px;
-    height: 94px;
-    border-radius: 30px;
-    border: none;
+.input_box{
+    display: flex;
+    justify-content: center;
+    .input_desktop {
+        width: 290px;
+        height: 76px;
+        border-radius: toRem(30px);
+        border: none;
+        font-style: normal;
+        font-size: toRem(20px);
+        line-height: toRem(76px);
+        background: #FFFFFF;
+        color: #1E1E1E;
+        padding: toRem(9px) toRem(68px);
+        margin-right: 20px;
+    }
+    .btn_send {
+        background: #A7C8E6;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-style: normal;
+        font-size: toRem(20px);
+        line-height: toRem(76px);
+        text-align: center;
+        padding: toRem(10px);
+    }
+
 }
+
