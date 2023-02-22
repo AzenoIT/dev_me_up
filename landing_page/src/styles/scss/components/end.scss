@@ -1,7 +1,7 @@
 @import "../helpers/functions";
 
 .container_end {
-    padding-top: toRem(37px);
+    padding: toRem(37px) toRem(30px) 0 toRem(30px);
     background-image: url("../../../images/devmeup2.png");
     background-color: #DFDEDE;
     background-repeat: no-repeat;

@@ -274,7 +274,7 @@ a {
 }
 
 .container_end {
-  padding-top: 2.3125rem;
+  padding: 2.3125rem 1.875rem 0 1.875rem;
   background-image: url("../../../images/devmeup2.png");
   background-color: #DFDEDE;
   background-repeat: no-repeat;
