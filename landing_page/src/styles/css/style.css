@@ -87,7 +87,7 @@ a {
 }
 
 .box_section {
-  background-image: url("../../../images/mac_icon_1.png");
+  background-image: url("../../../images/smartphone.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -132,40 +132,34 @@ a {
 .desktop_page {
   padding: 3.75rem;
   background-color: #DFDEDE;
+  height: 100%;
 }
-.desktop_page .h1_desktop {
-  font-size: 12.5rem;
+.desktop_page .h1_box_desktop .h1_desktop {
+  font-size: 13.75rem;
   text-align: center;
   color: white;
   text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
   margin: 0;
 }
-.desktop_page .h1_desktop .p_desktop {
-  margin-bottom: 0.0625rem;
-  margin-top: 0;
-}
-.desktop_page .h1_desktop .paragraphs_desktop {
-  display: flex;
-  justify-content: center;
-}
-.desktop_page .h1_desktop .p2_desktop {
-  margin: 0;
-}
-.desktop_page .info_and_buttons {
+.desktop_page .phone_and_buttons {
   display: flex;
   justify-content: space-between;
 }
-.desktop_page .info_and_buttons .buttons_download {
+.desktop_page .phone_and_buttons .buttons_download {
   display: flex;
-  flex-direction: row;
+  justify-content: end;
+  align-items: end;
 }
-.desktop_page .info_and_buttons .buttons_download .google_download {
+.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper {
+  display: flex;
+}
+.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper .google_download {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 2.0625rem;
 }
-.desktop_page .info_and_buttons .buttons_download .apple_download {
+.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper .apple_download {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -197,9 +191,6 @@ a {
 .box_newsletters {
   background-color: #DFDEDE;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../../../images/newsletter_bg.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -224,29 +215,27 @@ a {
   margin-bottom: 21.25rem;
 }
 
-.btn_newsletter_add {
+.dupa {
   display: flex;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
+}
+
+.btn_newsletter_add {
   margin-bottom: 4.625rem;
 }
 
-@media (min-width: 991px) {
-  .hide-on-desktop {
-    display: none;
-  }
+html, body {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background: #DFDEDE;
 }
 
-@media (max-width: 992px) {
-  .hide-on-mobile {
-    display: none;
-  }
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .container_opinions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../../../images/background.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -274,17 +263,21 @@ a {
   margin-top: 0;
 }
 
-.btnAppStore {
+.btn_box_opinions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn_box_opinions .btnAppStore {
   text-align: center;
   margin-bottom: 20px;
 }
-
-.btnGooglePlay {
+.btn_box_opinions .btnGooglePlay {
   margin-bottom: 94px;
 }
 
 .container_end {
-  padding-top: 5.625rem;
+  padding-top: 2.3125rem;
   background-image: url("../../../images/devmeup2.png");
   background-color: #DFDEDE;
   background-repeat: no-repeat;
