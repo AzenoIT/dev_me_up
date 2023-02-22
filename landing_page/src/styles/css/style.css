@@ -1,4 +1,5 @@
 html, body {
+  scroll-behavior: smooth;
   font-size: 16px;
 }
 
@@ -6,10 +7,12 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.25rem 2.5rem 1.5625rem 0.9375rem;
+  padding: 2.5rem 2.5rem 1.5625rem 0.9375rem;
+  background: #DFDEDE;
 }
 
 .logo {
+  position: relative;
   font-style: normal;
   font-weight: 400;
   font-size: 2.25rem;
@@ -43,19 +46,121 @@ html, body {
   background: #424141;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  padding-left: 3.75rem;
   border-radius: 0 0 1.875rem 1.875rem;
   box-shadow: inset 0 4px 22px 4px rgba(0, 0, 0, 0.6);
 }
+.navigation .container-logo {
+  display: flex;
+  align-items: center;
+}
 .navigation .logo {
   color: #FFFFFF;
-  margin-left: 3.75rem;
   line-height: 45px;
+  margin-left: 0.6875rem;
+  margin-right: 0.3125rem;
 }
 .navigation .btn_newsletter_add {
   margin-right: 2.4375rem;
+  margin-bottom: 0;
+}
+.navigation .container-btn {
+  display: flex;
+  align-items: center;
 }
 
 html, body {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+.box_section {
+  background-image: url("../../../images/mac_icon_1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0.9375rem 1.875rem;
+  background-color: #DFDEDE;
+}
+.box_section .hd1 {
+  font-style: normal;
+  font-size: 6rem;
+  line-height: 62px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 23.25rem;
+}
+.box_section .hd1 .hd1-indent {
+  text-align: start;
+  margin-left: 40px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.box_section .hd1 .hd1-center {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.box_section .hd1 .hd1-indent2 {
+  text-align: end;
+  margin: 0;
+}
+.box_section .buttons_first_section {
+  display: flex;
+  justify-content: center;
+}
+.box_section .buttons_first_section .btn_newsletter_add {
+  border: none;
+  margin-bottom: 5.625rem;
+}
+.box_section .buttons_first_section .btn_download {
+  margin-right: 2.4375rem;
+}
+
+.desktop_page {
+  padding: 3.75rem;
+  background-color: #DFDEDE;
+}
+.desktop_page .h1_desktop {
+  font-size: 12.5rem;
+  text-align: center;
+  color: white;
+  text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
+  margin: 0;
+}
+.desktop_page .h1_desktop .p_desktop {
+  margin-bottom: 0.0625rem;
+  margin-top: 0;
+}
+.desktop_page .h1_desktop .paragraphs_desktop {
+  display: flex;
+  justify-content: center;
+}
+.desktop_page .h1_desktop .p2_desktop {
+  margin: 0;
+}
+.desktop_page .info_and_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.desktop_page .info_and_buttons .buttons_download {
+  display: flex;
+  flex-direction: row;
+}
+.desktop_page .info_and_buttons .buttons_download .google_download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2.0625rem;
+}
+.desktop_page .info_and_buttons .buttons_download .apple_download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html, body {
+  scroll-behavior: smooth;
   font-size: 16px;
 }
 
@@ -105,7 +210,7 @@ html, body {
   display: flex;
   align-items: center;
   text-align: center;
-  margin-bottom: 5.625rem;
+  margin-bottom: 4.625rem;
 }
 
 @media (min-width: 991px) {
@@ -128,7 +233,7 @@ html, body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 95px 30px;
+  padding: 74px 30px 0 30px;
   background-color: #DFDEDE;
 }
 
@@ -158,6 +263,37 @@ html, body {
 
 .btnGooglePlay {
   margin-bottom: 94px;
+}
+
+.container_end {
+  padding-top: 5.625rem;
+  background-image: url("../../../images/devmeup2.png");
+  background-color: #DFDEDE;
+  background-repeat: no-repeat;
+  background-position: bottom 3.125rem right 40px;
+}
+
+.hdl_end {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 0.6875rem;
+  line-height: 3.90625rem;
+}
+
+.text_end {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.65625rem;
+  margin-bottom: 20.5625rem;
+}
+
+.btn_download {
+  margin-right: 1.875rem;
+}
+
+.buttons_end {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
