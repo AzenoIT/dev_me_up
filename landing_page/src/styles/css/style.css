@@ -181,9 +181,6 @@ html, body {
 .box_newsletters {
   background-color: #DFDEDE;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../../../images/newsletter_bg.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -208,10 +205,12 @@ html, body {
   margin-bottom: 21.25rem;
 }
 
-.btn_newsletter_add {
+.dupa {
   display: flex;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
+}
+
+.btn_newsletter_add {
   margin-bottom: 4.625rem;
 }
 
@@ -262,7 +261,7 @@ html, body {
 }
 
 .container_end {
-  padding-top: 5.625rem;
+  padding-top: 2.3125rem;
   background-image: url("../../../images/devmeup2.png");
   background-color: #DFDEDE;
   background-repeat: no-repeat;
