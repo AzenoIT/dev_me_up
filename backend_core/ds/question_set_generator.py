@@ -1,5 +1,4 @@
 from gamesets.models import GameSet
-from technologies.models import Technology
 from players.models import Player
 
 
