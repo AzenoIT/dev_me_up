@@ -12,7 +12,8 @@ djangorestframework = "==3.14.0"
 djangorestframework-simplejwt = "==5.2.2"
 drf-spectacular = "==0.25.1"
 django-cors-headers = "==3.13.0"
-qrcode = "6.1"
+qrcode = "==6.1"
+pillow = "==9.4.0"
 
 [dev-packages]
 

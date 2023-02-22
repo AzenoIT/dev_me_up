@@ -1,4 +1,5 @@
 import qrcode
+from django.core.files.base import ContentFile
 from . import models
 from . import serializers
 from .models import CustomUser
@@ -70,7 +71,8 @@ class GenerateQRCode(APIView):
         img = qr.make_image(fill_color="black", back_color="white")
         response = HttpResponse(content_type="image/png")
         img.save(response, "PNG")
+
+        user.qrcode.save(f"{user.username}.png", ContentFile(response.getvalue()))
+        user.save()
+
         return response
-
-
-

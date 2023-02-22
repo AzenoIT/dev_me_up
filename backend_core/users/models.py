@@ -16,6 +16,8 @@ class CustomUser(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
+    qrcode = models.ImageField(upload_to='qrcodes_files/', blank=True, null=True)
+
     def __str__(self):
         return self.email
 

@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework_simplejwt',
     'drf_spectacular',
-    'qrcode'
+    'qrcode',
 
     # Local
     'users.apps.UsersConfig',
