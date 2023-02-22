@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "81e6f6a5-6597-4a16-8f3c-37c633676f85",
+		"_postman_id": "10733a65-c465-4ad8-a4f8-751b6e95041e",
 		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "25165670"
+		"_exporter_id": "24531894"
 	},
 	"item": [
 		{
@@ -200,15 +200,15 @@
 			]
 		},
 		{
-			"name": "Infographic",
+			"name": "Player",
 			"item": [
 				{
-					"name": "Infographic all",
+					"name": "Player Random Nick GET",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://0.0.0.0:8000/api/v1/infographics/",
+							"raw": "http://0.0.0.0:8000/api/v1/generate-nick/",
 							"protocol": "http",
 							"host": [
 								"0",
@@ -220,7 +220,7 @@
 							"path": [
 								"api",
 								"v1",
-								"infographics",
+								"generate-nick",
 								""
 							]
 						}
@@ -228,6 +228,36 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3NDI4NDkwLCJpYXQiOjE2NzY5OTY0OTAsImp0aSI6Ijg3MjkyMmNmMDcyNTQ1Njc4YzRmMTQxZmY3ZDYwODY2IiwidXNlcl9pZCI6MX0.hZ-hRsirc1Ys6zbhh7ZHiZaAaDfbB0EFIN5834REbbM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
