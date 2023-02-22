@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "ee2b94e8-8323-4e46-8710-467b70e54233",
+		"_postman_id": "0d47445f-2ffb-41f0-82cc-21c72b588538",
 		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24531894"
+		"_exporter_id": "24410131"
 	},
 	"item": [
 		{
@@ -316,6 +316,125 @@
 								"api",
 								"v1",
 								"generate-nick",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserFriend",
+			"item": [
+				{
+					"name": "USERFRIENDS list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3NDM1MjQ0LCJpYXQiOjE2NzcwMDMyNDQsImp0aSI6ImNiZDU3YzkzYzE5OTRiNjhhNTMwNjIyM2U4YTVkYTdkIiwidXNlcl9pZCI6MX0.PnOLtvsxzUiL0P5cHhgYcOCaF1XcByzbCvRsU9FcWV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/userfriends",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"userfriends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERFRIENDS ADD",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc3NDQyMjEwLCJpYXQiOjE2NzcwMTAyMTAsImp0aSI6IjRhNmU5MGFiNTExMjQzZTY5MjdmYzQzZDQ0M2IzNDE4IiwidXNlcl9pZCI6MX0.v5LWn2zHBgE9oTAqH3D4Xchk-Zy_BL1GD7lgSN9bQng",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": 1,\n    \"friend\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/userfriends_add/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"userfriends_add",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Game",
+			"item": [
+				{
+					"name": "Start Quizz",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"AAA3\",\n    \"technology_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/game/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"game",
 								""
 							]
 						}

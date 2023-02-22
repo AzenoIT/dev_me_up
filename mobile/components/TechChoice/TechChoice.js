@@ -1,161 +1,216 @@
-import { StyleSheet, View } from "react-native";
-import { Avatar, Button, Card, Text } from "react-native-paper";
-import SelectDropdown from "react-native-select-dropdown";
+import {Image, SafeAreaView, ScrollView, StyleSheet, View, Dimensions} from "react-native";
+import {Badge, Button, Text, useTheme} from "react-native-paper";
 
-import { useState } from "react";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import {useEffect, useState} from "react";
+import {TouchableOpacity} from "react-native-gesture-handler";
+import DropDownPicker from "react-native-dropdown-picker";
+import {StatusBar} from "expo-status-bar";
+import {useNavigation} from "@react-navigation/native";
+import {goTo} from "../../helpers/router";
+import {getData, storeData} from "../../helpers/storage_helpers";
+import callApi from "../../helpers/api";
 
-const levels = ["don't train", "junior", "mid", "senior", "principle"];
+
+const levels = [
+    {label: 'Brak', value: ''},
+    {label: 'Novice', value: 'novice'},
+    {label: 'Junior', value: 'junior'},
+    {label: 'Regular', value: 'regular'},
+    {label: 'Senior', value: 'senior'},
+    {label: 'Guru', value: 'guru'},
+]
+
 
 function TechChoice() {
-	const [techStack, setTechStack] = useState([
-		{
-			id: 1,
-			name: "Python",
-			active: false,
-			showSelect: false,
-			level: "",
-			logo: "120",
-		},
-		{
-			id: 2,
-			name: "Java Script",
-			active: false,
-			showSelect: false,
-			level: "",
-			logo: "331",
-		},
-		{
-			id: 3,
-			name: "PhpStorm",
-			active: false,
-			showSelect: false,
-			level: "",
-			logo: "211",
-		},
-		{
-			id: 4,
-			name: "MS DOS",
-			active: false,
-			showSelect: false,
-			level: "",
-			logo: "121",
-		},
-		{
-			id: 5,
-			name: "C#",
-			active: false,
-			showSelect: false,
-			level: "",
-			logo: "136",
-		},
-		{
-			id: 6,
-			name: "CSS",
-			active: false,
-			showSelect: false,
-			level: "",
-			logo: "117",
-		},
-	]);
+    const [techStack, setTechStack] = useState([]);
+    const [activeTechnology, setActiveTechnology] = useState(0);
+    const [open, setOpen] = useState(false);
+    const [value, setValue] = useState(null);
+    const [items, setItems] = useState(levels);
 
-	return (
-		<View style={styles.container}>
-			{/* <Text variant="titleLarge">Wybierz z technologie</Text> */}
-			<View style={styles.grid}>
-				{techStack.map((item) => (
-					<View key={item.id}>
-						<TouchableOpacity
-						// onPress={
-						// 	() =>
-						// 		setTechStack((prevState) => {
-						// 			const modifiedState = prevState.map((element) => {
-						// 				element.id === item.id
-						// 					? {
-						// 							...element,
-						// 							showSelect: true,
-						// 					  }
-						// 					: item;
-						// 			});
-						// 			return modifiedState;
-						// 		})
+    const theme = useTheme();
+    const navigation = useNavigation();
 
-						// 	// {}
-						// }
-						>
-							<View style={styles.card}>
-								{!item.showSelect ? (
-									<Card>
-										<Card.Content>
-											<Text variant="titleLarge" style={styles.title}>
-												{item.name}
-											</Text>
-											{/* <Text variant="bodyMedium">Card content</Text> */}
-										</Card.Content>
-										<Card.Cover
-											style={styles.picture}
-											source={{ uri: `https://picsum.photos/${item.logo}` }}
-										/>
-									</Card>
-								) : (
-									<SelectDropdown
-										data={levels}
-										onSelect={(selectedItem, index) => {
-											console.log(selectedItem, index);
-											item.level = selectedItem;
-										}}
-										buttonTextAfterSelection={(selectedItem, index) => {
-											// text represented after item is selected
-											// if data array is an array of objects then return selectedItem.property to render after item is selected
-											return selectedItem;
-										}}
-										rowTextForSelection={(item, index) => {
-											// text represented for each item in dropdown
-											// if data array is an array of objects then return item.property to represent item in dropdown
-											return item;
-										}}
-									/>
-								)}
-							</View>
-						</TouchableOpacity>
-					</View>
-				))}
-			</View>
-		</View>
-	);
+    useEffect(() => {
+        callApi({
+            endpoint: '/technologies'
+        })
+            .then(setTechStack)
+            .catch(console.log);
+    }, [])
+
+    useEffect(() => {
+        updateStorageProfile().catch(console.log);
+    }, [techStack])
+
+    const updateStorageProfile = async () => {
+        const profile = await getData('profile')
+
+        if (profile) {
+            await storeData('profile', {...profile, technologies: techStack.filter((tech) => tech.level !== '')});
+        }
+    }
+
+    const handleTechnology = (technology) => {
+        return () => {
+            setActiveTechnology(technology.id);
+            setOpen(true)
+        }
+    }
+
+    const handleSetTechnology = (newValue) => {
+        setTechStack(techStack.map((tech) => {
+            if (tech.id === activeTechnology) {
+                tech.level = newValue.label === 'Brak' ? '' : newValue.label
+            }
+            return tech
+        }));
+        setItems(levels);
+    }
+
+    const handleGame = () => {
+        // TODO: Api Call
+        if (techStack.filter((tech) => tech.level).length) {
+            goTo(navigation, 'Pytanie')()
+        }
+    }
+
+    return (
+        <SafeAreaView style={styles(theme).containerSafe}>
+            {open && (
+                <View style={styles(theme).containerBg}>
+                    <DropDownPicker
+                        style={styles(theme).dropdown}
+                        open={open}
+                        value={value}
+                        items={items}
+                        setOpen={setOpen}
+                        setValue={setValue}
+                        setItems={setItems}
+                        onSelectItem={handleSetTechnology}
+                        theme="LIGHT"
+                        placeholder="Wybierz poziom"
+                        stickyHeader={true}
+                    />
+                </View>
+            )}
+            <View style={styles(theme).containerInfo}>
+                <Text style={styles(theme).text}>
+                    Wybierz technologie i poziom trudności,
+                </Text>
+                <Text style={styles(theme).text}>
+                    następnie naciśnij GRAJ
+                </Text>
+                <Button
+                    style={styles(theme).button}
+                    mode={techStack.filter((tech) => tech.level).length ? 'elevated' : 'disabled'}
+                    onPress={handleGame}
+                >
+                    Graj
+                </Button>
+            </View>
+            <ScrollView contentContainerStyle={styles(theme).container}>
+                {techStack.map((technology) => (
+                    <View
+                        style={[styles(theme).card, technology.level && styles(theme).cardChecked]}
+                        key={technology.id}>
+                        <TouchableOpacity style={{...styles(theme).cardTouch}} onPress={handleTechnology(technology)}>
+                            <Image
+                                style={styles(theme).logo}
+                                source={require('../../assets/logo_python.png')}
+                            />
+                            <Badge
+                                style={[styles(theme).badge, technology.level && styles(theme).badgeActive]}>{technology.level || 'Wybierz'}</Badge>
+                        </TouchableOpacity>
+                    </View>
+                ))}
+            </ScrollView>
+        </SafeAreaView>
+    );
 }
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
-		padding: 10,
-	},
 
-	grid: {
-		flex: 1,
-		rowGap: 4,
-		columnGap: 4,
-		flexWrap: "wrap",
-	},
-
-	card: {
-		// marginTop: 10,
-		margin: 10,
-	},
-
-	title: {
-		fontWeight: "bold",
-		textAlign: "center",
-		marginBottom: 6
-	},
-
-	picture: {
-		width: 180,
-		height: 180,
-	},
-});
+const styles = (theme, index = 1) =>
+    StyleSheet.create({
+        containerSafe: {
+            minHeight: Dimensions.get('window').height,
+            paddingTop: StatusBar.currentHeight,
+        },
+        container: {
+            // flex: 1,
+            marginRight: 20,
+            marginLeft: 20,
+            justifyContent: 'space-around',
+            minHeight: Dimensions.get('window').height,
+            flexWrap: "wrap",
+            flexDirection: 'row',
+        },
+        containerInfo: {
+            textAlign: 'center',
+            marginTop: 10,
+            alignItems: "center",
+            justifyContent: "center"
+        },
+        text: {
+            textAlign: "center",
+            fontSize: 12,
+            lineHeight: 20,
+        },
+        button: {
+            marginTop: 20,
+            marginBottom: 10
+        },
+        containerBg: {
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            position: "absolute",
+            zIndex: 999,
+            width: '100%',
+            minHeight: Dimensions.get('window').height,
+        },
+        card: {
+            margin: 10,
+            width: 150,
+            backgroundColor: 'white',
+            padding: 10,
+            borderRadius: 10,
+            position: "relative",
+            zIndex: 100 - index
+        },
+        cardChecked: {
+            borderWidth: 5,
+            borderStyle: 'solid',
+            borderColor: 'rgba(227, 12, 12, 1)',
+        },
+        cardTouch: {
+            width: 150,
+            position: "relative"
+        },
+        logo: {
+            width: 120,
+            height: 120,
+            marginBottom: 15
+        },
+        badge: {
+            position: "absolute",
+            top: 0,
+            right: 0
+        },
+        badgeActive: {
+            backgroundColor: 'green'
+        },
+        dropdown: {
+            borderTopLeftRadius: 0,
+            borderTopRightRadius: 0,
+            width: '100%',
+            margin: 0,
+            padding: 0,
+            position: "relative",
+            zIndex: 100 - index
+        }
+    });
 
 export default TechChoice;
+
+
+// <Text>{technology.name}</Text>
+// <Text>Poziom: {technology.level || 'Brak'}</Text>

@@ -2,7 +2,7 @@ from django.db import models
 
 class Quiz(models.Model):
     start_date = models.DateTimeField(auto_now_add=True)
-    duration_minutes = models.PositiveIntegerField()
+    duration_minutes = models.PositiveIntegerField(null=True, blank=True)
     end_status = models.BooleanField(default=False)
 
     def __str__(self):
