@@ -10,8 +10,9 @@ import Category from "./components/Category/Category";
 import Tutorial from "./components/Tutorial/Tutorial";
 import Layout from "./components/Layout/Layout";
 import Intro from "./components/Intro/Intro";
-import Register from "./components/Auth/Register";
 import Login from "./components/Auth/Login";
+import Register from "./components/Auth/Register";
+import Profile from "./components/Profile/Profile";
 import {AuthProvider} from "./context/AuthProvider";
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: "category",
                 element: <Category/>
+            },
+            {
+                path: "profile",
+                element: <Profile/>
             },
             {
                 path: 'login',

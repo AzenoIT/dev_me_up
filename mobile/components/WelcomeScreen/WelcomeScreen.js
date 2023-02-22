@@ -7,7 +7,7 @@ import {goTo} from "../../helpers/router";
 import {StyleSheet} from "react-native";
 import callApi from "../../helpers/api";
 import { Text } from 'react-native-paper';
-
+import TechChoice from "../TechChoice/TechChoice";
 
 function WelcomeScreen({navigation}) {
     const [guestName, setGuestName] = useState("");
@@ -60,6 +60,7 @@ function WelcomeScreen({navigation}) {
     })
 
     return (
+
         <View style={styles.container}>
             <TextInput
                 label="guestName"
@@ -74,7 +75,7 @@ function WelcomeScreen({navigation}) {
             <Button
                 icon="account-eye-outline"
                 mode="contained"
-                onPress={goTo(navigation, "Question")}
+                onPress={goTo(navigation, "TechChoice")}
                 style={styles.play_btn}
             >
                 Play as a guest
