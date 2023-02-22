@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "0e41f640-e0a8-401d-8a19-298646bb3c44",
-		"name": "dev_me_up Copy",
+		"_postman_id": "0d47445f-2ffb-41f0-82cc-21c72b588538",
+		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24531894"
+		"_exporter_id": "24410131"
 	},
 	"item": [
 		{
@@ -393,6 +393,48 @@
 								"api",
 								"v1",
 								"userfriends_add",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Game",
+			"item": [
+				{
+					"name": "Start Quizz",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"AAA3\",\n    \"technology_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/game/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"game",
 								""
 							]
 						}
