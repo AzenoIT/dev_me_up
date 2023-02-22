@@ -57,6 +57,8 @@ class GetUserAPIView(RetrieveAPIView):
 class UserExistsView(APIView):
     def get(self, request):
         email = request.query_params.get('email')
+        if not email:
+            return Response({'message': 'Email is required'})
         user = get_user_model().objects.filter(email=email).first()
         if user:
             return Response({'user_exists': True})
