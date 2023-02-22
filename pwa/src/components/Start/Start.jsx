@@ -3,31 +3,35 @@ import logo from "../../images/logos/dev-me-up.svg"
 import {Button, Container} from "@mui/material";
 import {styled} from "@mui/material";
 import Box from "@mui/material/Box";
-import Google from "../../images/logos/Google.svg"
-import Facebook from "../../images/logos/Facebook.svg"
-import Github from "../../images/logos/Git.svg"
-import JWT from "../../images/logos/JWT.svg"
-import LinkedIn from "../../images/logos/Linkedin.svg"
+import Typography from "@mui/material/Typography";
 
-const ButtonStart = styled(Button)({
+const ButtonCta = styled(Button) ({
+    textAlign: 'center',
     borderRadius: '16px',
-    backgroundColor: '#FFFBFE',
     color: '#6750A4',
     outlineColor: '#6750A4',
     height: '40px',
     textTransform: 'none',
+    width: '330px',
+    height: '40px',
+    backgroundImage: "linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05))",
+    boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)',
     '&:hover': {
         backgroundColor: '#6750A4',
         color: '#FFFBFE'
     }
 })
 
-const ButtonBox = styled(Box)({
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
+const TextSmall = styled(Typography) ({
+    fontSize: '12px',
+    textAlign: "center",
+    marginTop: '4px',
 })
+
+const ButtonWrapper = styled(Box) ({
+    marginBottom: "30px"
+})
+
 
 function Start() {
     return (
@@ -35,40 +39,34 @@ function Start() {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                alignContent: 'center',
-                justifyContent: 'space-between',
-                height: '95vh',
-                maxWidth: '800px'
+                minHeight: '100vh',
+                maxWidth: '600px',
+                paddingTop: "50px"
             }}>
-            <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop: '20px'}}>
-                <img alt='dev-me-up' src={logo}/>
-            </Box>
-            <ButtonBox sx={{gap: '5px'}}>
-                <ButtonStart variant="contained" sx={{maxWidth: '50%'}}>Szybki start GRY</ButtonStart>
-                <p style={{margin: '0'}}>Grasz jako gość.</p>
-            </ButtonBox>
-            <ButtonBox sx={{gap: '25px'}}>
-                <ButtonStart sx={{minWidth: '100%'}} variant="contained">Logowanie</ButtonStart>
-                <ButtonStart sx={{minWidth: '100%'}} variant="contained">Rejestracja</ButtonStart>
-            </ButtonBox>
-            <ButtonBox sx={{gap: '17px'}}>
-                <ButtonStart variant="contained" sx={{minWidth: '100%'}}>
-                    <img src={Google} alt=""/>
-                    <p>Logowanie przez Google</p>
-                </ButtonStart>
-                <ButtonStart variant="contained" sx={{minWidth: '100%'}}><img src={Facebook} alt=""/>
-                    Logowanie przez
-                    Facebook</ButtonStart>
-                <ButtonStart variant="contained" sx={{minWidth: '100%'}}><img src={LinkedIn} alt=""/>
-                    Logowanie przez
-                    LinkedIn</ButtonStart>
-                <ButtonStart variant="contained" sx={{minWidth: '100%'}}><img src={Github} alt=""/>
-                    Logowanie przez
-                    GitHub</ButtonStart>
-                <ButtonStart variant="contained" sx={{minWidth: '100%'}}><img src={JWT} alt=""/>
-                    Logowanie przez
-                    JWT</ButtonStart>
-            </ButtonBox>
+                <Box sx={{width: "150px", height: "150px", margin: "0 auto"}}
+                component="img" 
+                alt='Dev me up logo' 
+                src={logo}/>
+
+                <Box sx={{margin: "0 auto"}}>
+                    <ButtonWrapper sx={{marginTop: "50px"}}>
+                        <ButtonCta>Zaproś znajomego</ButtonCta>
+                        <TextSmall>Wyzwij znajomego na pojedynek</TextSmall>
+                    </ButtonWrapper>
+                    <ButtonWrapper>
+                        <ButtonCta>Graj</ButtonCta>
+                        <TextSmall>Szybka gra. Dopasujemy przeciwnika do Ciebie.
+                        </TextSmall>
+                    </ButtonWrapper>
+                    <ButtonWrapper>
+                        <ButtonCta>Graj ze znajomym</ButtonCta>
+                        <TextSmall>Wybierz z kim chcesz grać.</TextSmall>
+                    </ButtonWrapper>
+                    <ButtonWrapper>
+                        <ButtonCta>Graj z AI</ButtonCta>
+                        <TextSmall>Graj ze sztuczną inteligencją.</TextSmall>
+                    </ButtonWrapper>
+                </Box>
         </Container>
     );
 }
