@@ -16,6 +16,7 @@ import Profile from "./components/Profile/Profile";
 import {AuthProvider} from "./context/AuthProvider";
 import Start from "./components/Start/Start";
 import Start2 from "./components/Start/Start2";
+import Friends from "./components/Rankings/Friends";
 import StartFirst from "./components/Start/StartFirst"
 
 const router = createBrowserRouter([
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
                 path: 'register',
                 element: (<Register/>)
             },
+            {
+                path: 'friends',
+                element: <Friends/>
+            }
         ]
     }
 ])
