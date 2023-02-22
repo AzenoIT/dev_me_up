@@ -1,4 +1,9 @@
-from players.models import Player, Badge, Player_to_Badge, Game
+from players.models import Player
+
+# placeholder for new models to be added
+from badgde.models import Badge, Player_to_Badge
+from game.models import Game
+
 from django.db.models import Q
 
 badges_id = {'novitiate': 1,
