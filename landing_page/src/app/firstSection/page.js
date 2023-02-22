@@ -9,7 +9,7 @@ import apple from "@/images/Badgeapple.png";
 import google from "@/images/Badgegoogle.png";
 import apple_qr from "@/images/apple_qr.png";
 import google_qr from "@/images/google_qr.png";
-import smartphone from "@/images/smartphone2.png"
+import smartphone from "@/images/smartphone.png"
 
 
 export default function FirstSection() {
@@ -22,8 +22,8 @@ export default function FirstSection() {
                     <p className="hd1-indent2">Ucz się</p>
                 </h1>
                 <div className='buttons_first_section'>
-                    <button className='btn_newsletter_add btn_download'>Pobierz aplikację</button>
-                    <button className='btn_newsletter_add'>Newsletter</button>
+                    <a href="#download" className='btn_newsletter_add btn_download'>Pobierz aplikację</a>
+                    <a href="#newsletter3" className='btn_newsletter_add'>Newsletter</a>
                 </div>
             </div>
             <div className='hide-on-mobile desktop_page'>

@@ -11,8 +11,8 @@ function EndSection(props) {
             <p className={`${roboto300.className} text_end`}>Sprawdź swoją wiedzę rywalizując ze znajomymi.</p>
 
             <div className='buttons_end'>
-                <a href="" className={`${roboto500.className} btn_newsletter_add btn_download`}>Pobierz aplikację</a>
-                <a href="" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
+                <a href="#download" className={`${roboto500.className} btn_newsletter_add btn_download`}>Pobierz aplikację</a>
+                <a href="#newsletter" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
             </div>
         </div>
     );

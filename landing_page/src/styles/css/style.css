@@ -1,6 +1,12 @@
 html, body {
   scroll-behavior: smooth;
   font-size: 16px;
+  background: #DFDEDE;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .container_hamburger {
@@ -8,7 +14,6 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem 2.5rem 1.5625rem 0.9375rem;
-  background: #DFDEDE;
 }
 
 .logo {
@@ -32,6 +37,7 @@ html, body {
   line-height: 1.25rem;
   color: #1D192B;
   padding: 1.5625rem;
+  text-decoration: none;
 }
 
 .menu_item:hover {
@@ -72,6 +78,12 @@ html, body {
 html, body {
   scroll-behavior: smooth;
   font-size: 16px;
+  background: #DFDEDE;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .box_section {
@@ -156,6 +168,12 @@ html, body {
 html, body {
   scroll-behavior: smooth;
   font-size: 16px;
+  background: #DFDEDE;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .btn_newsletter_add {
@@ -209,6 +227,12 @@ html, body {
 html, body {
   scroll-behavior: smooth;
   font-size: 16px;
+  background: #DFDEDE;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .container_opinions {
