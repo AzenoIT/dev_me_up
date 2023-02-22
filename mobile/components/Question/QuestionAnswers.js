@@ -1,15 +1,27 @@
 import {Card, Text} from "react-native-paper";
-import {View} from "react-native";
-import {CountdownCircleTimer} from "react-native-countdown-circle-timer";
+import {StyleSheet, View} from "react-native";
+import {CountdownCircleTimer, useCountdown} from "react-native-countdown-circle-timer";
 
-function QuestionAnswers(qna, reveal, setReveal, styles, handleAnswer, isLoading, totalTime) {
+function QuestionAnswers({qna, reveal, setReveal, handleAnswer, styles, isLoading, totalTime}) {
+
+    const {
+        path,
+        pathLength,
+        stroke,
+        strokeDashoffset,
+        remainingTime,
+        elapsedTime,
+        size,
+        strokeWidth,
+        onUpdate
+    } = useCountdown({isPlaying: true, duration: totalTime, colors: '#abc'})
 
     return (
-        <View>
+        <View style={styles.responses_container}>
             <View style={styles.responses_container}>
             {!isLoading && qna[["answers"]].map((item, i) => (
                 <Card
-                    style={(reveal && item.isCorrect === 'true') ? styles.correctAnswer : styles.answerCard}
+                    style={styles.answerCard}
                     key={i}
                     onPress={(event) => {
                         handleAnswer(i)
