@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-position: center;
     padding: toRem(15px) toRem(30px);
+    background-color: #DFDEDE;
 
 
     .hd1 {
@@ -80,11 +81,11 @@
         display: flex;
         justify-content: space-between;
 
-        .board {
-            width: 200px;
-            height: 100px;
-            background-color: black;
-        }
+        //.board {
+        //    width: 200px;
+        //    height: 100px;
+        //    background-color: black;
+        //}
 
         .buttons_download {
             display: flex;

@@ -9,6 +9,7 @@ import apple from "@/images/Badgeapple.png";
 import google from "@/images/Badgegoogle.png";
 import apple_qr from "@/images/apple_qr.png";
 import google_qr from "@/images/google_qr.png";
+import smartphone from "@/images/smartphone.png"
 
 export default function FirstSection() {
     return (
@@ -33,9 +34,7 @@ export default function FirstSection() {
                     <p className='p2_desktop'>rywalizuj</p>
                 </h1>
                 <div className='info_and_buttons'>
-                    <div className='board'>
-
-                    </div>
+                    <Image  src={smartphone} alt='smartphone'/>
                     <div className='buttons_download '>
                         <div className='google_download'>
                             <Image src={apple_qr} alt='QR_apple'/>
@@ -45,7 +44,7 @@ export default function FirstSection() {
                         </div>
                         <div className='apple_download'>
                             <Image src={google_qr} alt='QR_apple'/>
-                            <a href='https://www.apple.com/pl/app-store/' className='btnAppStore'>
+                            <a href='https://play.google.com/store/games' className='btnAppStore'>
                                 <Image src={google} alt='Apple picture'/>
                             </a>
                         </div>

@@ -65,6 +65,7 @@ html, body {
   background-repeat: no-repeat;
   background-position: center;
   padding: 0.9375rem 1.875rem;
+  background-color: #DFDEDE;
 }
 .box_section .hd1 {
   font-style: normal;
@@ -127,11 +128,6 @@ html, body {
 .desktop_page .info_and_buttons {
   display: flex;
   justify-content: space-between;
-}
-.desktop_page .info_and_buttons .board {
-  width: 200px;
-  height: 100px;
-  background-color: black;
 }
 .desktop_page .info_and_buttons .buttons_download {
   display: flex;
