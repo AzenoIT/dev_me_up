@@ -1,16 +1,9 @@
 {
 	"info": {
-<<<<<<< HEAD
-		"_postman_id": "10733a65-c465-4ad8-a4f8-751b6e95041e",
+		"_postman_id": "ee2b94e8-8323-4e46-8710-467b70e54233",
 		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24531894"
-=======
-		"_postman_id": "cb5fe35e-b6ad-45bc-8883-040991ad53e5",
-		"name": "dev_me_up",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "19471961"
->>>>>>> origin/master
 	},
 	"item": [
 		{
@@ -175,36 +168,6 @@
 			"name": "Player",
 			"item": [
 				{
-					"name": "Player Random Nick GET",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://0.0.0.0:8000/api/v1/generate-nick/",
-							"protocol": "http",
-							"host": [
-								"0",
-								"0",
-								"0",
-								"0"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"v1",
-								"generate-nick",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Player",
-			"item": [
-				{
 					"name": "Get Specific Player",
 					"request": {
 						"method": "GET",
@@ -328,6 +291,31 @@
 								"v1",
 								"players",
 								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player Random Nick GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/generate-nick/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"generate-nick",
 								""
 							]
 						}
