@@ -6,7 +6,7 @@ class Subscriber(models.Model):
     confirmed = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.email + " (" + str(self.confirmed) + ")"
+        return self.email
 
 
 class Newsletter(models.Model):
@@ -16,4 +16,4 @@ class Newsletter(models.Model):
     contents = models.FileField(upload_to='uploaded_newsletters/')
 
     def __str__(self):
-        return self.subject + " " + self.created_at.strftime("%B %d, %Y")
+        return self.subject
