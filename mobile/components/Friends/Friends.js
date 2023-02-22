@@ -32,7 +32,7 @@ function Friends() {
 
     const playGame = (friend) => {
         return () => (
-            goTo(navigation, 'Pytanie')()
+            goTo(navigation, 'Grasz w gre')()
         )
     }
 
