@@ -9,7 +9,7 @@ class TechnologiesSerializer(serializers.ModelSerializer):
 
 
 class TechnologiesToPlayersSerializer(serializers.ModelSerializer):
-    # technologies = TechnologiesSerializer()
+#    technologies = TechnologiesSerializer()
 
     class Meta:
         model = TechnologiesToPlayers

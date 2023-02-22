@@ -17,8 +17,7 @@ class PlayerViewSet(ViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
     def retrieve(self, request, pk=None):
-        player = get_object_or_404(queryset=self.queryset, pk=pk)
-        serializer = serializers.PlayerSerializer(player)
+        serializer = serializers.PlayerDetailSerializer(self.queryset.prefetch_related('technologiestoplayers').get(pk=pk))
         return Response(serializer.data)
 
     def partial_update(self, request, pk=None):
