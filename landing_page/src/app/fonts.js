@@ -24,3 +24,8 @@ export const teko500 = Teko({
     weight: '500',
     subsets: ['latin']
 })
+
+export const teko400 = Teko({
+    weight: '400',
+    subsets: ['latin']
+})
