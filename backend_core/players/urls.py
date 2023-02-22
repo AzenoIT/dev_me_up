@@ -10,5 +10,6 @@ router.register(r'players', viewsets.PlayerViewSet, basename='player'),
 
 urlpatterns = [
     path('generate-nick/', views.GenerateNickView.as_view(), name='generate_nick'),
+    path('players/technologies', views.PlayerTechnologiesList.as_view(), name='players_technologies'),
     *router.urls,
 ]
