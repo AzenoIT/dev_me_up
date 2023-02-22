@@ -14,7 +14,7 @@ import Invitation from "../Invitation/Invitation";
 
 function Router() {
     return (
-        <Stack.Navigator initialRouteName="Nowa gra"
+        <Stack.Navigator initialRouteName="Znajdź znajomego"
                          screenOptions={{
                              header: (props) => <AzAppBar {...props} />,
                          }}>
@@ -24,7 +24,7 @@ function Router() {
             <Stack.Screen name='Profil' component={ProfileSettings}/>
             <Stack.Screen name='Metryki' component={Rankings}/>
             <Stack.Screen name='Zaproś znajomych' component={Invitation}/>
-            <Stack.Screen name='Wyszukaj znajomych' component={Friends}/>
+            <Stack.Screen name='Znajdź znajomego' component={Friends}/>
             <Stack.Screen name='Rejestracja' component={SignUp}/>
             <Stack.Screen name='Logowanie' component={Login}/>
         </Stack.Navigator>
