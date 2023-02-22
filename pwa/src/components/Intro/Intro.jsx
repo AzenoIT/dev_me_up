@@ -32,7 +32,7 @@ const ColorButton = styled(Button)(({theme}) => ({
 }));
 
 function Intro() {
-    const [guestNick, setGuestNick] = useState(useLocalStorage('profile')[0].username || '');
+    const [guestNick, setGuestNick] = useState(useLocalStorage('profile')[0]?.username || '');
     const [profile, setProfile] = useLocalStorage('profile', {
         'id': 1,
         'username': 'Kolaborant 2137',
