@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import {useNavigation} from "@react-navigation/native";
 import {goTo} from "../../helpers/router";
 import callApi from "../../helpers/api";
+import DropDownPicker from 'react-native-dropdown-picker'
 
 function Friends() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -31,7 +32,7 @@ function Friends() {
 
     const playGame = (friend) => {
         return () => (
-            goTo(navigation, 'Pytanie')
+            goTo(navigation, 'Pytanie')()
         )
     }
 

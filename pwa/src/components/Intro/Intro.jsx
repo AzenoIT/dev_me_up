@@ -32,7 +32,7 @@ const ColorButton = styled(Button)(({theme}) => ({
 }));
 
 function Intro() {
-    const [guestNick, setGuestNick] = useState(useLocalStorage('profile')[0].username || '');
+    const [guestNick, setGuestNick] = useState(useLocalStorage('profile')[0]?.username || '');
     const [profile, setProfile] = useLocalStorage('profile', {
         'id': 1,
         'username': 'Kolaborant 2137',
@@ -73,20 +73,20 @@ function Intro() {
     });
     const navigate = useNavigate();
 
+
     useEffect(() => {
         if (!guestNick) {
-            generateRandomName()
+            return generateRandomName()
         }
     }, []);
 
     useEffect(() => {
-        setProfile({...profile, username: guestNick});
+            setProfile({...profile, username: guestNick});
     }, [guestNick])
 
     function generateRandomName() {
         const randomName = uniqueNamesGenerator({dictionaries: [adjectives, animals], length: 2});
         setGuestNick(randomName);
-        setProfile({...profile, username: randomName})
     }
 
     function handleGuestStart() {

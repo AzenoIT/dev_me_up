@@ -1,3 +1,4 @@
+from players.serializers import PlayerSerializer
 from .models import Technology, TechnologiesToPlayers
 from rest_framework import serializers
 
@@ -9,8 +10,9 @@ class TechnologiesSerializer(serializers.ModelSerializer):
 
 
 class TechnologiesToPlayersSerializer(serializers.ModelSerializer):
-    # technologies = TechnologiesSerializer()
+    technology = TechnologiesSerializer()
+    player = PlayerSerializer()
 
     class Meta:
         model = TechnologiesToPlayers
-        fields = ('__all__')
+        fields = ('technology', 'player')
