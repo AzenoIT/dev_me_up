@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "0e41f640-e0a8-401d-8a19-298646bb3c44",
-		"name": "dev_me_up Copy",
+		"_postman_id": "8a502e67-a299-43f8-ba50-a2b4f47f1abf",
+		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24531894"
 	},
@@ -321,6 +321,46 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Player Technologies List Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "9b353e1d-dd84-4f3c-9b90-9d2da0522517",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"9b353e1d-dd84-4f3c-9b90-9d2da0522517\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/technologies",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"technologies"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -393,6 +433,36 @@
 								"api",
 								"v1",
 								"userfriends_add",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Technology",
+			"item": [
+				{
+					"name": "List Technology GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/technologies/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"technologies",
 								""
 							]
 						}
