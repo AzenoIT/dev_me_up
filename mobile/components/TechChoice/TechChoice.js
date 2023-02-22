@@ -70,7 +70,7 @@ function TechChoice() {
 
     const handleGame = () => {
         // TODO: Api Call
-        goTo(navigation, 'Pytanie')()
+        goTo(navigation, 'Grasz w gre')()
     }
 
     return (

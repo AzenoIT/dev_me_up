@@ -1,8 +1,17 @@
 import {Card, Text} from "react-native-paper";
-import {StyleSheet, View} from "react-native";
+import {View} from "react-native";
 import {CountdownCircleTimer, useCountdown} from "react-native-countdown-circle-timer";
 
-function QuestionAnswers({qna, reveal, setReveal, handleAnswer, styles, isLoading, totalTime}) {
+function QuestionAnswers({
+                             question,
+                             answers,
+                             reveal,
+                             setReveal,
+                             handleRevealAnswer,
+                             styles,
+                             isLoading,
+                             questionTime
+                         }) {
 
     const {
         path,
@@ -14,43 +23,44 @@ function QuestionAnswers({qna, reveal, setReveal, handleAnswer, styles, isLoadin
         size,
         strokeWidth,
         onUpdate
-    } = useCountdown({isPlaying: true, duration: totalTime, colors: '#abc'})
+    } = useCountdown({isPlaying: true, duration: questionTime, colors: '#abc'})
 
     return (
-        <View style={styles.responses_container}>
-            <View style={styles.responses_container}>
-            {!isLoading && qna[["answers"]].map((item, i) => (
-                <Card
-                    style={styles.answerCard}
-                    key={i}
-                    onPress={(event) => {
-                        handleAnswer(i)
-                    }}
-                >
-                    <Text
-                        style={styles.answer}
-                    >
-                        {item.text}
-                    </Text>
-                </Card>
-            ))
-            }
-        </View>
+        <View style={styles.main_container}>
             <View style={styles.countdown}>
                 < CountdownCircleTimer
                     isPlaying
-                    duration={totalTime}
+                    duration={questionTime}
                     colors={['#004777', '#F7B801', '#A30000', '#A30000']}
                     colorsTime={[7, 5, 2, 0]}
-                    size={80}
+                    size={40}
+                    strokeWidth={5}
                     onUpdate={(time) => {
                         if (!time) {
-                            setReveal(true);
+                            handleRevealAnswer();
                         }
                     }}
                 >
                     {({remainingTime}) => <Text>{remainingTime}</Text>}
                 </CountdownCircleTimer>
+            </View>
+            <View style={styles.responses_container}>
+                {!isLoading && answers.map((item, i) => (
+                    <Card
+                        style={styles.answerCard}
+                        key={i}
+                        onPress={(event) => {
+                            handleRevealAnswer(i)
+                        }}
+                    >
+                        <Text variant="bodyLarge"
+                            style={styles.answer}
+                        >
+                            {item.text}
+                        </Text>
+                    </Card>
+                ))
+                }
             </View>
         </View>
     )

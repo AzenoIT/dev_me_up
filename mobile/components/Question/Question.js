@@ -1,5 +1,5 @@
 import {Card, Divider, Text, useTheme} from 'react-native-paper';
-import {StyleSheet} from "react-native";
+import {StyleSheet, View} from "react-native";
 import {useEffect, useState} from "react";
 import callApi from "../../helpers/api";
 import QuestionAnswers from "./QuestionAnswers";
@@ -7,145 +7,139 @@ import QuestionReveal from "./QuestionReveal";
 import {getData, storeData} from "../../helpers/storage_helpers";
 import {useNavigation} from "@react-navigation/native";
 
-const totalTime = 5;
-
-function Question({score, count, setIsOver}) {
+function Question() {
     const theme = useTheme();
     const [reveal, setReveal] = useState(false);
-    const [qna, setQna] = useState({});
+    const [question, setQuestion] = useState('');
+    const [answers, setAnswers] = useState([]);
+    const [questionTime, setQuestionTime] = useState(5);
     const [isLoading, setIsLoading] = useState(true);
-
+    const [usersPick, setUsersPick] = useState(null);
+    const [correctPick, setCorrectPick] = useState(null);
+    const [opponentID, setOpponentID] = useState(undefined);
 
     useEffect(() => {
         callApi({endpoint: `/questions/`})
             .then((response) => {
-                setQna(response[0][1][0]);
+                setQuestion(response[0][1][0]["question"]);
+                setAnswers(response[0][1][0]["answers"]);
+                setQuestionTime(5);
                 setIsLoading(false);
             }).catch((error) => {
         });
-        handleGetData().catch(console.log);
-        handleGetData().catch(console.log);
 
-        return () => {
-            count.current = count.current + 1;
-            handleStoreData().catch(console.log);
-        }
     }, [])
 
     const navigation = useNavigation();
     const styles = StyleSheet.create({
         answer: {
-            margin: 10,
+            marginTop: 20,
+            margin: 20
         },
         correctAnswer: {
+            marginTop: 20,
+            marginBottom: 20,
             backgroundColor: 'green'
         },
+        wrongAnswer: {
+            marginTop: 20,
+            marginBottom: 20,
+            backgroundColor: theme.colors.error
+        },
+        main_container: {},
         responses_container: {
-            flex: 1,
-            backgroundColor: "white",
-            justifyContent: "space-between",
-            height: '100%'
+            margin: 20,
         },
-        container: {
-            backgroundColor: "white",
-            height: '85%'
+        container: {},
+        content: {
+            margin: 20,
+            backgroundColor: 'black'
         },
-        content: {},
         answerCard: {
-            marginTop: 20
+            marginTop: 20,
+            marginBottom: 20,
         },
-        card: {
-            marginLeft: 20,
-            marginRight: 20,
-            height: '100%'
+        card: {},
+        question_container: {
+            margin: 20,
+            minHeight: 100
         },
-        question: {},
-        hdn: {},
+        hdl: {
+            color: 'red',
+            fontFamily: 'monospace'
+        },
+        question: {
+            color: 'green',
+            fontFamily: 'monospace'
+        },
         countdown: {
-            margin: 15,
             alignItems: "center"
+        },
+        btn_container: {
+            marginLeft: 20,
+            marginRight: 20
         }
     });
 
-    async function handleGetData() {
-        let storageScore = await getData('score');
-        let storageCount = await getData('count');
 
-        if (score !== 0 && count !== 0) {
-            storageScore = score.current;
-            storageCount = count.current;
-        } else if (!!storageScore || !!storageCount) {
-            count.current = storageCount;
-            score.current = storageScore;
-        }
-
-    }
-
-    async function handleStoreData() {
-        await storeData('score', score.current);
-        await storeData('count', count.current);
-    }
-
-
-    async function handleAnswer(answerID) {
+    async function handleRevealAnswer(answerID) {
         callApi({endpoint: `/questions/`})
             .then((response) => {
-                const isCorrect = (response[0][1][0]["answers"][answerID].isCorrect === 'true')
 
-                if (isCorrect) {
-                    score.current = score.current + 1;
-                }
+                response[0][1][0]["answers"].forEach((answer, i) => {
+                    if (answer.isCorrect === 'true') {
+                        setCorrectPick(i);
+                    }
+                });
+                setUsersPick(answerID);
                 setReveal(true);
-            }).catch((error) => {
-        });
+
+            }).catch(console.log);
     }
 
 
     return (
-        <Card style={styles.card}>
-            <Card.Title title={`Pytanie ${count.current + 1}`} style={styles.hdn}/>
+        <View style={styles.card}>
 
-            <Card.Content style={styles.content}>
-                <Text
-                    style={styles.question}
+            <Card style={styles.content}>
+                <View
+                    style={styles.question_container}
                 >
-                    {qna[["question"]]}
-                    {console.log("score: " + score.current + ", count: " + count.current + " | correct: " + qna)}
-                </Text>
-                <Divider/>
-            </Card.Content>
-            <Card.Actions style={styles.container}>
+                    <Text variant="bodyLarge" style={styles.hdl}>Pytanie:</Text>
+                    <Text variant="bodyLarge" style={styles.question}>{`\n${question}`}</Text>
+                </View>
+            </Card>
+            <View style={styles.container}>
 
 
                 {!reveal ? (
                     <QuestionAnswers
-                        qna={qna}
+                        question={question}
+                        answers={answers}
                         reveal={reveal}
                         setReveal={setReveal}
                         styles={styles}
-                        handleAnswer={handleAnswer}
+                        handleRevealAnswer={handleRevealAnswer}
                         isLoading={isLoading}
-                        totalTime={totalTime}
+                        questionTime={questionTime}
                     />
                 ) : (
                     <QuestionReveal
-                        qna={qna}
+                        question={question}
+                        answers={answers}
                         reveal={reveal}
                         setReveal={setReveal}
                         styles={styles}
-                        handleAnswer={handleAnswer}
                         isLoading={isLoading}
-                        totalTime={totalTime}
                         navigation={navigation}
-                        setIsOver={setIsOver}
+                        usersPick={usersPick}
+                        correctPick={correctPick}
                     />
                 )}
 
-
-            </Card.Actions>
-        </Card>
+            </View>
+        </View>
     );
 }
-
 
 export default Question;
