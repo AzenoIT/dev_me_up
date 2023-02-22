@@ -21,7 +21,7 @@ function Router() {
             <Stack.Screen name='Start' options={{headerShown: false}} component={WelcomeScreen}/>
             <Stack.Screen name='Nowa gra' component={NewGame}/>
             <Stack.Screen name='Pytanie' component={Question}/>
-            <Stack.Screen name='Wybór tematów' component={TechChoice}/>
+            <Stack.Screen name='Wybór tematów' back={false} component={TechChoice}/>
             <Stack.Screen name='Profil' component={ProfileSettings}/>
             <Stack.Screen name='Metryki' component={Rankings}/>
             <Stack.Screen name='Zaproś znajomych' component={Invitation}/>
