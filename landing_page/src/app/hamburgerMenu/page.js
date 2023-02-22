@@ -12,6 +12,7 @@ import {quicksand, roboto500} from "@/app/fonts";
 import Image from "next/image";
 
 import logo from "../../images/logo.png"
+import Link from "next/link";
 
 
 export default function HamburgerMenu() {
@@ -56,11 +57,12 @@ export default function HamburgerMenu() {
                     onClose={handleClose}
                     TransitionComponent={Fade}
                 >
-                    <MenuItem className="menu_item" onClick={handleClose}>Zapisz się do newslettera</MenuItem>
-                    <MenuItem className="menu_item" onClick={handleClose}>Pobierz aplikację</MenuItem>
-                    <MenuItem className="menu_item" onClick={handleClose}>Rywalizacja</MenuItem>
-                    <MenuItem className="menu_item" onClick={handleClose}>Label</MenuItem>
-                    <MenuItem className="menu_item" onClick={handleClose}>Label</MenuItem>
+                    <MenuItem className="menu_item" onClick={handleClose}>
+                        <a href="#newsletter">Zapisz się do newslettera </a>
+                    </MenuItem>
+                    <MenuItem className="menu_item" onClick={handleClose}>
+                        <a href="#download">Pobierz aplikację</a>
+                    </MenuItem>
                 </Menu>
             </div>
             <div className="hide-on-mobile navigation">
@@ -74,10 +76,8 @@ export default function HamburgerMenu() {
                     <p className={`${quicksand.className} logo`}>Dev me up</p>
                 </div>
                 <div className="container-btn">
-                    <a href="" className={`${roboto500.className} btn_newsletter_add`}>Pobierz aplikację</a>
-                    <a href="" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
-                    <a href="" className={`${roboto500.className} btn_newsletter_add`}>Złóż konto</a>
-                    <a href="" className={`${roboto500.className} btn_newsletter_add`}>Zaloguj</a>
+                    <a href="#download" className={`${roboto500.className} btn_newsletter_add`}>Pobierz aplikację</a>
+                    <a href="#newsletter" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
                 </div>
             </div>
         </>

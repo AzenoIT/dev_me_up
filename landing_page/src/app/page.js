@@ -12,8 +12,8 @@ export default function Home() {
        <>
            <HamburgerMenu  />
            <FirstSection />
-           <Opinions />
            <Newsletter/>
+           <Opinions />
            <EndSection />
        </>
     )
