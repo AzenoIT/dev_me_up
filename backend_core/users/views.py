@@ -5,6 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import UpdateAPIView
 from rest_framework.generics import CreateAPIView, RetrieveAPIView
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from . import serializers
 from . import models
@@ -51,3 +52,13 @@ class GetUserAPIView(RetrieveAPIView):
     def retrieve(self, request, *args, **kwargs):
         serializer = self.serializer_class(request.user)
         return Response(serializer.data)
+
+
+class UserExistsView(APIView):
+    def get(self, request):
+        email = request.query_params.get('email')
+        user = get_user_model().objects.filter(email=email).first()
+        if user:
+            return Response({'user_exists': True})
+        else:
+            return Response({'user_exists': False})
