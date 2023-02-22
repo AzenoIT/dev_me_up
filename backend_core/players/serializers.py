@@ -9,7 +9,7 @@ class PlayerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Player
-        fields = ('pk', 'nick', 'rank', 'is_active', 'is_online',)
+        fields = "__all__"
 
 
 class PlayerDetailSerializer(serializers.ModelSerializer):
