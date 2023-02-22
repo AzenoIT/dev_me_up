@@ -25,9 +25,11 @@ class GameSet(models.Model):
 class Game(models.Model):
     player_id_1 = models.ForeignKey('players.Player', on_delete=models.DO_NOTHING, related_name='+')
     player_id_2 = models.ForeignKey('players.Player', on_delete=models.DO_NOTHING, related_name='+')
-    result = models.IntegerField()
+    result = models.IntegerField(null=True, blank=True)
     answer_player_1 = models.BooleanField(null=True)
     answer_player_2 = models.BooleanField(null=True)
+    response_bot_time = models.DateTimeField(null=True)
+    reponse_send = models.BooleanField(default=False, null=True)
     game_sets = models.ForeignKey('GameSet', on_delete=models.CASCADE, related_name='%(class)s')
     quiz = models.ForeignKey('quizzes.Quiz', on_delete=models.CASCADE, related_name='%(class)s', default=None)
 
