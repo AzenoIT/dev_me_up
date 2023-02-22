@@ -4,10 +4,13 @@ import Box from "@mui/material/Box";
 import AwardGold from '../../images/badges/AwardGold.svg';
 import AwardGold2 from '../../images/badges/AwardGold2.svg';
 import AwardSilver from '../../images/badges/AwardSilver.svg';
-import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import {useLocalStorage} from "../../hooks/useLocalStorage";
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import Typography from "@mui/material/Typography";
 
 const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -60,80 +63,170 @@ const IOSSwitch = styled((props) => (
     },
 }));
 
+const AvatarProfile = styled(Avatar) ({
+    width: '120px',
+    height: "120px",
+    rounded: 'full',
+    margin: 20
+})
+
+const TextPoints = styled(Typography) ({
+    fontSize: "45px",
+    fontWeight: "600",
+    marginBottom: -10,
+    marginTop: 20
+})
+
+const TextLittle = styled(Typography) ({
+    fontSize: "12px",
+    textAlign: "center",
+})
+
+const BadgesContainer = styled(Box) ({
+    marginBottom: 20,
+    marginTop: 10
+})
+
+const BadgesBox = styled(Box) ({
+    display: 'flex',
+    gap: '10px',
+    marginTop: 20,
+})
+
+const BadgeImg = styled(Image) ({
+    width: '500px'
+})
+
 const ButtonProfile = styled(Button)({
     borderRadius: '16px',
     backgroundColor: '#FFFBFE',
     color: '#6750A4',
     outlineColor: '#6750A4',
+    marginBottom: 20,
+    textTransform: 'none',
     '&:hover': {
         backgroundColor: '#6750A4',
         color: '#FFFBFE'
     }
 })
 
+const PreferencesCard = styled(Card) ({
+    display: 'flex',
+    padding: 10,
+    alignItems: 'center',
+    marginBottom: 15
+})
+
+const TabHeadline = styled(Typography) ({
+    fontWeight: '500',
+    fontSize: '16px'
+})
+
+const TabSubheadline = styled(Typography) ({
+    fontSize: '14px'
+})
 
 function Profile() {
+    const [profileState, setProfileState] = useState(useLocalStorage('profile')[0] || '');
+    const setProfileLocalStorage = useLocalStorage('profile', '')[1];
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!profileState) {
+            navigate('/intro');
+        }
+    }, [])
+
+    function handleUserNameChange(event) {
+        setProfileState({...profileState, username: event.target.value});
+        setProfileLocalStorage({...profileState, username: event.target.value});
+    }
+
+    function handleCheckBoxes(key, checked) {
+        const updatedProfile = {
+            ...profileState,
+            [key]: checked
+        }
+
+        setProfileLocalStorage(updatedProfile);
+        setProfileState(updatedProfile);
+    }
+
     return (
         <Container>
             <Stack direction='column' alignItems='center'>
-                {/*<Box>*/}
-                {/*    <Avatar src={avatar}/>*/}
-                {/*</Box>*/}
-                <Avatar src={avatar}/>
-                <TextField id="outlined-basic" label="nickname" variant="outlined"/>
-                <h2>2137</h2>
-                <p>Twoje punkty</p>
+                <AvatarProfile src={avatar}/>
+                <TextField id="outlined-basic" label='username' variant="outlined" value={profileState?.username}
+                           onChange={(event) => handleUserNameChange(event)}/>
                 <Box>
+                    <TextPoints>{profileState?.score}</TextPoints>
+                    <TextLittle>Twoje punkty</TextLittle>
+                </Box>
+                <BadgesContainer>
+                <BadgesBox>
                     <img src={AwardGold} alt=""/>
                     <img src={AwardGold2} alt=""/>
                     <img src={AwardSilver} alt=""/>
-                </Box>
-                <p>Twoje plakietki</p>
-                <ButtonProfile variant="contained" className='button_profile'>
+                </BadgesBox>
+                <TextLittle>Twoje plakietki</TextLittle>
+                </BadgesContainer>
+                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}>
                     Twoje statystyki
                 </ButtonProfile>
-                <ButtonProfile variant="contained" className='button_profile'>
+                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}>
                     Wybierz technologię
                 </ButtonProfile>
                 <Box>
-                    <Card sx={{display: 'flex'}}>
+                    <PreferencesCard>
                         <Box>
                             <FormGroup>
                                 <FormControlLabel
-                                    control={<IOSSwitch sx={{ m: 1 }} />}
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    checked={profileState?.isSearchVisible}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('isSearchVisible', checked)
+                                    }}
                                 />
                             </FormGroup>
                         </Box>
                         <Box>
-                            <Typography variant=''>Czy chcesz być wyszukiwany?</Typography>
-                            <Typography variant='subtitle1'>Szybciej zagrasz ze znajomymi</Typography>
+                            <TabHeadline variant='title1'>Czy chcesz być wyszukiwany?</TabHeadline>
+                            <TabSubheadline variant='subtitle2'>Szybciej zagrasz ze znajomymi</TabSubheadline>
                         </Box>
-                    </Card>
-                    <Card sx={{display: 'flex'}}>
+                    </PreferencesCard>
+                    <PreferencesCard>
                         <Box>
                             <FormGroup>
                                 <FormControlLabel
-                                    control={<IOSSwitch sx={{ m: 1 }} />}
-                                />
-                            </FormGroup>
-                        </Box>
-                        <Box xs={{display: 'flex'}}>
-                            <Typography variant=''>Ranking</Typography>
-                            <Typography variant=''>Czy chcesz być dodany do rankingu globalnego</Typography>
-                        </Box>
-                    </Card>
-                    <Card sx={{display: 'flex'}}>
-                        <Box>
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<IOSSwitch sx={{ m: 1 }} />}
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    checked={profileState?.isRankingVisible}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('isRankingVisible', checked)
+                                    }}
                                 />
                             </FormGroup>
                         </Box>
                         <Box>
-                            <Typography sx={{textAlign: 'center'}} variant=''>Dark Mode</Typography>
+                            <TabHeadline variant='title1'>Ranking</TabHeadline>
+                            <TabSubheadline variant='subtitle2'>Czy chcesz być dodany do rankingu globalnego</TabSubheadline>
                         </Box>
-                    </Card>
+                    </PreferencesCard>
+                    <PreferencesCard>
+                        <Box>
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    checked={profileState?.theme}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('theme', checked)
+                                    }}
+                                />
+                            </FormGroup>
+                        </Box>
+                        <Box>
+                            <TabHeadline variant='title1' variant=''>Dark Mode</TabHeadline>
+                        </Box>
+                    </PreferencesCard>
                 </Box>
 
             </Stack>
