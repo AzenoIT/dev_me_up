@@ -2,12 +2,12 @@ from django.contrib.auth import get_user_model
 from rest_framework import status
 from rest_framework.generics import UpdateAPIView, ListAPIView, CreateAPIView, RetrieveAPIView
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.generics import UpdateAPIView
-from rest_framework.generics import CreateAPIView, RetrieveAPIView
 from rest_framework.response import Response
 
 from . import serializers
 from . import models
+from .models import UserFriend
+from .serializers import UserFriendAddSerializer
 
 
 class CreateUserAPIView(CreateAPIView):
@@ -51,3 +51,26 @@ class GetUserAPIView(RetrieveAPIView):
     def retrieve(self, request, *args, **kwargs):
         serializer = self.serializer_class(request.user)
         return Response(serializer.data)
+
+
+class UserFriendAddAPIView(CreateAPIView):
+    queryset = UserFriend.objects.all()
+    serializer_class = UserFriendAddSerializer
+
+    def create(self, request, *args, **kwargs):
+        queryset = UserFriend.objects.all()
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        friends = queryset.values_list('friend_id')
+        friend_list = []
+
+        for friend in friends:
+            friend_list.append(friend[0])
+
+        if serializer.data.get('friend') not in friend_list:
+            serializer = self.get_serializer(data=request.data)
+            serializer.is_valid()
+            serializer.save()
+        else:
+            return Response(status=status.HTTP_418_IM_A_TEAPOT)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
