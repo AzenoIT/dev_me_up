@@ -23,7 +23,6 @@ class CreateUserAPIView(CreateAPIView):
 
 class UserFriendListAPIView(ListAPIView):
     queryset = models.UserFriend.objects.all()
-    serializer_class = serializers.UserFriendListSerializer
 
     def get(self, request, *args, **kwargs):
         user_id = request.user.id
