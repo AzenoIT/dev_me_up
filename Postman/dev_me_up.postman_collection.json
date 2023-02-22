@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "81e6f6a5-6597-4a16-8f3c-37c633676f85",
+		"_postman_id": "cb5fe35e-b6ad-45bc-8883-040991ad53e5",
 		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "25165670"
+		"_exporter_id": "19471961"
 	},
 	"item": [
 		{
@@ -118,7 +118,7 @@
 					"response": []
 				},
 				{
-					"name": "user update",
+					"name": "Update Account User",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -161,41 +161,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "user get tokens",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\": \"test@test3.com\",\n    \"password\": \"qwert123!\",\n    \"username\": \"testuser3333333\",\n    \"first_name\": \"\",\n    \"last_name\": \"\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://0.0.0.0:8000/api/v1/api/token/",
-							"protocol": "http",
-							"host": [
-								"0",
-								"0",
-								"0",
-								"0"
-							],
-							"port": "8000",
-							"path": [
-								"api",
-								"v1",
-								"api",
-								"token",
-								""
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -221,6 +186,141 @@
 								"api",
 								"v1",
 								"infographics",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Player",
+			"item": [
+				{
+					"name": "Get Specific Player",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/1/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Player",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nick\": \"mariusz\",\n    \"rank\": 5.0,\n    \"is_active\": true,\n    \"is_online\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Player",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nick\": \"mariusz\",\n    \"rank\": 5.0,\n    \"is_active\": true,\n    \"is_online\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/4/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Partial Update Player",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nick\": \"mariusz_update\",\n    \"rank\": 5.0,\n    \"is_active\": false,\n    \"is_online\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/4/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"4",
 								""
 							]
 						}
