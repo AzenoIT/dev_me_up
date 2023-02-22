@@ -14,6 +14,10 @@ export const roboto300 = Roboto({
     weight: '300',
     subsets: ['latin']
 })
+export const roboto400 = Roboto({
+    weight: '400',
+    subsets: ['latin']
+})
 
 export const quicksand = Quicksand({
     weight: '400',
