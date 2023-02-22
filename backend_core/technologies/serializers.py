@@ -10,8 +10,9 @@ class TechnologiesSerializer(serializers.ModelSerializer):
 
 class TechnologiesToPlayersSerializer(serializers.ModelSerializer):
     technology_name = serializers.CharField(source='technology.name', read_only=True)
+    technology_level = serializers.CharField(source='technology.level', read_only=True)
 
 
     class Meta:
         model = TechnologiesToPlayers
-        fields = ('pk', 'player', 'player_rank', 'technology_name',)
+        fields = ('pk', 'player', 'player_rank', 'technology_name', 'technology_level')

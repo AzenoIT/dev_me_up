@@ -18,7 +18,7 @@ class PlayerViewSet(ViewSet):
 
     # TODO add technologies and badges fields
     def retrieve(self, request, pk=None):
-        player = self.queryset.prefetch_related('technologiestoplayers').get(pk=pk)
+        player = self.queryset.prefetch_related('technologiestoplayers', 'playerstobadge').get(pk=pk)
         serializer = serializers.PlayerDetailSerializer(player)
         return Response(serializer.data)
 
