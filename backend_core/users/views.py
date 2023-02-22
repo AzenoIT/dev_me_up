@@ -1,13 +1,16 @@
+import qrcode
+from . import models
+from . import serializers
+from .models import CustomUser
+from django.shortcuts import get_object_or_404
 from django.contrib.auth import get_user_model
+from django.http import HttpResponse
 from rest_framework import status
-from rest_framework.generics import UpdateAPIView, ListAPIView, CreateAPIView, RetrieveAPIView
+from rest_framework.views import APIView
+from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveAPIView, UpdateAPIView
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.generics import UpdateAPIView
-from rest_framework.generics import CreateAPIView, RetrieveAPIView
 from rest_framework.response import Response
 
-from . import serializers
-from . import models
 
 
 class CreateUserAPIView(CreateAPIView):
@@ -51,3 +54,23 @@ class GetUserAPIView(RetrieveAPIView):
     def retrieve(self, request, *args, **kwargs):
         serializer = self.serializer_class(request.user)
         return Response(serializer.data)
+
+
+class GenerateQRCode(APIView):
+    def get(self, request, pk):
+        user = get_object_or_404(CustomUser, pk=pk)
+        qr = qrcode.QRCode(
+            version=1,
+            box_size=10,
+            border=1
+        )
+        data = f"{user.username} - {user.email}"
+        qr.add_data(data)
+        qr.make(fit=True)
+        img = qr.make_image(fill_color="black", back_color="white")
+        response = HttpResponse(content_type="image/png")
+        img.save(response, "PNG")
+        return response
+
+
+
