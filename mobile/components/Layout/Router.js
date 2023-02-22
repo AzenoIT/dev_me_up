@@ -9,20 +9,24 @@ import Login from "../Login/Login";
 import WelcomeScreen from "../WelcomeScreen/WelcomeScreen";
 import Question from "../Question/Question";
 import TechChoice from "../TechChoice/TechChoice";
+import NewGame from "../NewGame/NewGame";
+import Invitation from "../Invitation/Invitation";
 
 function Router() {
     return (
-        <Stack.Navigator initialRouteName="Home"
+        <Stack.Navigator initialRouteName="Znajdź znajomego"
                          screenOptions={{
                              header: (props) => <AzAppBar {...props} />,
                          }}>
-            <Stack.Screen name="Welcome!" component={WelcomeScreen}/>
-            <Stack.Screen name="TechChoice" component={TechChoice}/>
-            <Stack.Screen name="Profile" component={ProfileSettings}/>
-            <Stack.Screen name="Rankings" component={Rankings}/>
-            <Stack.Screen name="SignUp" component={SignUp}/>
-            <Stack.Screen name="Login" component={Login}/>
-            <Stack.Screen name="Question" component={Question}/>
+            <Stack.Screen name='Nowa gra' component={NewGame}/>
+            <Stack.Screen name='Pytanie' component={Question}/>
+            <Stack.Screen name='Wybór tematów' component={TechChoice}/>
+            <Stack.Screen name='Profil' component={ProfileSettings}/>
+            <Stack.Screen name='Metryki' component={Rankings}/>
+            <Stack.Screen name='Zaproś znajomych' component={Invitation}/>
+            <Stack.Screen name='Znajdź znajomego' component={Friends}/>
+            <Stack.Screen name='Rejestracja' component={SignUp}/>
+            <Stack.Screen name='Logowanie' component={Login}/>
         </Stack.Navigator>
     );
 }

@@ -1,8 +1,10 @@
 import {Button, Card, Divider, Text, useTheme} from 'react-native-paper';
 import {StyleSheet, View} from "react-native";
 import {useEffect, useState} from "react";
-import {CountdownCircleTimer, useCountdown} from 'react-native-countdown-circle-timer'
+import {CountdownCircleTimer, useCountdown} from 'react-native-countdown-circle-timer';
 import callApi from "../../helpers/api";
+import useAsyncStorage from '@react-native-async-storage/async-storage';
+import QuestionAnswers from "./QuestionAnswers";
 
 const totalTime = 2;
 const tech = 'js';
@@ -14,6 +16,8 @@ function Question() {
     const [count, setCount] = useState(1);
     const [score, setScore] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
+    const [reload, setReload] = useState(false);
+    const [isCorrect, setIsCorrect] = useState(false);
 
     const {
         path,
@@ -28,10 +32,6 @@ function Question() {
     } = useCountdown({isPlaying: true, duration: totalTime, colors: '#abc'})
 
     useEffect(() => {
-
-    })
-
-    useEffect(() => {
         callApi({endpoint: `/questions/`})
             .then((response) => {
                 setQna(response[0][1][0]);
@@ -39,13 +39,10 @@ function Question() {
             }).catch((error) => {
         });
 
-
         return () => {
         }
     }, [])
 
-    const question = qna[["question"]];
-    const answers = qna[["answers"]];
 
     const styles = StyleSheet.create({
         answer: {
@@ -81,12 +78,18 @@ function Question() {
         }
     })
 
-//     let handleAnswer = (event) => {
-//         if(item.isCorrect === "true"){
-//         setScore(score + 1);
-//     }
-//     setReveal(true);
-// };
+    async function handleAnswer(answerID) {
+        callApi({endpoint: `/questions/`})
+            .then((response) => {
+                setIsCorrect(response[0][1][0]["answers"][answerID] === 'true');
+                if (isCorrect) {
+                    setScore(score + 1);
+                }
+            }).catch((error) => {
+        });
+        setCount(count + 1);
+        setReveal(true);
+    }
 
     return (
         <Card style={styles.card}>
@@ -96,50 +99,23 @@ function Question() {
                 <Text
                     style={styles.question}
                 >
-                    {question}
+                    {qna[["question"]]}
                 </Text>
                 <Divider/>
             </Card.Content>
             <Card.Actions style={styles.container}>
-                <View style={styles.responses_container}>
 
 
-                    {!isLoading && answers.map((item, i) => (
-                            <Card
-                                style={(reveal && item.isCorrect === 'true') ? styles.correctAnswer : styles.answerCard}
-                                key={i}
-                                // onPress={handleAnswer}
-                            >
-                                <Text
-                                    style={styles.answer}
-                                >
-                                    {item.text}
-                                </Text>
-                            </Card>
-                        )
-                    )}
+                   <QuestionAnswers
+                       qna={qna}
+                       reveal={reveal}
+                       styles={styles}
+                       handleAnswer={handleAnswer}
+                       isLoading={isLoading}
+                       totalTime={totalTime}
+                   />
 
-                    <View style={styles.countdown}>
-                        {!reveal ? (
-                            < CountdownCircleTimer
-                                isPlaying
-                                duration={totalTime}
-                                colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-                                colorsTime={[7, 5, 2, 0]}
-                                size={80}
-                                onUpdate={(time) => {
-                                    if (!time) {
-                                        setReveal(true);
-                                    }
-                                }}
-                            >
-                                {({remainingTime}) => <Text>{remainingTime}</Text>}
-                            </CountdownCircleTimer>
-                        ) : (
-                            <Button mode={"contained"}>Next question!</Button>
-                        )}
-                    </View>
-                </View>
+
             </Card.Actions>
         </Card>
     );
