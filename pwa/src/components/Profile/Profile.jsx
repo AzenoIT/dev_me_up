@@ -8,10 +8,12 @@ import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import {useLocalStorage} from "../../hooks/useLocalStorage";
+import {useState} from "react";
 
 const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
-))(({ theme }) => ({
+))(({theme}) => ({
     width: 42,
     height: 26,
     padding: 0,
@@ -71,8 +73,25 @@ const ButtonProfile = styled(Button)({
     }
 })
 
-
 function Profile() {
+    const [profileState, setProfileState] = useState(useLocalStorage('profile')[0]);
+    const setProfileLocalStorage = useLocalStorage('profile')[1]
+
+    function handleUserNameChange(event) {
+        setProfileState({...profileState, username: event.target.value});
+        setProfileLocalStorage({...profileState, username: event.target.value});
+    }
+
+    function handleCheckBoxes(key, checked) {
+        const updatedProfile = {
+            ...profileState,
+            [key]: checked
+        }
+
+        setProfileLocalStorage(updatedProfile);
+        setProfileState(updatedProfile);
+    }
+
     return (
         <Container>
             <Stack direction='column' alignItems='center'>
@@ -80,8 +99,9 @@ function Profile() {
                 {/*    <Avatar src={avatar}/>*/}
                 {/*</Box>*/}
                 <Avatar src={avatar}/>
-                <TextField id="outlined-basic" label="nickname" variant="outlined"/>
-                <h2>2137</h2>
+                <TextField id="outlined-basic" label='username' variant="outlined" value={profileState.username}
+                           onChange={(event) => handleUserNameChange(event)}/>
+                <h2>{profileState.score}</h2>
                 <p>Twoje punkty</p>
                 <Box>
                     <img src={AwardGold} alt=""/>
@@ -96,42 +116,47 @@ function Profile() {
                     Wybierz technologię
                 </ButtonProfile>
                 <Box>
-                    <Card sx={{display: 'flex'}}>
+                    <Card sx={{display: 'flex', p: '3%', m: '2%'}}>
                         <Box>
                             <FormGroup>
                                 <FormControlLabel
-                                    control={<IOSSwitch sx={{ m: 1 }} />}
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    label={'Czy chcesz być wyszukiwany?'}
+                                    checked={profileState.isSearchVisible}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('isSearchVisible', checked)
+                                    }}
+
                                 />
                             </FormGroup>
-                        </Box>
-                        <Box>
-                            <Typography variant=''>Czy chcesz być wyszukiwany?</Typography>
-                            <Typography variant='subtitle1'>Szybciej zagrasz ze znajomymi</Typography>
                         </Box>
                     </Card>
-                    <Card sx={{display: 'flex'}}>
+                    <Card sx={{display: 'flex', p: '3%', m: '2%'}}>
                         <Box>
                             <FormGroup>
                                 <FormControlLabel
-                                    control={<IOSSwitch sx={{ m: 1 }} />}
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    label={'Czy chcesz być dodany do rankingu globalnego?'}
+                                    checked={profileState.isRankingVisible}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('isRankingVisible', checked)
+                                    }}
                                 />
                             </FormGroup>
-                        </Box>
-                        <Box xs={{display: 'flex'}}>
-                            <Typography variant=''>Ranking</Typography>
-                            <Typography variant=''>Czy chcesz być dodany do rankingu globalnego</Typography>
                         </Box>
                     </Card>
-                    <Card sx={{display: 'flex'}}>
+                    <Card sx={{display: 'flex', p: '3%', m: '2%'}}>
                         <Box>
                             <FormGroup>
                                 <FormControlLabel
-                                    control={<IOSSwitch sx={{ m: 1 }} />}
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    label={'Dark Mode'}
+                                    checked={profileState.theme}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('theme', checked)
+                                    }}
                                 />
                             </FormGroup>
-                        </Box>
-                        <Box>
-                            <Typography sx={{textAlign: 'center'}} variant=''>Dark Mode</Typography>
                         </Box>
                     </Card>
                 </Box>
