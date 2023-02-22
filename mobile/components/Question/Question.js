@@ -1,16 +1,20 @@
-import {Card, Divider, Text, useTheme} from 'react-native-paper';
+import {Button, Card, Divider, Text, useTheme} from 'react-native-paper';
 import {StyleSheet, View} from "react-native";
 import {useEffect, useState} from "react";
 import {CountdownCircleTimer, useCountdown} from 'react-native-countdown-circle-timer'
 import callApi from "../../helpers/api";
 
-const totalTime = 20;
+const totalTime = 2;
+const tech = 'js';
 
-function Question(tech) {
+function Question() {
     const theme = useTheme();
     const [reveal, setReveal] = useState(false);
-    const [qna, setQna] = useState([]);
+    const [qna, setQna] = useState({});
     const [count, setCount] = useState(1);
+    const [score, setScore] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
+
     const {
         path,
         pathLength,
@@ -24,22 +28,31 @@ function Question(tech) {
     } = useCountdown({isPlaying: true, duration: totalTime, colors: '#abc'})
 
     useEffect(() => {
-        callApi({endpoint: `/questions/${tech}/1`})
+
+    })
+
+    useEffect(() => {
+        callApi({endpoint: `/questions/`})
             .then((response) => {
-                setQna(response)
+                setQna(response[0][1][0]);
+                setIsLoading(false);
             }).catch((error) => {
         });
+
 
         return () => {
         }
     }, [])
+
+    const question = qna[["question"]];
+    const answers = qna[["answers"]];
 
     const styles = StyleSheet.create({
         answer: {
             margin: 10,
         },
         correctAnswer: {
-            backgroundColor: theme.colors.error
+            backgroundColor: 'green'
         },
         responses_container: {
             flex: 1,
@@ -68,6 +81,13 @@ function Question(tech) {
         }
     })
 
+//     let handleAnswer = (event) => {
+//         if(item.isCorrect === "true"){
+//         setScore(score + 1);
+//     }
+//     setReveal(true);
+// };
+
     return (
         <Card style={styles.card}>
             <Card.Title title={`Pytanie ${count}`} style={styles.hdn}/>
@@ -76,58 +96,47 @@ function Question(tech) {
                 <Text
                     style={styles.question}
                 >
-
+                    {question}
                 </Text>
                 <Divider/>
             </Card.Content>
             <Card.Actions style={styles.container}>
                 <View style={styles.responses_container}>
-                    <Card
-                        style={styles.answerCard}
-                    >
-                        <Text
-                            style={styles.answer}
-                        >Odpowiedź A</Text>
-                    </Card>
-                    <Card
-                        style={reveal ? styles.correctAnswer : styles.answerCard}
-                    >
-                        <Text
-                            style={styles.answer}
-                        >Odpowiedź B</Text>
-                    </Card>
-                    <Card
-                        style={styles.answerCard}
-                    >
-                        <Text
-                            style={styles.answer}
-                        >Odpowiedź C</Text>
-                    </Card>
-                    <Card
-                        style={styles.answerCard}
-                    >
-                        <Text
-                            style={styles.answer}
-                        >Odpowiedź D</Text>
-                    </Card>
-                    <View style={styles.countdown}>
-                        {reveal === false ? (
-                            < CountdownCircleTimer
-                            isPlaying
-                            duration={totalTime}
-                            colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-                            colorsTime={[7, 5, 2, 0]}
-                            size={80}
-                            onUpdate={(time) => {
-                                if(!time) {
-                                    setReveal(true);
-                                }
-                            }}
+
+
+                    {!isLoading && answers.map((item, i) => (
+                            <Card
+                                style={(reveal && item.isCorrect === 'true') ? styles.correctAnswer : styles.answerCard}
+                                key={i}
+                                // onPress={handleAnswer}
                             >
-                        {({remainingTime}) => <Text>{remainingTime}</Text>}
+                                <Text
+                                    style={styles.answer}
+                                >
+                                    {item.text}
+                                </Text>
+                            </Card>
+                        )
+                    )}
+
+                    <View style={styles.countdown}>
+                        {!reveal ? (
+                            < CountdownCircleTimer
+                                isPlaying
+                                duration={totalTime}
+                                colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+                                colorsTime={[7, 5, 2, 0]}
+                                size={80}
+                                onUpdate={(time) => {
+                                    if (!time) {
+                                        setReveal(true);
+                                    }
+                                }}
+                            >
+                                {({remainingTime}) => <Text>{remainingTime}</Text>}
                             </CountdownCircleTimer>
                         ) : (
-                        <></>
+                            <Button mode={"contained"}>Next question!</Button>
                         )}
                     </View>
                 </View>
@@ -135,7 +144,5 @@ function Question(tech) {
         </Card>
     );
 }
-
-
 
 export default Question;

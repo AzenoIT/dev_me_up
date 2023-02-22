@@ -9,7 +9,6 @@ import {AuthProvider} from "./context/AuthContext";
 
 import Outlet from "./Outlet";
 
-
 export default function App() {
     return (
         <NavigationContainer>

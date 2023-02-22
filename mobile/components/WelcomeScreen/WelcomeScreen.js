@@ -5,10 +5,9 @@ import {Button, useTheme} from "react-native-paper";
 import {TextInput, View} from "react-native";
 import {goTo} from "../../helpers/router";
 import {StyleSheet} from "react-native";
-import {useState} from "react";
 import callApi from "../../helpers/api";
 import { Text } from 'react-native-paper';
-
+import TechChoice from "../TechChoice/TechChoice";
 
 function WelcomeScreen({navigation}) {
     const [guestName, setGuestName] = useState("");
@@ -101,4 +100,3 @@ function WelcomeScreen({navigation}) {
 }
 
 export default WelcomeScreen;
-

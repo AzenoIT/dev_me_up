@@ -1,164 +1,227 @@
 {
-  "questions": {
-    "js": [
-      {
-        "id": 1,
-        "question": "Question?",
-        "answers": [
-          {
-            "text": "C > JS",
-            "isCorrect": "false"
-          },
-          {
-            "text": "This answer is wrong",
-            "isCorrect": "false"
-          },
-          {
-            "text": "Maybe",
-            "isCorrect": "true"
-          },
-          {
-            "text": "ACAB",
-            "isCorrect": "false"
-          }
-        ],
-        "difficulty": 2
-      },
-      {
-        "id": 2,
-        "question": "Another question?",
-        "answers": [
-          {
-            "text": "sinx - cosx = tgx",
-            "isCorrect": "false"
-          },
-          {
-            "text": "This answer isn't",
-            "isCorrect": "false"
-          },
-          {
-            "text": "Maybe",
-            "isCorrect": "true"
-          },
-          {
-            "text": "***** ***",
-            "isCorrect": "false"
-          }
-        ],
-        "difficulty": 1
-      },
-      {
-        "id": 3,
-        "question": "3question?",
-        "answers": [
-          {
-            "text": "no",
-            "isCorrect": "false"
-          },
-          {
-            "text": "yeah",
-            "isCorrect": "true"
-          },
-          {
-            "text": "nope!",
-            "isCorrect": "false"
-          },
-          {
-            "text": "nooo...",
-            "isCorrect": "false"
-          }
-        ],
-        "difficulty": 1
-      }
-    ],
-    "python": [
-      {
-        "id": 1,
-        "question": "QuestionP?",
-        "answers": [
-          {
-            "text": "Python",
-            "isCorrect": "false"
-          },
-          {
-            "text": "This answer is wrong",
-            "isCorrect": "false"
-          },
-          {
-            "text": "Maybe",
-            "isCorrect": "true"
-          },
-          {
-            "text": "ACAB",
-            "isCorrect": "false"
-          }
-        ],
-        "difficulty": 2
-      },
-      {
-        "id": 2,
-        "question": "Pondering question?",
-        "answers": [
-          {
-            "text": "pipi",
-            "isCorrect": "true"
-          },
-          {
-            "text": "This answer isn't",
-            "isCorrect": "false"
-          },
-          {
-            "text": "Maybe",
-            "isCorrect": "false"
-          },
-          {
-            "text": "***** ***",
-            "isCorrect": "false"
-          }
-        ],
-        "difficulty": 1
-      },
-      {
-        "id": 3,
-        "question": "Pythion?",
-        "answers": [
-          {
-            "text": "no",
-            "isCorrect": "false"
-          },
-          {
-            "text": "Pythonada",
-            "isCorrect": "true"
-          },
-          {
-            "text": "nope!",
-            "isCorrect": "false"
-          },
-          {
-            "text": "nooo...",
-            "isCorrect": "false"
-          }
-        ],
-        "difficulty": 3
-      }
-    ]
-  },
-  "userNames": [
-    {
-      "id": 1,
-      "name": "kocham-PIS"
-    },
-    {
-      "id": 2,
-      "name": "imadło"
-    },
-    {
-      "id": 3,
-      "name": "orlen-lite"
-    },
-    {
-      "id": 4,
-      "name": "Janusz Kowalski"
-    }
-  ]
+	"questions": [
+		[
+			"js",
+			[
+				{
+					"id": 1,
+					"question": "Question?",
+					"answers": [
+						{
+							"text": "C > JS",
+							"isCorrect": "false"
+						},
+						{
+							"text": "This answer is wrong",
+							"isCorrect": "false"
+						},
+						{
+							"text": "Maybe",
+							"isCorrect": "true"
+						},
+						{
+							"text": "ACAB",
+							"isCorrect": "false"
+						}
+					],
+					"difficulty": 2
+				},
+				{
+					"id": 2,
+					"question": "Another question?",
+					"answers": [
+						{
+							"text": "sinx - cosx = tgx",
+							"isCorrect": "false"
+						},
+						{
+							"text": "This answer isn't",
+							"isCorrect": "false"
+						},
+						{
+							"text": "Maybe",
+							"isCorrect": "true"
+						},
+						{
+							"text": "***** ***",
+							"isCorrect": "false"
+						}
+					],
+					"difficulty": 1
+				},
+				{
+					"id": 3,
+					"question": "3question?",
+					"answers": [
+						{
+							"text": "no",
+							"isCorrect": "false"
+						},
+						{
+							"text": "yeah",
+							"isCorrect": "true"
+						},
+						{
+							"text": "nope!",
+							"isCorrect": "false"
+						},
+						{
+							"text": "nooo...",
+							"isCorrect": "false"
+						}
+					],
+					"difficulty": 1
+				}
+			]
+		],
+		[
+			"python",
+			[
+				{
+					"id": 1,
+					"question": "QuestionP?",
+					"answers": [
+						{
+							"text": "Python",
+							"isCorrect": "false"
+						},
+						{
+							"text": "This answer is wrong",
+							"isCorrect": "false"
+						},
+						{
+							"text": "Maybe",
+							"isCorrect": "true"
+						},
+						{
+							"text": "ACAB",
+							"isCorrect": "false"
+						}
+					],
+					"difficulty": 2
+				},
+				{
+					"id": 2,
+					"question": "Pondering question?",
+					"answers": [
+						{
+							"text": "pipi",
+							"isCorrect": "true"
+						},
+						{
+							"text": "This answer isn't",
+							"isCorrect": "false"
+						},
+						{
+							"text": "Maybe",
+							"isCorrect": "false"
+						},
+						{
+							"text": "***** ***",
+							"isCorrect": "false"
+						}
+					],
+					"difficulty": 1
+				},
+				{
+					"id": 3,
+					"question": "Pythion?",
+					"answers": [
+						{
+							"text": "no",
+							"isCorrect": "false"
+						},
+						{
+							"text": "Pythonada",
+							"isCorrect": "true"
+						},
+						{
+							"text": "nope!",
+							"isCorrect": "false"
+						},
+						{
+							"text": "nooo...",
+							"isCorrect": "false"
+						}
+					],
+					"difficulty": 3
+				}
+			]
+		]
+	],
+	"userNames": [
+		{
+			"id": 1,
+			"name": "kocham-PIS"
+		},
+		{
+			"id": 2,
+			"name": "imadło"
+		},
+		{
+			"id": 3,
+			"name": "orlen-lite"
+		},
+		{
+			"id": 4,
+			"name": "Janusz Kowalski"
+		}
+	],
+	"techChoices": [
+		{
+			"id": 1,
+			"name": "Python",
+			"active": false,
+			"showSelect": false,
+			"level": "",
+			"logo2": "120",
+			"logo": "python"
+		},
+		{
+			"id": 2,
+			"name": "Java Script",
+			"active": false,
+			"showSelect": true,
+			"level": "",
+			"logo2": "331",
+			"logo": "javascript"
+		},
+		{
+			"id": 3,
+			"name": "PhpStorm",
+			"active": false,
+			"showSelect": true,
+			"level": "",
+			"logo2": "211",
+			"logo": "phpstorm"
+		},
+		{
+			"id": 4,
+			"name": "MS DOS",
+			"active": false,
+			"showSelect": false,
+			"level": "",
+			"logo2": "121",
+			"logo": "msdos"
+		},
+		{
+			"id": 5,
+			"name": "C#",
+			"active": false,
+			"showSelect": false,
+			"level": "",
+			"logo2": "136",
+			"logo": "csharp"
+		},
+		{
+			"id": 6,
+			"name": "CSS",
+			"active": false,
+			"showSelect": false,
+			"level": "",
+			"logo2": "117",
+			"logo": "css3"
+		}
+	],
+	"levels": ["junior", "mid", "senior", "principle"]
 }
