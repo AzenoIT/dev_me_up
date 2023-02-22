@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "ee2b94e8-8323-4e46-8710-467b70e54233",
+		"_postman_id": "adcf92bf-6e50-470c-a072-fc33596d2562",
 		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24531894"
@@ -316,6 +316,36 @@
 								"api",
 								"v1",
 								"generate-nick",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Technology",
+			"item": [
+				{
+					"name": "List Technology GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/technologies/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"technologies",
 								""
 							]
 						}
