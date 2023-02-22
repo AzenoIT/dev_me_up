@@ -27,27 +27,27 @@ export default function FirstSection() {
                 </div>
             </div>
             <div className='hide-on-mobile desktop_page'>
-                <h1 className={`${teko400.className} h1_desktop`}>
-                    <div className='paragraphs_desktop'>
-                        <p className='p_desktop'>Graj&nbsp;</p>
-                        <p className='p_desktop'>ucz się</p>
-                    </div>
-                    <p className='p2_desktop'>rywalizuj</p>
-                </h1>
-                <div className='info_and_buttons'>
-                    <Image  src={smartphone} alt='smartphone'/>
+                <div className='h1_box_desktop'>
+                    <h1 className={`${teko400.className} h1_desktop`}>
+                        Graj ucz się rywalizuj
+                    </h1>
+                </div>
+                <div className='phone_and_buttons'>
+                    <Image src={smartphone} alt='smartphone' width={900} height={800}/>
                     <div className='buttons_download '>
-                        <div className='google_download'>
-                            <Image src={apple_qr} alt='QR_apple'/>
-                            <a href='https://www.apple.com/pl/app-store/' className='btnAppStore'>
-                                <Image src={apple} alt='Apple picture'/>
-                            </a>
-                        </div>
-                        <div className='apple_download'>
-                            <Image src={google_qr} alt='QR_apple'/>
-                            <a href='https://play.google.com/store/games' className='btnAppStore'>
-                                <Image src={google} alt='Apple picture'/>
-                            </a>
+                        <div className='buttons_wrapper'>
+                            <div className='google_download'>
+                                <Image src={apple_qr} alt='QR_apple'/>
+                                <a href='https://www.apple.com/pl/app-store/' className='btnAppStore'>
+                                    <Image src={apple} alt='Apple picture'/>
+                                </a>
+                            </div>
+                            <div className='apple_download'>
+                                <Image src={google_qr} alt='QR_apple'/>
+                                <a href='https://play.google.com/store/games' className='btnAppStore'>
+                                    <Image src={google} alt='Apple picture'/>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

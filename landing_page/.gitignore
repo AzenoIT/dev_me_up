@@ -31,5 +31,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-# css
+#css
 src/styles/css

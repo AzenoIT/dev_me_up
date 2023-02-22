@@ -23,3 +23,10 @@ class UserFriendListSerializer(ModelSerializer):
     class Meta:
         model = UserFriend
         fields = ('friend', 'approved')
+
+
+class UserFriendAddSerializer(ModelSerializer):
+    class Meta:
+        model = UserFriend
+        fields = ('user', 'friend', 'approved')
+
