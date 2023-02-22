@@ -74,6 +74,96 @@ html, body {
   font-size: 16px;
 }
 
+.box_section {
+  background-image: url("../../../images/mac_icon_1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0.9375rem 1.875rem;
+  background-color: #DFDEDE;
+}
+.box_section .hd1 {
+  font-style: normal;
+  font-size: 6rem;
+  line-height: 62px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 23.25rem;
+}
+.box_section .hd1 .hd1-indent {
+  text-align: start;
+  margin-left: 40px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.box_section .hd1 .hd1-center {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.box_section .hd1 .hd1-indent2 {
+  text-align: end;
+  margin: 0;
+}
+.box_section .buttons_first_section {
+  display: flex;
+  justify-content: center;
+}
+.box_section .buttons_first_section .btn_newsletter_add {
+  border: none;
+  margin-bottom: 5.625rem;
+}
+.box_section .buttons_first_section .btn_download {
+  margin-right: 2.4375rem;
+}
+
+.desktop_page {
+  padding: 3.75rem;
+  background-color: #DFDEDE;
+}
+.desktop_page .h1_desktop {
+  font-size: 12.5rem;
+  text-align: center;
+  color: white;
+  text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
+  margin: 0;
+}
+.desktop_page .h1_desktop .p_desktop {
+  margin-bottom: 0.0625rem;
+  margin-top: 0;
+}
+.desktop_page .h1_desktop .paragraphs_desktop {
+  display: flex;
+  justify-content: center;
+}
+.desktop_page .h1_desktop .p2_desktop {
+  margin: 0;
+}
+.desktop_page .info_and_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.desktop_page .info_and_buttons .buttons_download {
+  display: flex;
+  flex-direction: row;
+}
+.desktop_page .info_and_buttons .buttons_download .google_download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2.0625rem;
+}
+.desktop_page .info_and_buttons .buttons_download .apple_download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 .btn_newsletter_add {
   color: #6750A4;
   font-style: normal;
@@ -120,7 +210,7 @@ html, body {
   display: flex;
   align-items: center;
   text-align: center;
-  margin-bottom: 5.625rem;
+  margin-bottom: 4.625rem;
 }
 
 @media (min-width: 991px) {
@@ -143,7 +233,7 @@ html, body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 95px 30px;
+  padding: 74px 30px 0 30px;
   background-color: #DFDEDE;
 }
 
@@ -175,52 +265,8 @@ html, body {
   margin-bottom: 94px;
 }
 
-html, body {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-.box_section {
-  background-image: url("../../../images/mac_icon_1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 0.9375rem 1.875rem;
-}
-.box_section .hd1 {
-  font-style: normal;
-  font-size: 6rem;
-  line-height: 62px;
-  text-align: center;
-  color: #000;
-  margin-bottom: 23.25rem;
-  margin-top: 3.3125rem;
-}
-.box_section .hd1 .hd1-indent {
-  text-align: start;
-  margin-left: 40px;
-  margin-bottom: 5px;
-  margin-top: 0;
-}
-.box_section .hd1 .hd1-center {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.box_section .hd1 .hd1-indent2 {
-  text-align: end;
-  margin: 0;
-}
-.box_section .btn_newsletter_add {
-  border: none;
-  margin-bottom: 5.625rem;
-}
-.box_section .btn_download {
-  margin-right: 2.4375rem;
-}
-
 .container_end {
-  padding: 5.625rem 1.875rem;
+  padding-top: 5.625rem;
   background-image: url("../../../images/devmeup2.png");
   background-color: #DFDEDE;
   background-repeat: no-repeat;
@@ -243,6 +289,11 @@ html, body {
 
 .btn_download {
   margin-right: 1.875rem;
+}
+
+.buttons_end {
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
