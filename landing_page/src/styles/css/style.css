@@ -95,7 +95,6 @@ a {
   background-color: #DFDEDE;
 }
 .box_section .hd1 {
-  font-style: normal;
   font-size: 6rem;
   line-height: 62px;
   text-align: center;
@@ -177,7 +176,7 @@ a {
 }
 
 .btn_newsletter_add {
-  color: #6750A4;
+  color: #000;
   font-style: normal;
   font-size: 16px;
   line-height: 1.25rem;

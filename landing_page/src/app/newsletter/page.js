@@ -11,7 +11,7 @@ function Newsletter() {
             <h2 className={`${teko500.className} hdl_newsletter`}>Graj Rywalizuj Ucz się</h2>
             <p className={`${roboto300.className} text_newsletter`}>Sprawdź swoją wiedzę rywalizując ze znajomymi.</p>
             <div className='btn_newsletter_box'>
-            <a href="" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
+            <a href="" className={`${teko500.className} btn_newsletter_add`}>Newsletter</a>
             </div>
         </div>
 
