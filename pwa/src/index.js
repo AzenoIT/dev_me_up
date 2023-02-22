@@ -10,6 +10,7 @@ import Category from "./components/Category/Category";
 import Tutorial from "./components/Tutorial/Tutorial";
 import Layout from "./components/Layout/Layout";
 import Intro from "./components/Intro/Intro";
+import Profile from "./components/Profile/Profile";
 
 const router = createBrowserRouter([
     {
@@ -27,7 +28,11 @@ const router = createBrowserRouter([
             },
             {
                 path: "category",
-                element: <Category />
+                element: <Category/>
+            },
+            {
+                path: "profile",
+                element: <Profile/>
             },
             {
                 path: 'homepage',

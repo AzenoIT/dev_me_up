@@ -25,7 +25,7 @@ function Category() {
             }}>
                 <Grid container spacing={2}>
                     {images.map((item) => (
-                        <Grid item xs={6} sm={4} md={3} key={item}>
+                        <Grid xs={6} sm={4} md={3} key={item}>
                             <Item>
                                 <img src={item} alt="" style={{width: '90%', height: '90%',}}/>
                             </Item>
