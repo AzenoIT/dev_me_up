@@ -4,3 +4,5 @@
 backend_core/envs/.env_django
 
 .DS_Store
+
+landing_page/src/styles/css

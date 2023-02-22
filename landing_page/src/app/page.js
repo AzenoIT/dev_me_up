@@ -9,12 +9,12 @@ import EndSection from "@/app/end/page";
 
 export default function Home() {
     return (
-        <>
-            <HamburgerMenu  />
-            <FirstSection />
-            <Opinions />
-            <Newsletter/>
-            <EndSection />
-        </>
+       <>
+           <HamburgerMenu  />
+           <FirstSection />
+           <Opinions />
+           <Newsletter/>
+           <EndSection />
+       </>
     )
 }

@@ -11,6 +11,7 @@ import apple_qr from "@/images/apple_qr.png";
 import google_qr from "@/images/google_qr.png";
 import smartphone from "@/images/smartphone.png"
 
+
 export default function FirstSection() {
     return (
         <>
