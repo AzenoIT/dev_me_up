@@ -1,9 +1,13 @@
 {
 	"info": {
+<<<<<<< HEAD:Postman/dev_me_up.postman_collection.json
 		"_postman_id": "8a502e67-a299-43f8-ba50-a2b4f47f1abf",
+=======
+		"_postman_id": "0d47445f-2ffb-41f0-82cc-21c72b588538",
+>>>>>>> origin/master:Postman/dev_me_upp.postman_collection.json
 		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24531894"
+		"_exporter_id": "24410131"
 	},
 	"item": [
 		{
@@ -442,6 +446,7 @@
 			]
 		},
 		{
+<<<<<<< HEAD:Postman/dev_me_up.postman_collection.json
 			"name": "Technology",
 			"item": [
 				{
@@ -451,6 +456,29 @@
 						"header": [],
 						"url": {
 							"raw": "http://0.0.0.0:8000/api/v1/technologies/",
+=======
+			"name": "Game",
+			"item": [
+				{
+					"name": "Start Quizz",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"AAA3\",\n    \"technology_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/game/",
+>>>>>>> origin/master:Postman/dev_me_upp.postman_collection.json
 							"protocol": "http",
 							"host": [
 								"0",
@@ -462,7 +490,11 @@
 							"path": [
 								"api",
 								"v1",
+<<<<<<< HEAD:Postman/dev_me_up.postman_collection.json
 								"technologies",
+=======
+								"game",
+>>>>>>> origin/master:Postman/dev_me_upp.postman_collection.json
 								""
 							]
 						}
