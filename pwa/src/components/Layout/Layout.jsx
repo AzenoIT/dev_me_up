@@ -1,6 +1,7 @@
-import NavBar from "../NavBar/NavBar";
 import {Outlet} from 'react-router-dom';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
+
+import NavBar from "../NavBar/NavBar";
 
 
 const lightTheme = createTheme({
