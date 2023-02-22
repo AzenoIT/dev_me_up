@@ -21,8 +21,9 @@ function Newsletter() {
             <div className="hide-on-mobile">
                 <div className='h1_box_desktop'>
                     <h1 className={`${teko400.className} h1_desktop`}>
-                        Zapisz się na Newsletter
+                        Zapisz się na&nbsp;Newsletter
                     </h1>
+                    <p className={`${roboto400.className} desc_desktop`}>Zapisując się na newsletter,&nbsp;zawsze będziesz wiedział&nbsp;o nowych pytaniach, językach itp.</p>
                 </div>
                 <div className="input_box">
                     <input className={`${roboto400.className} input_desktop`} type='text' name='email'
