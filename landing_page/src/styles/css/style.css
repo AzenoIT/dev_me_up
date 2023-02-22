@@ -164,18 +164,6 @@ html, body {
   font-size: 16px;
 }
 
-.btn_newsletter_add {
-  color: #6750A4;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.25rem;
-  background: linear-gradient(0deg, rgba(103, 80, 164, 0.05), rgba(103, 80, 164, 0.05)), #FFFBFE;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
-  border-radius: 6.25rem;
-  padding: 0.625rem 1.5rem;
-  text-decoration: none;
-}
-
 .box_newsletters {
   background-color: #DFDEDE;
   width: 100%;
@@ -211,6 +199,14 @@ html, body {
   align-items: center;
   text-align: center;
   margin-bottom: 4.625rem;
+}
+
+.input_desktop {
+  background: #FFFFFF;
+  width: 426px;
+  height: 94px;
+  border-radius: 30px;
+  border: none;
 }
 
 @media (min-width: 991px) {

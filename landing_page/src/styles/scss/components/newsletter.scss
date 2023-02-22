@@ -1,4 +1,4 @@
-@import "../helpers/buttons";
+@import "../helpers/variables";
 
 .box_newsletters {
     background-color: #DFDEDE;
@@ -37,4 +37,12 @@
     align-items: center;
     text-align: center;
     margin-bottom: toRem(74px);
+}
+
+.input_desktop {
+    background: #FFFFFF;
+    width: 426px;
+    height: 94px;
+    border-radius: 30px;
+    border: none;
 }
