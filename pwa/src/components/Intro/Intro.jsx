@@ -77,22 +77,16 @@ function Intro() {
     useEffect(() => {
         if (!guestNick) {
             return generateRandomName()
-            console.log('Nie ma guest nicka, generuję')
         }
-        console.log('Jest guest nick, nie generuję')
     }, []);
 
     useEffect(() => {
-        if (Object.keys(profile).length > 2) {
             setProfile({...profile, username: guestNick});
-            console.log('set Profile na {...profile, username}')
-        }
     }, [guestNick])
 
     function generateRandomName() {
         const randomName = uniqueNamesGenerator({dictionaries: [adjectives, animals], length: 2});
         setGuestNick(randomName);
-        // setProfile({...profile, username: randomName})
     }
 
     function handleGuestStart() {
