@@ -16,6 +16,7 @@ class PlayerViewSet(ViewSet):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
+    # TODO add technologies and badges fields
     def retrieve(self, request, pk=None):
         player = get_object_or_404(queryset=self.queryset, pk=pk)
         serializer = serializers.PlayerSerializer(player)
