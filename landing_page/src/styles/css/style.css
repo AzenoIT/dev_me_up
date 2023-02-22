@@ -122,7 +122,7 @@ html, body {
   background-color: #DFDEDE;
   height: 100%;
 }
-.desktop_page .h1_desktop {
+.desktop_page .h1_box_desktop .h1_desktop {
   font-size: 13.75rem;
   text-align: center;
   color: white;
@@ -132,19 +132,22 @@ html, body {
 .desktop_page .phone_and_buttons {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .desktop_page .phone_and_buttons .buttons_download {
   display: flex;
-  flex-direction: row;
+  justify-content: end;
+  align-items: end;
 }
-.desktop_page .phone_and_buttons .buttons_download .google_download {
+.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper {
+  display: flex;
+}
+.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper .google_download {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 2.0625rem;
 }
-.desktop_page .phone_and_buttons .buttons_download .apple_download {
+.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper .apple_download {
   display: flex;
   flex-direction: column;
   align-items: center;
