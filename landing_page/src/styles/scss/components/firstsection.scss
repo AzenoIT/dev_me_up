@@ -1,7 +1,7 @@
 @import "../helpers/variables";
 
 .box_section {
-    background-image: url("../../../images/mac_icon_1.png");
+    background-image: url("../../../images/smartphone.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -16,7 +16,6 @@
         text-align: center;
         color: #000;
         margin-bottom: toRem(372px);
-        //margin-top: toRem(53px);
 
         .hd1-indent {
             text-align: start;
@@ -63,19 +62,6 @@
         color: white;
         text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
         margin: 0;
-        .p_desktop {
-            margin-bottom: toRem(1px);
-            margin-top: 0;
-        }
-
-        .paragraphs_desktop {
-            display: flex;
-            justify-content: center;
-        }
-
-        .p2_desktop {
-            margin: 0;
-        }
     }
 
     .phone_and_buttons {

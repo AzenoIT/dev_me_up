@@ -75,7 +75,7 @@ html, body {
 }
 
 .box_section {
-  background-image: url("../../../images/mac_icon_1.png");
+  background-image: url("../../../images/smartphone.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -127,17 +127,6 @@ html, body {
   text-align: center;
   color: white;
   text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
-  margin: 0;
-}
-.desktop_page .h1_desktop .p_desktop {
-  margin-bottom: 0.0625rem;
-  margin-top: 0;
-}
-.desktop_page .h1_desktop .paragraphs_desktop {
-  display: flex;
-  justify-content: center;
-}
-.desktop_page .h1_desktop .p2_desktop {
   margin: 0;
 }
 .desktop_page .phone_and_buttons {

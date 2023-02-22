@@ -27,15 +27,13 @@ export default function FirstSection() {
                 </div>
             </div>
             <div className='hide-on-mobile desktop_page'>
-                <h1 className={`${teko400.className} h1_desktop`}>
-                    <div className='paragraphs_desktop'>
-                        <p className='p_desktop'>Graj&nbsp;</p>
-                        <p className='p_desktop'>ucz się</p>
-                    </div>
-                    <p className='p2_desktop'>rywalizuj</p>
-                </h1>
+                <div>
+                    <h1 className={`${teko400.className} h1_desktop`}>
+                        Graj ucz się rywalizuj
+                    </h1>
+                </div>
                 <div className='phone_and_buttons'>
-                    <Image  src={smartphone} alt='smartphone'/>
+                    <Image src={smartphone} alt='smartphone'/>
                     <div className='buttons_download '>
                         <div className='google_download'>
                             <Image src={apple_qr} alt='QR_apple'/>
