@@ -72,5 +72,5 @@ class UserFriendAddAPIView(CreateAPIView):
             serializer.is_valid()
             serializer.save()
         else:
-            print('you already have this friend')
+            return Response(status=status.HTTP_418_IM_A_TEAPOT)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
