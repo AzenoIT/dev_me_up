@@ -22,6 +22,7 @@ urlpatterns = [
     path('api/v1/', include('users.urls')),
     path('api/v1/', include('technologies.urls')),
     path('api/v1/', include('infographics.urls')),
+    path('api/v1/', include('quizzes.urls')),
     path('api/v1/', include('players.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
