@@ -41,7 +41,7 @@ function NewGame() {
                         <Button
                             style={styles(theme).button}
                             mode="elevated"
-                            onPress={goTo(navigation, 'Wyszukaj znajomych')}
+                            onPress={goTo(navigation, 'Znajdź znajomego')}
                         >
                             Graj ze znajomym
                         </Button>
