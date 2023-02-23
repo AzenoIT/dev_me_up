@@ -6,7 +6,8 @@ import {goTo} from "../../helpers/router";
 import {Button} from "react-native-paper";
 import {useNavigation} from "@react-navigation/native";
 
-function BattleSummary({score, count, setIsOver}) {
+function BattleSummary() {
+    const [isCorrect, setIsCorrect] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const navigation = useNavigation();
 
@@ -14,19 +15,11 @@ function BattleSummary({score, count, setIsOver}) {
 
         handleSummaryFromStorage().then(setIsLoading(false)).catch(console.log);
 
-        return () => {
-            storeData('score.current', 0);
-            storeData('count.current', 0);
-            score.current = 0;
-            count.current = 0;
-        }
-
 
     }, [])
 
     async function handleSummaryFromStorage() {
-        let storageScore = await getData('score');
-        let storageCount = await getData('count');
+        let storageScore = await getData('correct');
 
         score.current = storageScore;
         count.current = storageCount;
