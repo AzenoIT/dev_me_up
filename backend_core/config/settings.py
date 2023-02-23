@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework_simplejwt',
     'drf_spectacular',
+    'sendgrid',
 
     # Local
     'users.apps.UsersConfig',
@@ -229,5 +230,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-DEFAULT_FROM_EMAIL = os.environ.get('FROM_EMAIL')
+FROM_EMAIL = os.environ.get('FROM_EMAIL')
 LOGIN_REDIRECT_URL = 'success'

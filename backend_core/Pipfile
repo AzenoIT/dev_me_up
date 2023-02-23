@@ -13,6 +13,8 @@ djangorestframework-simplejwt = "==5.2.2"
 drf-spectacular = "==0.25.1"
 django-cors-headers = "==3.13.0"
 numpy = "==1.24.2"
+sendgrid = "==6.9.7"
+python-http-client = "==3.3.7"
 
 [dev-packages]
 
