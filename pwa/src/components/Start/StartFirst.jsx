@@ -59,18 +59,7 @@ function Start() {
                 "amount": 0
             }
         ],
-        'technologies': [
-            {
-                "id": 1,
-                "name": "python",
-                "level": "guru"
-            },
-            {
-                "id": 2,
-                "name": "html",
-                "level": "junior"
-            }
-        ],
+        'technologies': [],
         'isSearchVisible': true,
         'isRankingVisible': true,
         'theme': true,
@@ -125,13 +114,13 @@ function Start() {
                                onBlur={(event) => {checkIfEmpty(event)}}
                                value={guestNick}
                     />
-                    <ButtonWrapper sx={{marginTop: "5px", marginBottom: "45px"}}>
+                    <ButtonWrapper sx={{marginTop: "5px", marginBottom: "45px"}} >
                         <ButtonCta onClick={generateRandomName}>Losuj nazwę użytkownika</ButtonCta>
                     </ButtonWrapper>
 
                     <ButtonWrapper sx={{marginTop: "20px", marginBottom: "75px"}}>
-                        <ButtonCta onClick={() => {handleNavigate('/profile')}}>Zaczynamy!</ButtonCta>
-                        <TextSmall>Zagraj jako gość.</TextSmall>
+                        <ButtonCta onClick={() => {handleNavigate('/category')}}>Zagraj jako gość</ButtonCta>
+                        <TextSmall>Zaczynamy!</TextSmall>
                     </ButtonWrapper>
 
                     <ButtonCta onClick={() => {handleNavigate('/login')}}>Zaloguj się</ButtonCta>

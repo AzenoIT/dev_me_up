@@ -30,10 +30,6 @@ const router = createBrowserRouter([
         element: <Tutorial/>
     },
     {
-        path: "/profile",
-        element: <Profile/>
-    },
-    {
         path: '/',
         element: <Layout/>,
         children: [
@@ -46,6 +42,10 @@ const router = createBrowserRouter([
                 path: 'startfirst',
                 element: (<StartFirst/>)
 
+            },
+            {
+                path: "/profile",
+                element: <Profile/>
             },
             {
                 path: "category",
