@@ -20,37 +20,34 @@ import StartFirst from "./components/Start/StartFirst"
 
 const router = createBrowserRouter([
     {
-      path: '/start',
-      element: <Start/>
-    },
-    {
       path: '/start2',
       element: <Start2/>
-    },
-    {
-      path: '/startfirst',
-      element: <StartFirst/>
     },
     {
         path: "/tutorial",
         element: <Tutorial/>
     },
     {
+        path: "/profile",
+        element: <Profile/>
+    },
+    {
         path: '/',
         element: <Layout/>,
         children: [
             {
-                path: 'intro',
-                element: (<Intro/>)
+                path: 'start',
+                element: (<Start/>)
+
+            },
+            {
+                path: 'startfirst',
+                element: (<StartFirst/>)
 
             },
             {
                 path: "category",
                 element: <Category/>
-            },
-            {
-                path: "profile",
-                element: <Profile/>
             },
             {
                 path: 'login',
