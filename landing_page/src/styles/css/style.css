@@ -13,9 +13,10 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 2.5rem 1.5625rem 0.9375rem;
+  padding: 2.5rem 1.875rem 1.5625rem 0.9375rem;
   position: sticky;
   top: 0;
+  background: #DFDEDE;
 }
 
 .logo_box {
@@ -74,13 +75,13 @@ a {
   margin-left: 0.6875rem;
   margin-right: 0.3125rem;
 }
-.navigation .btn_newsletter_add {
-  margin-right: 2.4375rem;
-  margin-bottom: 0;
-}
 .navigation .container-btn {
   display: flex;
   align-items: center;
+}
+.navigation .container-btn .btn_newsletter_add {
+  margin-right: 2.4375rem;
+  margin-bottom: 0;
 }
 
 html, body {

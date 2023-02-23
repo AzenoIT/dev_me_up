@@ -5,9 +5,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: toRem(40px) toRem(40px) toRem(25px) toRem(15px);
+    padding: toRem(40px) toRem(30px) toRem(25px) toRem(15px);
     position: sticky;
     top:0;
+    background: #DFDEDE;
 
 }
 
@@ -62,6 +63,7 @@
     .container-logo{
         display: flex;
         align-items: center;
+
     }
     .logo {
         color: #FFFFFF;
@@ -70,14 +72,17 @@
         margin-right: toRem(5px);
 
     }
-
-    .btn_newsletter_add {
-        margin-right: toRem(39px);
-        margin-bottom: 0;
-    }
-
     .container-btn {
         display: flex;
         align-items: center;
+
+        .btn_newsletter_add {
+            margin-right: toRem(39px);
+            margin-bottom: 0;
+        }
     }
+
+
+
+
 }
