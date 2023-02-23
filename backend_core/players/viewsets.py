@@ -16,10 +16,8 @@ class PlayerViewSet(ViewSet):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-    # TODO add technologies and badges fields
     def retrieve(self, request, pk=None):
-        player = get_object_or_404(queryset=self.queryset, pk=pk)
-        serializer = serializers.PlayerSerializer(player)
+        serializer = serializers.PlayerDetailSerializer(self.queryset.prefetch_related('technologiestoplayers').get(pk=pk))
         return Response(serializer.data)
 
     def partial_update(self, request, pk=None):
@@ -29,10 +27,9 @@ class PlayerViewSet(ViewSet):
         serializer.save()
         return Response(status=status.HTTP_200_OK)
 
-
+    # TODO change float to bool
     def destroy(self, request, pk=None):
         player = get_object_or_404(queryset=self.queryset, pk=pk)
-        player.is_active = False
+        player.is_active = 0.0
         player.save()
         return Response(status=status.HTTP_200_OK)
-
