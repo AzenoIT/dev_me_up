@@ -4,12 +4,11 @@ import "../../styles/scss/components/newsletter.scss";
 import "../../styles/scss/helpers/buttons.scss";
 import {roboto300, roboto400, roboto500, teko300, teko400, teko500} from "@/app/fonts";
 
-
-
 function Newsletter() {
     return (
         <>
-            <div id="newsletter" className="hide-on-desktop  box_newsletters">
+
+            <div id="newsletter_mobile" className="hide-on-desktop  box_newsletters">
                 <h2 className={`${teko500.className} hdl_newsletter`}>Graj Rywalizuj Ucz się</h2>
                 <p className={`${teko300.className} text_newsletter`}>Sprawdź swoją wiedzę rywalizując ze
                     znajomymi.</p>
@@ -19,7 +18,7 @@ function Newsletter() {
 
             </div>
 
-            <div className="hide-on-mobile box_newsletter_desktop">
+            <div id="newsletter_desktop" className="hide-on-mobile box_newsletter_desktop">
                 <div className='h1_box_desktop'>
                     <h1 className={`${teko400.className} h1_desktop`}>
                         Zapisz się na&nbsp;Newsletter
@@ -32,11 +31,8 @@ function Newsletter() {
                     <a href="" className={`${roboto400.className} btn_send`}>Zapisz się</a>
                 </div>
             </div>
-
-
         </>
-    )
-        ;
+    );
 
 }
 
