@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "8a502e67-a299-43f8-ba50-a2b4f47f1abf",
-		"name": "dev_me_up",
+		"_postman_id": "be30d802-02ac-41cd-ac70-1e66976e1334",
+		"name": "dev_me_up Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "24531894"
 	},
@@ -397,7 +397,7 @@
 					"response": []
 				},
 				{
-					"name": "Player Quizzes List Post",
+					"name": "Player Quizzes List Post Copy",
 					"request": {
 						"method": "POST",
 						"header": [],
