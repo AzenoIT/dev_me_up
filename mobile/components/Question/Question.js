@@ -1,149 +1,145 @@
-import {Button, Card, Divider, Text, useTheme} from 'react-native-paper';
+import {Card, Divider, Text, useTheme} from 'react-native-paper';
 import {StyleSheet, View} from "react-native";
 import {useEffect, useState} from "react";
-import {CountdownCircleTimer, useCountdown} from 'react-native-countdown-circle-timer'
 import callApi from "../../helpers/api";
-
-const totalTime = 2;
-const tech = 'js';
+import QuestionAnswers from "./QuestionAnswers";
+import QuestionReveal from "./QuestionReveal";
+import {getData, storeData} from "../../helpers/storage_helpers";
+import {useNavigation} from "@react-navigation/native";
 
 function Question() {
     const theme = useTheme();
     const [reveal, setReveal] = useState(false);
-    const [qna, setQna] = useState({});
-    const [count, setCount] = useState(1);
-    const [score, setScore] = useState(0);
+    const [question, setQuestion] = useState('');
+    const [answers, setAnswers] = useState([]);
+    const [questionTime, setQuestionTime] = useState(5);
     const [isLoading, setIsLoading] = useState(true);
-
-    const {
-        path,
-        pathLength,
-        stroke,
-        strokeDashoffset,
-        remainingTime,
-        elapsedTime,
-        size,
-        strokeWidth,
-        onUpdate
-    } = useCountdown({isPlaying: true, duration: totalTime, colors: '#abc'})
-
-    useEffect(() => {
-
-    })
+    const [usersPick, setUsersPick] = useState(null);
+    const [correctPick, setCorrectPick] = useState(null);
+    const [opponentID, setOpponentID] = useState(undefined);
 
     useEffect(() => {
         callApi({endpoint: `/questions/`})
             .then((response) => {
-                setQna(response[0][1][0]);
+                setQuestion(response[0][1][0]["question"]);
+                setAnswers(response[0][1][0]["answers"]);
+                setQuestionTime(5);
                 setIsLoading(false);
             }).catch((error) => {
         });
 
-
-        return () => {
-        }
     }, [])
 
-    const question = qna[["question"]];
-    const answers = qna[["answers"]];
-
+    const navigation = useNavigation();
     const styles = StyleSheet.create({
         answer: {
-            margin: 10,
+            marginTop: 20,
+            margin: 20
         },
         correctAnswer: {
+            marginTop: 20,
+            marginBottom: 20,
             backgroundColor: 'green'
         },
+        wrongAnswer: {
+            marginTop: 20,
+            marginBottom: 20,
+            backgroundColor: theme.colors.error
+        },
+        main_container: {},
         responses_container: {
-            flex: 1,
-            backgroundColor: "white",
-            justifyContent: "space-between",
-            height: '100%'
+            margin: 20,
         },
-        container: {
-            backgroundColor: "white",
-            height: '85%'
+        container: {},
+        content: {
+            margin: 20,
+            backgroundColor: 'black'
         },
-        content: {},
         answerCard: {
-            marginTop: 20
+            marginTop: 20,
+            marginBottom: 20,
         },
-        card: {
-            marginLeft: 20,
-            marginRight: 20,
-            height: '100%'
+        card: {},
+        question_container: {
+            margin: 20,
+            minHeight: 100
         },
-        question: {},
-        hdn: {},
+        hdl: {
+            color: 'red',
+            fontFamily: 'monospace'
+        },
+        question: {
+            color: 'green',
+            fontFamily: 'monospace'
+        },
         countdown: {
-            margin: 15,
             alignItems: "center"
+        },
+        btn_container: {
+            marginLeft: 20,
+            marginRight: 20
         }
-    })
+    });
 
-//     let handleAnswer = (event) => {
-//         if(item.isCorrect === "true"){
-//         setScore(score + 1);
-//     }
-//     setReveal(true);
-// };
+
+    async function handleRevealAnswer(answerID) {
+        callApi({endpoint: `/questions/`})
+            .then((response) => {
+
+                response[0][1][0]["answers"].forEach((answer, i) => {
+                    if (answer.isCorrect === 'true') {
+                        setCorrectPick(i);
+                    }
+                });
+                setUsersPick(answerID);
+                setReveal(true);
+
+            }).catch(console.log);
+    }
+
 
     return (
-        <Card style={styles.card}>
-            <Card.Title title={`Pytanie ${count}`} style={styles.hdn}/>
+        <View style={styles.card}>
 
-            <Card.Content style={styles.content}>
-                <Text
-                    style={styles.question}
+            <Card style={styles.content}>
+                <View
+                    style={styles.question_container}
                 >
-                    {question}
-                </Text>
-                <Divider/>
-            </Card.Content>
-            <Card.Actions style={styles.container}>
-                <View style={styles.responses_container}>
-
-
-                    {!isLoading && answers.map((item, i) => (
-                            <Card
-                                style={(reveal && item.isCorrect === 'true') ? styles.correctAnswer : styles.answerCard}
-                                key={i}
-                                // onPress={handleAnswer}
-                            >
-                                <Text
-                                    style={styles.answer}
-                                >
-                                    {item.text}
-                                </Text>
-                            </Card>
-                        )
-                    )}
-
-                    <View style={styles.countdown}>
-                        {!reveal ? (
-                            < CountdownCircleTimer
-                                isPlaying
-                                duration={totalTime}
-                                colors={['#004777', '#F7B801', '#A30000', '#A30000']}
-                                colorsTime={[7, 5, 2, 0]}
-                                size={80}
-                                onUpdate={(time) => {
-                                    if (!time) {
-                                        setReveal(true);
-                                    }
-                                }}
-                            >
-                                {({remainingTime}) => <Text>{remainingTime}</Text>}
-                            </CountdownCircleTimer>
-                        ) : (
-                            <Button mode={"contained"}>Next question!</Button>
-                        )}
-                    </View>
+                    <Text variant="bodyLarge" style={styles.hdl}>Pytanie:</Text>
+                    <Text variant="bodyLarge" style={styles.question}>{`\n${question}`}</Text>
                 </View>
-            </Card.Actions>
-        </Card>
+            </Card>
+            <View style={styles.container}>
+
+
+                {!reveal ? (
+                    <QuestionAnswers
+                        question={question}
+                        answers={answers}
+                        reveal={reveal}
+                        setReveal={setReveal}
+                        styles={styles}
+                        handleRevealAnswer={handleRevealAnswer}
+                        isLoading={isLoading}
+                        questionTime={questionTime}
+                    />
+                ) : (
+                    <QuestionReveal
+                        question={question}
+                        answers={answers}
+                        reveal={reveal}
+                        setReveal={setReveal}
+                        styles={styles}
+                        isLoading={isLoading}
+                        navigation={navigation}
+                        usersPick={usersPick}
+                        correctPick={correctPick}
+                    />
+                )}
+
+            </View>
+        </View>
     );
 }
-
 
 export default Question;

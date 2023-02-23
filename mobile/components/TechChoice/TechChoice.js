@@ -71,7 +71,7 @@ function TechChoice() {
     const handleGame = () => {
         // TODO: Api Call
         if (techStack.filter((tech) => tech.level).length) {
-            goTo(navigation, 'Pytanie')()
+        goTo(navigation, 'Grasz w gre')()
         }
     }
 

@@ -32,7 +32,7 @@ function NewGame() {
                         <Button
                             style={styles(theme).button}
                             mode="elevated"
-                            onPress={goTo(navigation, 'Pytanie')}
+                            onPress={goTo(navigation, 'Grasz w gre')}
                         >
                             Graj
                         </Button>
