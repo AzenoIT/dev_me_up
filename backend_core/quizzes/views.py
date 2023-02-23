@@ -6,7 +6,7 @@ from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from quizzes.serializers import GameSerializer
+from quizzes.serializers import GameSerializer, GameHistorySerializer
 
 from quizzes.models import Quiz
 
@@ -21,6 +21,8 @@ from gamesets.models import GameSet
 from ds.bot_response import bot_single_response
 
 from quizzes.serializers import AnswerSerializer
+
+from django.db.models import Q
 
 
 class GameApiView(APIView):
@@ -74,5 +76,31 @@ class GameApiView(APIView):
         response_serializer = AnswerSerializer(data=response_dict)
         a = response_serializer.is_valid(raise_exception=True)
 
-
         return Response(response_serializer.data)
+
+
+class GameHistoryApiView(APIView):
+    # uuid
+    def post(self, request):
+        serializer = GameHistorySerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        # interesuje player_id
+        player = Player.objects.get(uuid=serializer.data['uuid'])
+
+        # intersuje list wszystkich quizes idików
+        games = Game.objects.filter(Q(player_id_1_id=player.id) | Q(player_id_2_id=player.id)).distinct('quiz_id')
+
+        print('**')
+        print('**')
+        print('**')
+        print('**')
+        print('**')
+        response_dict = {}
+        for game in games:
+            tmp = Quiz.objects.get(id=game.id)
+            print(tmp.id, tmp.start_date, tmp.end_status)
+
+
+
+        return Response('ala')

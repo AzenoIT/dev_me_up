@@ -28,3 +28,7 @@ class AnswerSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         pass
+
+
+class GameHistorySerializer(serializers.Serializer):
+    uuid = serializers.CharField(max_length=50)
