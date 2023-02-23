@@ -25,6 +25,13 @@ function QuestionReveal({
                 >
                     Graj dalej!
                 </Button>
+                <Button
+                    mode={"elevated"}
+                    onPress={goTo(navigation, 'Podsumowanie')}
+                    style={styles.btn}
+                >
+                    Zobacz podsumowanie
+                </Button>
             </View>
             <View style={styles.responses_container}>
                 {!isLoading && answers.map((item, i) => (

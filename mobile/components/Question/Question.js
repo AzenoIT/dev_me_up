@@ -78,7 +78,13 @@ function Question() {
         },
         btn_container: {
             marginLeft: 20,
-            marginRight: 20
+            marginRight: 20,
+            flexDirection: "row",
+            justifyContent: "space-between"
+        },
+        btn: {
+            paddingLeft: 10,
+            paddingRight: 10
         }
     });
 
