@@ -33,7 +33,6 @@ class PlayerViewSet(ViewSet):
         serializer.save()
         return Response(status=status.HTTP_200_OK)
 
-    # TODO change float to bool
     def destroy(self, request, pk=None):
         player = get_object_or_404(queryset=self.queryset, pk=pk)
         player.is_active = False
