@@ -8,7 +8,7 @@ import Fade from '@mui/material/Fade';
 import "../../styles/scss/helpers/buttons.scss";
 import '../../styles/scss/components/hamburgerMenu.scss'
 import '../../styles/scss/helpers/media-queries.scss'
-import {quicksand, roboto500} from "@/app/fonts";
+import {quicksand, roboto500, teko300} from "@/app/fonts";
 import Image from "next/image";
 
 import logo from "../../images/logo.png"
@@ -60,7 +60,7 @@ export default function HamburgerMenu() {
                     onClose={handleClose}
                     TransitionComponent={Fade}
                 >
-                    <MenuItem className="menu_item" onClick={handleClose}>
+                    <MenuItem className={`${teko300.className} menu_item`} onClick={handleClose}>
                         <a href="#newsletter_mobile">Zapisz się do newslettera </a>
                     </MenuItem>
                     <MenuItem className="menu_item" onClick={handleClose}>
