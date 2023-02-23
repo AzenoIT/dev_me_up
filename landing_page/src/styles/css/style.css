@@ -218,6 +218,38 @@ a {
   letter-spacing: 0.1px;
 }
 
+.input_box_mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input_box_mobile .input_desktop_mobile {
+  width: 250px;
+  height: 40px;
+  border-radius: 1.875rem;
+  border: none;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 4.75rem;
+  background: #FFFFFF;
+  color: #1E1E1E;
+  padding: 0.5625rem 0.625rem;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.input_box_mobile .btn_send_mobile {
+  width: 113px;
+  height: 40px;
+  background: #A7C8E6;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 4.75rem;
+  text-align: center;
+  padding: 0.625rem;
+}
+
 .input_box {
   display: flex;
   justify-content: center;

@@ -12,8 +12,10 @@ function Newsletter() {
                 <h2 className={`${teko500.className} hdl_newsletter`}>Graj Rywalizuj Ucz się</h2>
                 <p className={`${teko300.className} text_newsletter`}>Sprawdź swoją wiedzę rywalizując ze
                     znajomymi.</p>
-                <div className='btn_newsletter_box'>
-                    <a href="" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
+                <div className="input_box_mobile">
+                    <input className={`${roboto400.className} input_desktop_mobile`} type='text' name='email'
+                           placeholder='Tu wprowadź swój e-mail'/>
+                    <a href="" className={`${roboto400.className} btn_send_mobile`}>Zapisz się</a>
                 </div>
 
             </div>
