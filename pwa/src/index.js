@@ -16,60 +16,57 @@ import Profile from "./components/Profile/Profile";
 import {AuthProvider} from "./context/AuthProvider";
 import Start from "./components/Start/Start";
 import Start2 from "./components/Start/Start2";
-import Friends from "./components/Rankings/Friends";
-import StartFirst from "./components/Start/StartFirst"
-import BattleSummary from "./components/Battle/BattleSummary";
+import StartFirst from "./components/Start/StartFirst";
+import Battle from "./components/Battle/Battle";
 
 const router = createBrowserRouter([
-    {
-      path: '/start2',
-      element: <Start2/>
-    },
-    {
-        path: "/tutorial",
-        element: <Tutorial/>
-    },
-    {
-        path: '/',
-        element: <Layout/>,
-        children: [
-            {
-                path: 'start',
-                element: (<Start/>)
-
-            },
-            {
-                path: 'startfirst',
-                element: (<StartFirst/>)
-
-            },
-            {
-                path: "/profile",
-                element: <Profile/>
-            },
-            {
-                path: "category",
-                element: <Category/>
-            },
-            {
-                path: 'login',
-                element: (<Login/>)
-            },
-            {
-                path: 'register',
-                element: (<Register/>)
-            },
-            {
-                path: 'friends',
-                element: <Friends/>
-            },
-            {
-                path: 'summary',
-                element: <BattleSummary/>
-            }
-        ]
-    }
-])
+	{
+		path: "/start",
+		element: <Start />,
+	},
+	{
+		path: "/start2",
+		element: <Start2 />,
+	},
+	{
+		path: "/startfirst",
+		element: <StartFirst />,
+	},
+	{
+		path: "/battle",
+		element: <Battle />,
+	},
+	{
+		path: "/tutorial",
+		element: <Tutorial />,
+	},
+	{
+		path: "/",
+		element: <Layout />,
+		children: [
+			{
+				path: "intro",
+				element: <Intro />,
+			},
+			{
+				path: "category",
+				element: <Category />,
+			},
+			{
+				path: "profile",
+				element: <Profile />,
+			},
+			{
+				path: "login",
+				element: <Login />,
+			},
+			{
+				path: "register",
+				element: <Register />,
+			},
+		],
+	},
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

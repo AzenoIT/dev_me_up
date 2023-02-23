@@ -1,4 +1,4 @@
-import {Avatar, Button, Card, CardContent, Container, Grid, Stack, styled, TextField, withStyles} from "@mui/material";
+import {Avatar, Button, Card, Container, Stack, styled, TextField} from "@mui/material";
 import avatar from '../../images/avatar/avatar1.svg';
 import Box from "@mui/material/Box";
 import AwardGold from '../../images/badges/AwardGold.svg';
