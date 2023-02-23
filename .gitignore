@@ -1,5 +1,6 @@
 .idea
 .vscode
+/node_modules
 
 backend_core/envs/.env_django
 

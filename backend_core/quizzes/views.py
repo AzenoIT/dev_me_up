@@ -1,8 +1,6 @@
-import json
 from datetime import timedelta, datetime
 from random import shuffle
 
-from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
@@ -11,8 +9,6 @@ from quizzes.serializers import GameSerializer
 from quizzes.models import Quiz
 
 from players.models import Player
-
-from questions.models import Question
 
 from gamesets.models import Game
 
@@ -73,6 +69,5 @@ class GameApiView(APIView):
         print(response_dict)
         response_serializer = AnswerSerializer(data=response_dict)
         a = response_serializer.is_valid(raise_exception=True)
-
 
         return Response(response_serializer.data)

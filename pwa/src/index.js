@@ -3,8 +3,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import ReactDOM from 'react-dom/client';
 import {
-    createBrowserRouter,
-    RouterProvider,
+	createBrowserRouter,
+	RouterProvider,
 } from "react-router-dom";
 import Category from "./components/Category/Category";
 import Tutorial from "./components/Tutorial/Tutorial";
@@ -21,66 +21,63 @@ import StartFirst from "./components/Start/StartFirst"
 import BattleSummary from "./components/Battle/BattleSummary";
 
 const router = createBrowserRouter([
-    {
-      path: '/start',
-      element: <Start/>
-    },
-    {
-      path: '/start2',
-      element: <Start2/>
-    },
-    {
-      path: '/startfirst',
-      element: <StartFirst/>
-    },
-    {
-        path: "/tutorial",
-        element: <Tutorial/>
-    },
-    {
-        path: '/',
-        element: <Layout/>,
-        children: [
-            {
-                path: 'intro',
-                element: (<Intro/>)
+	{
+		path: '/start2',
+		element: <Start2/>
+	},
+	{
+		path: "/tutorial",
+		element: <Tutorial/>
+	},
+	{
+		path: '/',
+		element: <Layout/>,
+		children: [
+			{
+				path: 'start',
+				element: (<Start/>)
 
-            },
-            {
-                path: "category",
-                element: <Category/>
-            },
-            {
-                path: "profile",
-                element: <Profile/>
-            },
-            {
-                path: 'login',
-                element: (<Login/>)
-            },
-            {
-                path: 'register',
-                element: (<Register/>)
-            },
-            {
-                path: 'friends',
-                element: <Friends/>
-            },
-            {
-                path: 'summary',
-                element: <BattleSummary/>
-            }
-        ]
-    }
+			},
+			{
+				path: 'startfirst',
+				element: (<StartFirst/>)
+
+			},
+			{
+				path: "/profile",
+				element: <Profile/>
+			},
+			{
+				path: "category",
+				element: <Category/>
+			},
+			{
+				path: 'login',
+				element: (<Login/>)
+			},
+			{
+				path: 'register',
+				element: (<Register/>)
+			},
+			{
+				path: 'friends',
+				element: <Friends/>
+			},
+			{
+				path: 'summary',
+				element: <BattleSummary/>
+			}
+		]
+	}
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
-        <AuthProvider>
-            <RouterProvider router={router}/>
-        </AuthProvider>
-    </React.StrictMode>
+	<React.StrictMode>
+		<AuthProvider>
+			<RouterProvider router={router}/>
+		</AuthProvider>
+	</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
