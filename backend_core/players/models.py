@@ -20,8 +20,8 @@ class Player(models.Model):
 
 
 class PlayerFriend(models.Model):
-    player = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='player')
-    friend = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='player_friend')
+    player = models.ForeignKey('Player', on_delete=models.CASCADE, related_name='player')
+    friend = models.ForeignKey('Player', on_delete=models.CASCADE, related_name='player_friend')
     approved = models.BooleanField(default=False)
     relation = models.BooleanField(default=True)
 
