@@ -10,8 +10,8 @@ class Player(models.Model):
     is_active = models.BooleanField(default=False)
     is_online = models.BooleanField(default=False)
     is_bot = models.BooleanField(default=False)
-    isSearchVisible = models.BooleanField(default=False)
-    isRankVisible = models.BooleanField(default=False)
+    is_search_visible = models.BooleanField(default=False)
+    is_rank_visible = models.BooleanField(default=False)
     theme = models.BooleanField(default=False)
 
     def __str__(self):

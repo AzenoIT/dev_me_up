@@ -38,7 +38,7 @@ function Start() {
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                minHeight: '100vh',
+                minHeight: '90vh',
                 maxWidth: '600px',
                 paddingTop: "50px",
             }}>
