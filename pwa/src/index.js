@@ -18,6 +18,7 @@ import Start from "./components/Start/Start";
 import Start2 from "./components/Start/Start2";
 import Friends from "./components/Rankings/Friends";
 import StartFirst from "./components/Start/StartFirst"
+import BattleSummary from "./components/Battle/BattleSummary";
 
 const router = createBrowserRouter([
     {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
             {
                 path: 'friends',
                 element: <Friends/>
+            },
+            {
+                path: 'summary',
+                element: <BattleSummary/>
             }
         ]
     }

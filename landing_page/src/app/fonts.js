@@ -25,11 +25,20 @@ export const quicksand = Quicksand({
 })
 
 export const teko500 = Teko({
+    subsets: ['latin'],
+    style: ['normal'],
     weight: '500',
-    subsets: ['latin']
+    display: 'swap'
 })
 
 export const teko400 = Teko({
     weight: '400',
     subsets: ['latin']
+})
+
+export const teko300 = Teko({
+    subsets: ['latin'],
+    style: ['normal'],
+    weight: '300',
+    display: 'swap'
 })
