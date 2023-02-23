@@ -1,0 +1,83 @@
+@import "../helpers/variables";
+
+.box_newsletters {
+    background-color: #DFDEDE;
+    width: 100%;
+    background-image: url("../../../images/newsletter_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom toRem(107px) right 0;
+    padding: toRem(15px) toRem(30px);
+    box-sizing: border-box;
+
+}
+
+.hdl_newsletter {
+    font-style: normal;
+    font-size: toRem(64px);
+    line-height: toRem(62px);
+    margin-top: toRem(93px);
+    margin-bottom: toRem(11px);
+    text-align: center;
+}
+
+.text_newsletter {
+    margin-top: 0;
+    font-size: toRem(25px);
+    text-align: center;
+    margin-bottom: toRem(340px);
+
+}
+
+.btn_newsletter_box {
+    display: flex;
+    justify-content: center;
+}
+
+.btn_newsletter_add{
+    margin-bottom: toRem(74px);
+}
+.desc_desktop{
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.1px;
+}
+
+
+.input_box{
+    display: flex;
+    justify-content: center;
+    .input_desktop {
+        width: 290px;
+        height: 76px;
+        border-radius: toRem(30px);
+        border: none;
+        font-style: normal;
+        font-size: toRem(20px);
+        line-height: toRem(76px);
+        background: #FFFFFF;
+        color: #1E1E1E;
+        padding: toRem(9px) toRem(68px);
+        margin-right: 20px;
+    }
+    .btn_send {
+        background: #A7C8E6;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        font-style: normal;
+        font-size: toRem(20px);
+        line-height: toRem(76px);
+        text-align: center;
+        padding: toRem(10px);
+    }
+
+}
+
+.box_newsletter_desktop{
+    background-image: url("../../../images/komp_newsletter.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    //background-position: ;
+}
+

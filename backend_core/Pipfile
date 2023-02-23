@@ -15,6 +15,8 @@ celery = "==5.2.7"
 django-celery-results = "==2.4.0"
 django-celery-beat = "==2.4.0"
 django-redis = "==5.2.0"
+django-cors-headers = "==3.13.0"
+numpy = "==1.24.2"
 
 [dev-packages]
 

@@ -1,0 +1,254 @@
+{
+  "questions": [
+    [
+      "js",
+      [
+        {
+          "id": 1,
+          "question": "Question?",
+          "answers": [
+            {
+              "text": "C > JS",
+              "isCorrect": "false"
+            },
+            {
+              "text": "This answer is wrong",
+              "isCorrect": "false"
+            },
+            {
+              "text": "Maybe",
+              "isCorrect": "true"
+            },
+            {
+              "text": "ACAB",
+              "isCorrect": "false"
+            }
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": 2,
+          "question": "Another question?",
+          "answers": [
+            {
+              "text": "sinx - cosx = tgx",
+              "isCorrect": "false"
+            },
+            {
+              "text": "This answer isn't",
+              "isCorrect": "false"
+            },
+            {
+              "text": "Maybe",
+              "isCorrect": "true"
+            },
+            {
+              "text": "***** ***",
+              "isCorrect": "false"
+            }
+          ],
+          "difficulty": 1
+        },
+        {
+          "id": 3,
+          "question": "3question?",
+          "answers": [
+            {
+              "text": "no",
+              "isCorrect": "false"
+            },
+            {
+              "text": "yeah",
+              "isCorrect": "true"
+            },
+            {
+              "text": "nope!",
+              "isCorrect": "false"
+            },
+            {
+              "text": "nooo...",
+              "isCorrect": "false"
+            }
+          ],
+          "difficulty": 1
+        }
+      ]
+    ],
+    [
+      "python",
+      [
+        {
+          "id": 1,
+          "question": "What is the difference between \"==\" and \"is\" in Python?",
+          "answers": [
+            {
+              "text": "They are the same thing",
+              "isCorrect": "false"
+            },
+            {
+              "text": " \"==\" compares values, while \"is\" compares object identity",
+              "isCorrect": "true"
+            },
+            {
+              "text": "\"is\" compares values, while \"==\" compares object identity",
+              "isCorrect": "false"
+            },
+            {
+              "text": "They both compare object identity and are interchangeable",
+              "isCorrect": "false"
+            }
+          ],
+          "difficulty": 2
+        },
+        {
+          "id": 2,
+          "question": "What is the difference between a list and a tuple in Python?",
+          "answers": [
+            {
+              "text": "A list is mutable, while a tuple is immutable",
+              "isCorrect": "true"
+            },
+            {
+              "text": "A list can only contain elements of the same type, while a tuple can contain elements of different types",
+              "isCorrect": "false"
+            },
+            {
+              "text": "A list can be nested, while a tuple cannot be nested",
+              "isCorrect": "false"
+            },
+            {
+              "text": "There is no difference between a list and a tuple",
+              "isCorrect": "false"
+            }
+          ],
+          "difficulty": 1
+        },
+        {
+          "id": 3,
+          "question": "What is a dictionary in Python?",
+          "answers": [
+            {
+              "text": "A data structure that stores a sequence of elements",
+              "isCorrect": "false"
+            },
+            {
+              "text": "A data structure that stores a collection of key-value pairs",
+              "isCorrect": "true"
+            },
+            {
+              "text": "A data structure that stores a hierarchy of elements",
+              "isCorrect": "false"
+            },
+            {
+              "text": "A data structure that stores elements in a tree-like structure",
+              "isCorrect": "false"
+            }
+          ],
+          "difficulty": 3
+        }
+      ]
+    ]
+  ],
+  "userNames": [
+    {
+      "id": 1,
+      "name": "kocham-PIS"
+    },
+    {
+      "id": 2,
+      "name": "imadło"
+    },
+    {
+      "id": 3,
+      "name": "orlen-lite"
+    },
+    {
+      "id": 4,
+      "name": "Janusz Kowalski"
+    }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "username": "Kolaborant 2137",
+      "score": 2137,
+      "badges": [
+        {
+          "id": 1,
+          "level": 1,
+          "amount": 313
+        },
+        {
+          "id": 2,
+          "level": 2,
+          "amount": 33
+        },
+        {
+          "id": 3,
+          "level": 3,
+          "amount": 0
+        }
+      ],
+      "technologies": [
+        {
+          "id": 1,
+          "name": "python",
+          "level": "guru"
+        },
+        {
+          "id": 2,
+          "name": "html",
+          "level": "junior"
+        }
+      ],
+      "isSearchVisible": true,
+      "isRankingVisible": true,
+      "theme": true,
+      "avatar": "link.jpg"
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "username": "Janusz Kowalski",
+      "avatar": "link.jpg",
+      "score": -29
+    },
+    {
+      "id": 2,
+      "username": "Mateusz M",
+      "avatar": "link.jpg",
+      "score": 666
+    },
+    {
+      "id": 3,
+      "username": "Antoni M",
+      "avatar": "link.jpg",
+      "score": 3
+    },
+    {
+      "id": 4,
+      "username": "Jarosław K",
+      "avatar": "link.jpg",
+      "score": 2137
+    },
+    {
+      "id": 5,
+      "username": "Lech K",
+      "avatar": "link.jpg",
+      "score": 10
+    }
+  ],
+  "technologies": [
+    {
+      "id": 1,
+      "name": "python",
+      "level": "guru"
+    },
+    {
+      "id": 2,
+      "name": "html",
+      "level": "junior"
+    }
+  ]
+}

@@ -1,24 +1,34 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import 'react-native-gesture-handler';
 
-import Main from "./screens/Main";
-import Battle from "./screens/Battle";
-import Friends from "./screens/Friends";
-import ProfileSettings from "./screens/ProfileSettings";
-import Rankings from "./screens/Rankings";
+import {StyleSheet} from 'react-native';
+import {NavigationContainer} from "@react-navigation/native";
 
-const Stack = createNativeStackNavigator();
+import {Provider as MenuProvider} from 'react-native-paper';
+import {AxiosProvider} from "./context/AxiosContext";
+import {AuthProvider} from "./context/AuthContext";
+
+import Outlet from "./Outlet";
+
 
 export default function App() {
-	return (
-		<NavigationContainer>
-			<Stack.Navigator initialRouteName="Main">
-				<Stack.Screen name="Home" component={Main} />
-				<Stack.Screen name="Battle" component={Battle} />
-				<Stack.Screen name="Friends" component={Friends} />
-				<Stack.Screen name="Settings" component={ProfileSettings} />
-				<Stack.Screen name="Rankings" component={Rankings} />
-			</Stack.Navigator>
-		</NavigationContainer>
-	);
+    return (
+        <NavigationContainer>
+            <AuthProvider>
+                <AxiosProvider>
+                    <MenuProvider>
+                        <Outlet />
+                    </MenuProvider>
+                </AxiosProvider>
+            </AuthProvider>
+        </NavigationContainer>
+    );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+});

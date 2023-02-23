@@ -1,16 +1,20 @@
-"use client";
+"use client"
 
-import { Button, Grid, Stack } from "@mui/material";
+
+import HamburgerMenu from "@/app/hamburgerMenu/page";
+import FirstSection from "@/app/firstSection/page";
+import Opinions from "@/app/opinions/page";
+import Newsletter from "@/app/newsletter/page";
+import EndSection from "@/app/end/page";
 
 export default function Home() {
     return (
-        <Grid container height="100vh" alignItems="center" justifyContent="center" direction="column">
-            <h1>Using Material UI with Next.js 13</h1>
-            <Stack direction="row" columnGap={1}>
-                <Button variant="text">Text</Button>
-                <Button variant="contained">Contained</Button>
-                <Button variant="outlined">Outlined</Button>
-            </Stack>
-        </Grid>
+       <>
+           <HamburgerMenu  />
+           <FirstSection />
+           <Newsletter/>
+           <Opinions />
+           <EndSection />
+       </>
     )
 }
