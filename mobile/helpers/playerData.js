@@ -1,6 +1,6 @@
 export const playerData = {
     "username": "",
-    "score": 0,
+    "score": 2137,
     "badges": [],
     "technologies": [],
     "isSearchVisible": true,

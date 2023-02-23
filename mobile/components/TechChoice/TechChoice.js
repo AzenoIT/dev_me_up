@@ -169,7 +169,7 @@ const styles = (theme, index = 1) =>
         },
         card: {
             margin: 10,
-            width: 150,
+            width: 130,
             backgroundColor: 'white',
             padding: 10,
             borderRadius: 10,
@@ -182,12 +182,12 @@ const styles = (theme, index = 1) =>
             borderColor: 'rgba(227, 12, 12, 1)',
         },
         cardTouch: {
-            width: 150,
+            width: 130,
             position: "relative"
         },
         logo: {
-            width: 120,
-            height: 120,
+            width: 100,
+            height: 100,
             marginBottom: 15
         },
         badge: {
