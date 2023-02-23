@@ -24,6 +24,7 @@ class PlayerViewSet(ViewSet):
         except Player.DoesNotExist:
             raise Http404
         serializer = serializers.PlayerDetailSerializer(player)
+
         return Response(serializer.data)
 
     def partial_update(self, request, pk=None):
