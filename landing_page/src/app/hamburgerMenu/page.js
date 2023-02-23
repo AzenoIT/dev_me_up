@@ -36,7 +36,10 @@ export default function HamburgerMenu() {
     return (
         <>
             <div className="container_hamburger hide-on-desktop">
-                <p className={`${quicksand.className} logo`}>Dev me up</p>
+                <div className='logo_box'>
+                    <Image src={logo} alt='logo' width={40} height={40}/>
+                    <p className={`${quicksand.className} logo`}>Dev me up</p>
+                </div>
                 <DehazeSharpIcon
                     id="fade-button"
                     className="hamburger"

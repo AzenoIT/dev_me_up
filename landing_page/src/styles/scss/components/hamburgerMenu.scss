@@ -8,6 +8,10 @@
     padding: toRem(40px) toRem(40px) toRem(25px) toRem(15px);
 }
 
+.logo_box {
+    display: flex;
+}
+
 .logo {
     position: relative;
     font-style: normal;
