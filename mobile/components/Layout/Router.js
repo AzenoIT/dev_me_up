@@ -12,10 +12,11 @@ import NewGame from "../NewGame/NewGame";
 import Invitation from "../Invitation/Invitation";
 import BattleSummary from "../BattleSummary/BattleSummary";
 import Question from "../Question/Question";
+import BattleList from "../BattleList/BattleList";
 
 function Router() {
     return (
-        <Stack.Navigator initialRouteName="Start"
+        <Stack.Navigator initialRouteName="Lista gier"
                          screenOptions={{
                              header: (props) => <AzAppBar {...props} />,
                          }}>
@@ -29,7 +30,8 @@ function Router() {
             <Stack.Screen name='Znajdź znajomego' component={Friends}/>
             <Stack.Screen name='Rejestracja' options={{headerShown: false}}  component={SignUp}/>
             <Stack.Screen name='Logowanie' options={{headerShown: false}}  component={Login}/>
-            <Stack.Screen name='Podsumowanie' options={{headerShown: false}}  component={BattleSummary}/>
+            <Stack.Screen name='Podsumowanie' options={{headerShown: true}}  component={BattleSummary}/>
+            <Stack.Screen name='Lista gier' options={{headerShown: true}}  component={BattleList}/>
         </Stack.Navigator>
     );
 }
