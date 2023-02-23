@@ -19,7 +19,7 @@ $grid-breakpoints: (
 
 
 .hide-on-desktop {
-    @media (min-width: 991px) {
+    @media (min-width: 991px){
         display: none;
     }
 }

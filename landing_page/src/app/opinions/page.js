@@ -12,7 +12,7 @@ import apple from '../../images/Badgeapple.png';
 function Opinions() {
     return (
         <>
-            <div className="hide-on-desktop container_opinions">
+            <div id="download" className="hide-on-desktop container_opinions">
                 <h2 className={`${teko500.className} hdl`}>Zabawa i&nbsp;nauka w jednym</h2>
                 <p className={`${teko300.className} text`}>Sprawdź swoją wiedzę rywalizując&nbsp;ze znajomymi</p>
 
