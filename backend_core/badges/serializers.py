@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from players.serializers import PlayerSerializer
 from . import models
 
 class BadgeSerializer(serializers.ModelSerializer):
@@ -9,6 +10,8 @@ class BadgeSerializer(serializers.ModelSerializer):
 
 
 class PlayersToBadgeSerializer(serializers.ModelSerializer):
+    badge = BadgeSerializer()
+    player = PlayerSerializer()
     badge_name = serializers.CharField(source='badge.name', read_only=True)
     badge_weight = serializers.CharField(source='badge.weight', read_only=True)
     badge_points = serializers.CharField(source='badge.points', read_only=True)

@@ -19,13 +19,13 @@ $grid-breakpoints: (
 
 
 .hide-on-desktop {
-    @media (min-width: 991px) {
+    @media (min-width: 767px){
         display: none;
     }
 }
 
 .hide-on-mobile {
-    @media (max-width: 992px) {
+    @media (max-width: 768px) {
         display: none;
     }
 }
