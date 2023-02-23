@@ -5,7 +5,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: toRem(40px) toRem(40px) toRem(25px) toRem(15px);
+    padding: toRem(40px) toRem(30px) toRem(25px) toRem(15px);
+    position: sticky;
+    top:0;
+    background: #DFDEDE;
+
+}
+
+.logo_box {
+    display: flex;
 }
 
 .logo {
@@ -49,10 +57,13 @@
     padding-left: toRem(60px);
     border-radius: 0 0 toRem(30px) toRem(30px);
     box-shadow: inset 0 4px 22px 4px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top:0;
 
     .container-logo{
         display: flex;
         align-items: center;
+
     }
     .logo {
         color: #FFFFFF;
@@ -61,14 +72,17 @@
         margin-right: toRem(5px);
 
     }
-
-    .btn_newsletter_add {
-        margin-right: toRem(39px);
-        margin-bottom: 0;
-    }
-
     .container-btn {
         display: flex;
         align-items: center;
+
+        .btn_newsletter_add {
+            margin-right: toRem(39px);
+            margin-bottom: 0;
+        }
     }
+
+
+
+
 }
