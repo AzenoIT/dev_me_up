@@ -31,7 +31,7 @@ function QuestionAnswers({
                 < CountdownCircleTimer
                     isPlaying
                     duration={questionTime}
-                    colors={['#004777', '#F7B801', '#A30000', '#A30000']}
+                    colors={['#00AA00', '#F7B801', '#A30000', '#A30000']}
                     colorsTime={[7, 5, 2, 0]}
                     size={40}
                     strokeWidth={5}
@@ -53,7 +53,7 @@ function QuestionAnswers({
                             handleRevealAnswer(i)
                         }}
                     >
-                        <Text variant="bodyLarge"
+                        <Text
                             style={styles.answer}
                         >
                             {item.text}
