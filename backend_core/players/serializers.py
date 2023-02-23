@@ -1,7 +1,8 @@
 from rest_framework import serializers
 
+
 from badges.models import PlayersToBadge
-from .models import Player
+from .models import Player, PlayerFriend
 from technologies.serializers import TechnologiesToPlayersSerializer
 
 
@@ -34,5 +35,8 @@ class PlayerDetailSerializer(serializers.ModelSerializer):
         fields = ('pk', 'uuid', 'nick', 'rank', 'is_active', 'is_online', 'is_bot', 'is_search_visible',
                   'is_rank_visible', 'theme', 'technologiestoplayers', 'playerstobadge')
 
-
+class PlayerFriendSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PlayerFriend
+        fields = ('player', 'friend', 'approved', 'relation')
 

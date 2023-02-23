@@ -6,7 +6,7 @@ import {goTo} from "../../helpers/router";
 import {Button} from "react-native-paper";
 import {useNavigation} from "@react-navigation/native";
 
-function BattleSummary({score, count, setIsOver}) {
+function BattleSummary({score = {current: 5}, count = 2, setIsOver = false}) {
     const [isLoading, setIsLoading] = useState(true);
     const navigation = useNavigation();
 
