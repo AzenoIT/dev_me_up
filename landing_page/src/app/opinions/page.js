@@ -23,7 +23,7 @@ function Opinions() {
                         <Image src={google} alt='Google picture'/></a>
                 </div>
             </div>
-            <div className="hide-on-mobile box_opinions_desktop">
+            <div id="download_desktop" className="hide-on-mobile box_opinions_desktop">
                 <h1 className={`${teko400.className} h1_desktop`}>
                     Technologie Statystyki&nbsp;<br/>Wyniki
                 </h1>
