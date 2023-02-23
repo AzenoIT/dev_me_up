@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from quizzes.serializers import QuizSerializer
 from . import models
 from ..players.serializers import PlayerSerializer
 
@@ -20,6 +21,7 @@ class GameSetSerializer(serializers.ModelSerializer):
 class GameSerializer(serializers.ModelSerializer):
     player_id_1 = PlayerSerializer()
     player_id_2 = PlayerSerializer()
+    quiz = QuizSerializer()
 
     class Meta:
         model = models.Game
@@ -29,5 +31,7 @@ class GameSerializer(serializers.ModelSerializer):
                   'result,'
                   'date_start',
                   'date_end',
-                  'game_sets')
+                  'game_sets',
+                  'quiz',
+                  )
 

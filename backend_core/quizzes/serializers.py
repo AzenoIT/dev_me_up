@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from gamesets.models import GameSet
+from quizzes.models import Quiz
 
 
 class GameSerializer(serializers.Serializer):
@@ -28,3 +28,12 @@ class AnswerSerializer(serializers.Serializer):
 
     def create(self, validated_data):
         pass
+
+class QuizSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Quiz
+        fields = (
+            'start_date',
+            'duration_minutes',
+            'end_status',
+        )
