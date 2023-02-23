@@ -9,7 +9,8 @@ class PlayerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Player
-        fields = "__all__"
+        fields = ('pk', 'uuid', 'nick', 'rank', 'is_active', 'is_online', 'is_bot', 'is_search_visible',
+                  'is_rank_visible', 'theme')
 
 
 class PlayerDetailSerializer(serializers.ModelSerializer):
@@ -18,4 +19,5 @@ class PlayerDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Player
-        fields = "__all__"
+        fields = ('pk', 'uuid', 'nick', 'rank', 'is_active', 'is_online', 'is_bot', 'is_search_visible',
+                  'is_rank_visible', 'theme', 'technologiestoplayers', 'playerstobadge')
