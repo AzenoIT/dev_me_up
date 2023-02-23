@@ -294,6 +294,12 @@ a {
   margin-bottom: 94px;
 }
 
+.box-opinions-desktop {
+  background-image: url("../../../images/kafelki.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .container_end {
   padding: 2.3125rem 1.875rem 0 1.875rem;
   background-image: url("../../../images/devmeup2.png");

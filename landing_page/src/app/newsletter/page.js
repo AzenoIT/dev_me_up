@@ -31,8 +31,7 @@ function Newsletter() {
                 </div>
             </div>
         </>
-    )
-        ;
+    );
 
 }
 
