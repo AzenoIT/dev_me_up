@@ -2,10 +2,11 @@
 
 .container_end {
     padding: toRem(37px) toRem(30px) 0 toRem(30px);
-    background-image: url("../../../images/devmeup2.png");
+    background-image: url("../../../images/screeny_male.png");
     background-color: #DFDEDE;
     background-repeat: no-repeat;
-    background-position: bottom toRem(50px) right 40px;
+    background-position: bottom;
+    background-size: contain;
 }
 
 .hdl_end {

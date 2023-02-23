@@ -7,7 +7,7 @@ import "../../styles/scss/helpers/media-queries.scss"
 function EndSection(props) {
     return (
         <div className="hide-on-desktop container_end">
-            <h2 className={`${teko500.className} hdl_end`}>Zabawa i&nbsp;nauka w jednym</h2>
+            <h2 className={`${teko500.className} hdl_end`}>Zabawa i&nbsp;nauka</h2>
             <p className={`${teko300.className} text_end`}>Sprawdź swoją wiedzę rywalizując ze znajomymi.</p>
 
             <div className='buttons_end'>
