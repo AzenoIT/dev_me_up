@@ -14,6 +14,10 @@ export const roboto300 = Roboto({
     weight: '300',
     subsets: ['latin']
 })
+export const roboto400 = Roboto({
+    weight: '400',
+    subsets: ['latin']
+})
 
 export const quicksand = Quicksand({
     weight: '400',
@@ -21,11 +25,20 @@ export const quicksand = Quicksand({
 })
 
 export const teko500 = Teko({
+    subsets: ['latin'],
+    style: ['normal'],
     weight: '500',
-    subsets: ['latin']
+    display: 'swap'
 })
 
 export const teko400 = Teko({
     weight: '400',
     subsets: ['latin']
+})
+
+export const teko300 = Teko({
+    subsets: ['latin'],
+    style: ['normal'],
+    weight: '300',
+    display: 'swap'
 })

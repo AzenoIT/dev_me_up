@@ -1,0 +1,9 @@
+@import "variables";
+
+.h1_desktop {
+    font-size: toRem(220px);
+    text-align: center;
+    color: white;
+    text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
+    margin: 0;
+}

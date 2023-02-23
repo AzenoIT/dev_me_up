@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "f7519a45-1b0a-41d4-86c0-8b923493e3da",
-		"name": "dev_me_up Copy",
+		"_postman_id": "d7b20132-3f27-40be-9529-c191908ad298",
+		"name": "dev_me_up",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "25753032"
+		"_exporter_id": "25165670"
 	},
 	"item": [
 		{
@@ -321,6 +321,80 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Player Technologies List Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "9b353e1d-dd84-4f3c-9b90-9d2da0522517",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"9b353e1d-dd84-4f3c-9b90-9d2da0522517\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/technologies",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"technologies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player Badges List Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"9b353e1d-dd84-4f3c-9b90-9d2da0522517\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/badges",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"badges"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -393,6 +467,36 @@
 								"api",
 								"v1",
 								"userfriends_add",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Technology",
+			"item": [
+				{
+					"name": "List Technology GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/technologies/",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"technologies",
 								""
 							]
 						}

@@ -14,9 +14,10 @@ function AzMenu({visible, closeMenu, openMenu}) {
             anchor={
                 <Appbar.Action icon="menu" color="black" onPress={openMenu}/>
             }>
+            <Menu.Item onPress={goTo(navigation, 'Start')} title="Start"/>
             <Menu.Item onPress={goTo(navigation, 'Nowa gra')} title="Nowa gra"/>
-            <Menu.Item onPress={goTo(navigation, 'Pytanie')} title="Gra"/>
-            <Menu.Item onPress={goTo(navigation, 'Pytanie')} title="Lista gier"/>
+            <Menu.Item onPress={goTo(navigation, 'Grasz w gre')} title="Gra"/>
+            <Menu.Item onPress={goTo(navigation, 'Grasz w gre')} title="Lista gier"/>
             <Menu.Item onPress={goTo(navigation, 'Profil')} title="Profil"/>
         </Menu>
     );

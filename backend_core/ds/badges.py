@@ -1,7 +1,6 @@
 from players.models import Player
 
-# placeholder for new models to be added
-from badgde.models import Badge, Player_to_Badge
+from badgdes.models import Badge, PlayersToBadge
 from game.models import Game
 
 from django.db.models import Q
@@ -25,30 +24,29 @@ badges_quantity = {2: 5,
                    9: 200}
 
 
-def generate_initiation_badge(player_id):
+def generate_initiation_badge(player_uuid):
     badge_initial_id = 1
-    player_initial_badge = Player_to_Badge.objects.filter(id=player_id, badge_id=badge_initial_id).count()
-    # player_badges = PlayerBadge.objects.filter(id=player_id)
+    player_initial_badge = PlayersToBadge.objects.filter(id=player_uuid, badge=badge_initial_id).count()
 
     if player_initial_badge == 0:
-        new_player_to_badge = Player_to_Badge(player_id=player_id, badge_id=badge_initial_id)
+        new_player_to_badge = PlayersToBadge(player=player_uuid, badge=badge_initial_id)
         new_player_to_badge.save()
     else:
         pass
 
 
-def programming_intern_badge(player_id):
+def programming_intern_badge(player_uuid):
     badge_initial_id = 2
 
-    player = Player.objects.get(id=player_id)
-    has_badge = Player_to_Badge.objects.filter(player=player, badge_id=badge_initial_id).exists()
+    player = Player.objects.get(id=player_uuid)
+    has_badge = PlayersToBadge.objects.filter(player=player, badge=badge_initial_id).exists()
     won_five_games = Game.objects.filter(Q(ga_player1=player) | Q(ga_player2=player), ga_result=1).count() == 5
 
     if has_badge and won_five_games:
         pass
 
     if not has_badge and won_five_games:
-        player_badge = Player_to_Badge(player_id=player_id, badge_id=badge_initial_id)
+        player_badge = PlayersToBadge(player=player_uuid, badge=badge_initial_id)
         player_badge.save()
 
     else:

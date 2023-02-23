@@ -16,12 +16,11 @@ import Profile from "./components/Profile/Profile";
 import {AuthProvider} from "./context/AuthProvider";
 import Start from "./components/Start/Start";
 import Start2 from "./components/Start/Start2";
+import Friends from "./components/Rankings/Friends";
+import StartFirst from "./components/Start/StartFirst"
+import BattleSummary from "./components/Battle/BattleSummary";
 
 const router = createBrowserRouter([
-    {
-      path: '/start',
-      element: <Start/>
-    },
     {
       path: '/start2',
       element: <Start2/>
@@ -31,21 +30,26 @@ const router = createBrowserRouter([
         element: <Tutorial/>
     },
     {
+        path: "/profile",
+        element: <Profile/>
+    },
+    {
         path: '/',
         element: <Layout/>,
         children: [
             {
-                path: 'intro',
-                element: (<Intro/>)
+                path: 'start',
+                element: (<Start/>)
+
+            },
+            {
+                path: 'startfirst',
+                element: (<StartFirst/>)
 
             },
             {
                 path: "category",
                 element: <Category/>
-            },
-            {
-                path: "profile",
-                element: <Profile/>
             },
             {
                 path: 'login',
@@ -55,6 +59,14 @@ const router = createBrowserRouter([
                 path: 'register',
                 element: (<Register/>)
             },
+            {
+                path: 'friends',
+                element: <Friends/>
+            },
+            {
+                path: 'summary',
+                element: <BattleSummary/>
+            }
         ]
     }
 ])
