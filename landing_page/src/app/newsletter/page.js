@@ -18,7 +18,7 @@ function Newsletter() {
                 </div>
             </div>
 
-            <div className="hide-on-mobile">
+            <div className="hide-on-mobile box_newsletter_desktop">
                 <div className='h1_box_desktop'>
                     <h1 className={`${teko400.className} h1_desktop`}>
                         Zapisz się na&nbsp;Newsletter
