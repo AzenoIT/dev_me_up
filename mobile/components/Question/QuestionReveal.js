@@ -32,7 +32,7 @@ function QuestionReveal({
                         style={i === correctPick ? styles.correctAnswer : (i === usersPick ? styles.wrongAnswer : styles.answerCard)}
                         key={i}
                     >
-                        <Text variant="bodyLarge"
+                        <Text
                             style={styles.answer}
                         >
                             {item.text}
