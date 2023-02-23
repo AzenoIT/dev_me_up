@@ -141,18 +141,18 @@ a {
   padding: 3.75rem;
   background-color: #DFDEDE;
   height: 100%;
+  background-image: url("../../../images/smartphone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .desktop_page .phone_and_buttons {
   display: flex;
-  justify-content: space-between;
-}
-.desktop_page .buttons_download {
-  display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: flex-end;
 }
 .desktop_page .buttons_wrapper {
   display: flex;
+  justify-content: end;
+  align-items: end;
 }
 .desktop_page .buttons_wrapper .google_download {
   display: flex;

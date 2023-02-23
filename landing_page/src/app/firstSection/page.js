@@ -36,8 +36,6 @@ export default function FirstSection() {
                     </h1>
                 </div>
                 <div className='phone_and_buttons'>
-                    <Image className="smartphone" src={smartphone} alt='smartphone' width={900} height={800}/>
-                    <div className='buttons_download'>
                         <div className='buttons_wrapper'>
                             <div className='google_download'>
                                 <Image src={apple_qr} alt='QR_apple'/>
@@ -52,7 +50,6 @@ export default function FirstSection() {
                                 </a>
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </>
