@@ -1,5 +1,6 @@
 import uuid
 
+from django.contrib.auth import get_user_model
 from django.db import models
 
 
@@ -16,3 +17,13 @@ class Player(models.Model):
 
     def __str__(self):
         return self.nick
+
+
+class PlayerFriend(models.Model):
+    player = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='player')
+    friend = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='player_friend')
+    approved = models.BooleanField(default=False)
+    relation = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f'{self.player} has friendship relation with {self.friend}'
