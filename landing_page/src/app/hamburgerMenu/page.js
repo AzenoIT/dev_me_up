@@ -58,10 +58,10 @@ export default function HamburgerMenu() {
                     TransitionComponent={Fade}
                 >
                     <MenuItem className="menu_item" onClick={handleClose}>
-                        <a href="#newsletter">Zapisz się do newslettera </a>
+                        <a href="#newsletter_mobile">Zapisz się do newslettera </a>
                     </MenuItem>
                     <MenuItem className="menu_item" onClick={handleClose}>
-                        <a href="#download">Pobierz aplikację</a>
+                        <a href="#download_mobile">Pobierz aplikację</a>
                     </MenuItem>
                 </Menu>
             </div>
@@ -76,8 +76,8 @@ export default function HamburgerMenu() {
                     <p className={`${quicksand.className} logo`}>Dev me up</p>
                 </div>
                 <div className="container-btn">
-                    <a href="#download" className={`${roboto500.className} btn_newsletter_add`}>Pobierz aplikację</a>
-                    <a href="#newsletter" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
+                    <a href="#download_desktop" className={`${roboto500.className} btn_newsletter_add`}>Pobierz aplikację</a>
+                    <a href="#newsletter_desktop" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
                 </div>
             </div>
         </>

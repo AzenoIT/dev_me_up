@@ -11,14 +11,14 @@ import "../styles/scss/helpers/globals.scss";
 
 export default function Home() {
     return (
-        <>
+        <div className="container_all">
             <HamburgerMenu/>
-            <div className="container_all">
-                <FirstSection/>
-                <Newsletter/>
-                <Opinions/>
-                <EndSection/>
-            </div>
-        </>
+
+            <FirstSection/>
+            <Newsletter/>
+            <Opinions/>
+            <EndSection/>
+        </div>
+
     )
 }
