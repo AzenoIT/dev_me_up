@@ -22,9 +22,14 @@ import BattleSummary from "./components/Battle/BattleSummary";
 
 const router = createBrowserRouter([
 	{
-		path: '/start2',
-		element: <Start2/>
+		path: '/start',
+		element: <Start/>
 	},
+		{
+		path: '/login',
+		element: <Login/>
+	},
+
 	{
 		path: "/tutorial",
 		element: <Tutorial/>
