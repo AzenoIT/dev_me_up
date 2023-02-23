@@ -81,7 +81,9 @@ function Intro() {
     }, []);
 
     useEffect(() => {
-            setProfile({...profile, username: guestNick});
+        setProfile({...profile, username: guestNick});
+
+
     }, [guestNick])
 
     function generateRandomName() {
@@ -123,6 +125,7 @@ function Intro() {
                             <FilledInput
                                 value={guestNick}
                                 onChange={(event) => setGuestNick(event.target.value)}
+                                onBlur={(event => {})}
                             />
                         </FormControl>
                         <Button variant="contained" onClick={generateRandomName}>
