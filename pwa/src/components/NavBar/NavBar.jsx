@@ -12,10 +12,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import EventIcon from "@mui/icons-material/Event";
 import SearchIcon from "@mui/icons-material/Search";
+import {Container} from "@mui/material";
+import {useNavigate} from "react-router-dom";
 
 export default function MenuAppBar() {
     const [auth, setAuth] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState(null);
+    const navigate = useNavigate();
 
     const handleChange = (event) => {
         setAuth(event.target.checked);
@@ -29,24 +32,24 @@ export default function MenuAppBar() {
         setAnchorEl(null);
     };
 
+    const handleClick = (navigateUrl) => {
+        handleClose()
+        navigate(navigateUrl);
+    }
+
     return (
-            <Box sx={{flexGrow: 1}}>
+        <Box sx={{flexGrow: 1}}>
+            <Container
+                sx={{
+                    maxWidth: '600px',
+                    minHeight: '10vh'
+                }}>
                 <FormGroup>
-                    <FormControlLabel
-                        control={
-                            <Switch
-                                checked={auth}
-                                onChange={handleChange}
-                                aria-label="login switch"
-                            />
-                        }
-                        label={auth ? 'Logined' : 'Logouted'}
-                    />
                 </FormGroup>
                 <AppBar position="static">
                     <Toolbar>
                         <Typography variant="h6" component="div" sx={{flexGrow: 1, ml: 1}}>
-                            Kurwa
+                            NavBar
                         </Typography>
                         <div>
                             <IconButton
@@ -91,15 +94,16 @@ export default function MenuAppBar() {
                                         open={Boolean(anchorEl)}
                                         onClose={handleClose}
                                     >
-                                        <MenuItem onClick={handleClose}>Gra</MenuItem>
-                                        <MenuItem onClick={handleClose}>Lista gier</MenuItem>
-                                        <MenuItem onClick={handleClose}>Profil</MenuItem>
+                                        <MenuItem onClick={handleClick}>Gra</MenuItem>
+                                        <MenuItem onClick={handleClick}>Lista gier</MenuItem>
+                                        <MenuItem onClick={() => handleClick('/profile')}>Profil</MenuItem>
                                     </Menu>
                                 </>
                             )}
                         </div>
                     </Toolbar>
                 </AppBar>
-            </Box>
+            </Container>
+        </Box>
     );
 }

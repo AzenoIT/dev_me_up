@@ -79,22 +79,22 @@
       [
         {
           "id": 1,
-          "question": "QuestionP?",
+          "question": "What is the difference between \"==\" and \"is\" in Python?",
           "answers": [
             {
-              "text": "Python",
+              "text": "They are the same thing",
               "isCorrect": "false"
             },
             {
-              "text": "This answer is wrong",
-              "isCorrect": "false"
-            },
-            {
-              "text": "Maybe",
+              "text": " \"==\" compares values, while \"is\" compares object identity",
               "isCorrect": "true"
             },
             {
-              "text": "ACAB",
+              "text": "\"is\" compares values, while \"==\" compares object identity",
+              "isCorrect": "false"
+            },
+            {
+              "text": "They both compare object identity and are interchangeable",
               "isCorrect": "false"
             }
           ],
@@ -102,22 +102,22 @@
         },
         {
           "id": 2,
-          "question": "Pondering question?",
+          "question": "What is the difference between a list and a tuple in Python?",
           "answers": [
             {
-              "text": "pipi",
+              "text": "A list is mutable, while a tuple is immutable",
               "isCorrect": "true"
             },
             {
-              "text": "This answer isn't",
+              "text": "A list can only contain elements of the same type, while a tuple can contain elements of different types",
               "isCorrect": "false"
             },
             {
-              "text": "Maybe",
+              "text": "A list can be nested, while a tuple cannot be nested",
               "isCorrect": "false"
             },
             {
-              "text": "***** ***",
+              "text": "There is no difference between a list and a tuple",
               "isCorrect": "false"
             }
           ],
@@ -125,22 +125,22 @@
         },
         {
           "id": 3,
-          "question": "Pythion?",
+          "question": "What is a dictionary in Python?",
           "answers": [
             {
-              "text": "no",
+              "text": "A data structure that stores a sequence of elements",
               "isCorrect": "false"
             },
             {
-              "text": "Pythonada",
+              "text": "A data structure that stores a collection of key-value pairs",
               "isCorrect": "true"
             },
             {
-              "text": "nope!",
+              "text": "A data structure that stores a hierarchy of elements",
               "isCorrect": "false"
             },
             {
-              "text": "nooo...",
+              "text": "A data structure that stores elements in a tree-like structure",
               "isCorrect": "false"
             }
           ],

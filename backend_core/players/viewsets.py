@@ -37,6 +37,6 @@ class PlayerViewSet(ViewSet):
     # TODO change float to bool
     def destroy(self, request, pk=None):
         player = get_object_or_404(queryset=self.queryset, pk=pk)
-        player.is_active = 0.0
+        player.is_active = False
         player.save()
         return Response(status=status.HTTP_200_OK)
