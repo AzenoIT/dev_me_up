@@ -6,13 +6,14 @@ import QuestionAnswers from "./QuestionAnswers";
 import QuestionReveal from "./QuestionReveal";
 import {getData, storeData} from "../../helpers/storage_helpers";
 import {useNavigation} from "@react-navigation/native";
+import Avatars from "./Avatars";
 
 function Question() {
     const theme = useTheme();
     const [reveal, setReveal] = useState(false);
     const [question, setQuestion] = useState('');
     const [answers, setAnswers] = useState([]);
-    const [questionTime, setQuestionTime] = useState(5);
+    const [questionTime, setQuestionTime] = useState(30);
     const [isLoading, setIsLoading] = useState(true);
     const [usersPick, setUsersPick] = useState(null);
     const [correctPick, setCorrectPick] = useState(null);
@@ -21,9 +22,9 @@ function Question() {
     useEffect(() => {
         callApi({endpoint: `/questions/`})
             .then((response) => {
-                setQuestion(response[0][1][0]["question"]);
-                setAnswers(response[0][1][0]["answers"]);
-                setQuestionTime(5);
+                setQuestion(response[1][1][0]["question"]);
+                setAnswers(response[1][1][0]["answers"]);
+                setQuestionTime(20);
                 setIsLoading(false);
             }).catch((error) => {
         });
@@ -100,6 +101,8 @@ function Question() {
 
     return (
         <View style={styles.card}>
+
+            <Avatars />
 
             <Card style={styles.content}>
                 <View
