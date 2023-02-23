@@ -10,7 +10,6 @@
 
 
     .hd1 {
-        font-style: normal;
         font-size: toRem(96px);
         line-height: 62px;
         text-align: center;
@@ -60,28 +59,28 @@
     .phone_and_buttons {
         display: flex;
         justify-content: space-between;
+    }
 
-        .buttons_download {
+    .buttons_download {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+
+    .buttons_wrapper {
+        display: flex;
+
+        .google_download {
             display: flex;
-            justify-content: end;
-            align-items: end;
+            flex-direction: column;
+            align-items: center;
+            margin-right: toRem(33px);
+        }
 
-            .buttons_wrapper {
-                display: flex;
-
-                .google_download {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    margin-right: toRem(33px);
-                }
-
-                .apple_download {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
+        .apple_download {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 

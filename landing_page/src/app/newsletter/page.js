@@ -16,6 +16,7 @@ function Newsletter() {
                 <div className='btn_newsletter_box'>
                     <a href="" className={`${roboto500.className} btn_newsletter_add`}>Newsletter</a>
                 </div>
+
             </div>
 
             <div className="hide-on-mobile box_newsletter_desktop">

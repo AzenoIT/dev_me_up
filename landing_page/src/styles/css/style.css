@@ -95,7 +95,6 @@ a {
   background-color: #DFDEDE;
 }
 .box_section .hd1 {
-  font-style: normal;
   font-size: 6rem;
   line-height: 62px;
   text-align: center;
@@ -138,21 +137,21 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.desktop_page .phone_and_buttons .buttons_download {
+.desktop_page .buttons_download {
   display: flex;
   justify-content: end;
   align-items: end;
 }
-.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper {
+.desktop_page .buttons_wrapper {
   display: flex;
 }
-.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper .google_download {
+.desktop_page .buttons_wrapper .google_download {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 2.0625rem;
 }
-.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper .apple_download {
+.desktop_page .buttons_wrapper .apple_download {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,7 +190,7 @@ a {
 
 .text_newsletter {
   margin-top: 0;
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   text-align: center;
   margin-bottom: 21.25rem;
 }
@@ -267,8 +266,6 @@ a {
 }
 
 .hdl {
-  font-family: sans-serif;
-  font-style: normal;
   font-size: 64px;
   line-height: 62px;
   margin-bottom: 15px;
@@ -277,8 +274,7 @@ a {
 }
 
 .text {
-  font-family: sans-serif;
-  font-size: 20px;
+  font-size: 1.5625rem;
   font-weight: 300;
   margin-bottom: 201px;
   text-align: center;
@@ -299,7 +295,7 @@ a {
 }
 
 .container_end {
-  padding-top: 2.3125rem;
+  padding: 2.3125rem 1.875rem 0 1.875rem;
   background-image: url("../../../images/devmeup2.png");
   background-color: #DFDEDE;
   background-repeat: no-repeat;
@@ -315,7 +311,7 @@ a {
 
 .text_end {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   line-height: 1.65625rem;
   margin-bottom: 20.5625rem;
 }

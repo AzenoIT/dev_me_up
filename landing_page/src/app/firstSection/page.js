@@ -24,8 +24,9 @@ export default function FirstSection() {
                     <p className="hd1-indent2">Ucz się</p>
                 </h1>
                 <div className='buttons_first_section'>
-                    <a href="#download" className='btn_newsletter_add btn_download'>Pobierz aplikację</a>
-                    <a href="#newsletter" className='btn_newsletter_add'>Newsletter</a>
+                    <a href="#download" className={`${teko500.className} btn_newsletter_add btn_download`}>Pobierz aplikację</a>
+                    <a href="#newsletter3" className={`${teko500.className} btn_newsletter_add`}>Newsletter</a>
+
                 </div>
             </div>
             <div className='hide-on-mobile desktop_page'>
@@ -36,7 +37,7 @@ export default function FirstSection() {
                 </div>
                 <div className='phone_and_buttons'>
                     <Image src={smartphone} alt='smartphone' width={900} height={800}/>
-                    <div className='buttons_download '>
+                    <div className='buttons_download'>
                         <div className='buttons_wrapper'>
                             <div className='google_download'>
                                 <Image src={apple_qr} alt='QR_apple'/>
