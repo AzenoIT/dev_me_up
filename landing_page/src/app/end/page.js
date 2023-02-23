@@ -11,8 +11,8 @@ function EndSection(props) {
             <p className={`${teko300.className} text_end`}>Sprawdź swoją wiedzę rywalizując ze znajomymi.</p>
 
             <div className='buttons_end'>
-                <a href="#download" className={`${teko500.className} btn_newsletter_add btn_download`}>Pobierz aplikację</a>
-                <a href="#newsletter" className={`${teko500.className} btn_newsletter_add`}>Newsletter</a>
+                <a href="#download_mobile" className={`${teko500.className} btn_newsletter_add btn_download`}>Pobierz aplikację</a>
+                <a href="#newsletter_mobile" className={`${teko500.className} btn_newsletter_add`}>Newsletter</a>
             </div>
         </div>
     );
