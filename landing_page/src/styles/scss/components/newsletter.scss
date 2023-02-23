@@ -3,7 +3,7 @@
 .box_newsletters {
     background-color: #DFDEDE;
     width: 100%;
-    background-image: url("../../../images/newsletter_bg.png");
+    background-image: url("../../../images/newsletter_mobile.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom toRem(107px) right 0;
@@ -23,7 +23,7 @@
 
 .text_newsletter {
     margin-top: 0;
-    font-size: toRem(20px);
+    font-size: toRem(25px);
     text-align: center;
     margin-bottom: toRem(340px);
 
@@ -37,6 +37,13 @@
 .btn_newsletter_add{
     margin-bottom: toRem(74px);
 }
+.desc_desktop{
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.1px;
+}
+
 
 .input_box{
     display: flex;
@@ -65,5 +72,12 @@
         padding: toRem(10px);
     }
 
+}
+
+.box_newsletter_desktop{
+    background-image: url("../../../images/komp_newsletter.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    //background-position: ;
 }
 

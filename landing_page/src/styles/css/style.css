@@ -13,7 +13,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.5rem 2.5rem 1.5625rem 0.9375rem;
+  padding: 2.5rem 1.875rem 1.5625rem 0.9375rem;
+  position: sticky;
+  top: 0;
+  background: #DFDEDE;
+}
+
+.logo_box {
+  display: flex;
 }
 
 .logo {
@@ -55,6 +62,8 @@ a {
   padding-left: 3.75rem;
   border-radius: 0 0 1.875rem 1.875rem;
   box-shadow: inset 0 4px 22px 4px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
 }
 .navigation .container-logo {
   display: flex;
@@ -66,13 +75,13 @@ a {
   margin-left: 0.6875rem;
   margin-right: 0.3125rem;
 }
-.navigation .btn_newsletter_add {
-  margin-right: 2.4375rem;
-  margin-bottom: 0;
-}
 .navigation .container-btn {
   display: flex;
   align-items: center;
+}
+.navigation .container-btn .btn_newsletter_add {
+  margin-right: 2.4375rem;
+  margin-bottom: 0;
 }
 
 html, body {
@@ -95,7 +104,6 @@ a {
   background-color: #DFDEDE;
 }
 .box_section .hd1 {
-  font-style: normal;
   font-size: 6rem;
   line-height: 62px;
   text-align: center;
@@ -133,33 +141,26 @@ a {
   padding: 3.75rem;
   background-color: #DFDEDE;
   height: 100%;
-}
-.desktop_page .h1_box_desktop .h1_desktop {
-  font-size: 13.75rem;
-  text-align: center;
-  color: white;
-  text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
-  margin: 0;
+  background-image: url("../../../images/smartphone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .desktop_page .phone_and_buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
-.desktop_page .phone_and_buttons .buttons_download {
+.desktop_page .buttons_wrapper {
   display: flex;
   justify-content: end;
   align-items: end;
 }
-.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper {
-  display: flex;
-}
-.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper .google_download {
+.desktop_page .buttons_wrapper .google_download {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 2.0625rem;
 }
-.desktop_page .phone_and_buttons .buttons_download .buttons_wrapper .apple_download {
+.desktop_page .buttons_wrapper .apple_download {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,7 +180,7 @@ a {
 .box_newsletters {
   background-color: #DFDEDE;
   width: 100%;
-  background-image: url("../../../images/newsletter_bg.png");
+  background-image: url("../../../images/newsletter_mobile.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom 6.6875rem right 0;
@@ -198,7 +199,7 @@ a {
 
 .text_newsletter {
   margin-top: 0;
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   text-align: center;
   margin-bottom: 21.25rem;
 }
@@ -210,6 +211,13 @@ a {
 
 .btn_newsletter_add {
   margin-bottom: 4.625rem;
+}
+
+.desc_desktop {
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.1px;
 }
 
 .input_box {
@@ -240,6 +248,12 @@ a {
   padding: 0.625rem;
 }
 
+.box_newsletter_desktop {
+  background-image: url("../../../images/komp_newsletter.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 html, body {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -252,7 +266,7 @@ a {
 }
 
 .container_opinions {
-  background-image: url("../../../images/background.png");
+  background-image: url("../../../images/slupki_male.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -261,8 +275,6 @@ a {
 }
 
 .hdl {
-  font-family: sans-serif;
-  font-style: normal;
   font-size: 64px;
   line-height: 62px;
   margin-bottom: 15px;
@@ -271,8 +283,7 @@ a {
 }
 
 .text {
-  font-family: sans-serif;
-  font-size: 20px;
+  font-size: 1.5625rem;
   font-weight: 300;
   margin-bottom: 201px;
   text-align: center;
@@ -292,8 +303,14 @@ a {
   margin-bottom: 94px;
 }
 
+.box-opinions-desktop {
+  background-image: url("../../../images/kafelki.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .container_end {
-  padding-top: 2.3125rem;
+  padding: 2.3125rem 1.875rem 0 1.875rem;
   background-image: url("../../../images/devmeup2.png");
   background-color: #DFDEDE;
   background-repeat: no-repeat;
@@ -309,7 +326,7 @@ a {
 
 .text_end {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.5625rem;
   line-height: 1.65625rem;
   margin-bottom: 20.5625rem;
 }

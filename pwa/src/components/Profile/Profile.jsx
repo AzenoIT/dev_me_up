@@ -67,17 +67,17 @@ const AvatarProfile = styled(Avatar) ({
     width: '120px',
     height: "120px",
     rounded: 'full',
-    margin: 20
+    marginBottom: 20
 })
 
-const TextPoints = styled(Typography) ({
+export const TextPoints = styled(Typography) ({
     fontSize: "45px",
     fontWeight: "600",
     marginBottom: -10,
     marginTop: 20
 })
 
-const TextLittle = styled(Typography) ({
+export const TextLittle = styled(Typography) ({
     fontSize: "12px",
     textAlign: "center",
 })
@@ -97,7 +97,7 @@ const BadgeImg = styled(Image) ({
     width: '500px'
 })
 
-const ButtonProfile = styled(Button)({
+export const ButtonProfile = styled(Button)({
     borderRadius: '16px',
     backgroundColor: '#FFFBFE',
     color: '#6750A4',
@@ -133,7 +133,7 @@ function Profile() {
 
     useEffect(() => {
         if (!profileState) {
-            navigate('/intro');
+            navigate('/startfirst');
         }
     }, [])
 
@@ -150,6 +150,10 @@ function Profile() {
 
         setProfileLocalStorage(updatedProfile);
         setProfileState(updatedProfile);
+    }
+
+    const handleNavigate = (url) => {
+        navigate(url)
     }
 
     return (
@@ -173,7 +177,8 @@ function Profile() {
                 <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}>
                     Twoje statystyki
                 </ButtonProfile>
-                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}>
+                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}
+                               onClick={() => handleNavigate('/category')}>
                     Wybierz technologię
                 </ButtonProfile>
                 <Box>

@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "0d47445f-2ffb-41f0-82cc-21c72b588538",
-		"name": "dev_me_up",
+		"_postman_id": "be30d802-02ac-41cd-ac70-1e66976e1334",
+		"name": "dev_me_up Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24410131"
+		"_exporter_id": "24531894"
 	},
 	"item": [
 		{
@@ -321,6 +321,114 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Player Technologies List Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "uuid",
+								"value": "9b353e1d-dd84-4f3c-9b90-9d2da0522517",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"9b353e1d-dd84-4f3c-9b90-9d2da0522517\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/technologies",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"technologies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player Badges List Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"9b353e1d-dd84-4f3c-9b90-9d2da0522517\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/badges",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"badges"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Player Quizzes List Post Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"uuid\": \"9b353e1d-dd84-4f3c-9b90-9d2da0522517\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://0.0.0.0:8000/api/v1/players/quizzes",
+							"protocol": "http",
+							"host": [
+								"0",
+								"0",
+								"0",
+								"0"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"players",
+								"quizzes"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -402,27 +510,15 @@
 			]
 		},
 		{
-			"name": "Game",
+			"name": "Technology",
 			"item": [
 				{
-					"name": "Start Quizz",
+					"name": "List Technology GET",
 					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"uuid\": \"AAA3\",\n    \"technology_id\": 1\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://0.0.0.0:8000/api/v1/game/",
+							"raw": "http://0.0.0.0:8000/api/v1/technologies/",
 							"protocol": "http",
 							"host": [
 								"0",
@@ -434,7 +530,7 @@
 							"path": [
 								"api",
 								"v1",
-								"game",
+								"technologies",
 								""
 							]
 						}

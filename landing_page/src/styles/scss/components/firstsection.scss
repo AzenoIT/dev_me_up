@@ -10,7 +10,6 @@
 
 
     .hd1 {
-        font-style: normal;
         font-size: toRem(96px);
         line-height: 62px;
         text-align: center;
@@ -55,44 +54,34 @@
     padding: toRem(60px);
     background-color: #DFDEDE;
     height: 100%;
-
-    .h1_box_desktop {
-
-        .h1_desktop {
-            font-size: toRem(220px);
-            text-align: center;
-            color: white;
-            text-shadow: -11px 10px 0px #CE0E0E, -22px 20px 0px rgba(0, 133, 255, 0.25);
-            margin: 0;
-        }
-    }
+    background-image: url("../../../images/smartphone.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 
 
     .phone_and_buttons {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
+    }
 
-        .buttons_download {
+
+    .buttons_wrapper {
+        display: flex;
+        justify-content: end;
+        align-items: end;
+
+        .google_download {
             display: flex;
-            justify-content: end;
-            align-items: end;
+            flex-direction: column;
+            align-items: center;
+            margin-right: toRem(33px);
+        }
 
-            .buttons_wrapper {
-                display: flex;
-
-                .google_download {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    margin-right: toRem(33px);
-                }
-
-                .apple_download {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
+        .apple_download {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
+
 }
