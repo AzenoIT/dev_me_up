@@ -4,12 +4,12 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from badges.models import PlayersToBadge
-from badges.serializers import PlayersToBadgeSerializer
+from players.serializers import PlayersToBadgeSerializer
+from technologies.models import TechnologiesToPlayers
 from ds.nick_generator import generate_nick
 from gamesets.models import Game
 from gamesets.serializers import GameSerializer
-from technologies.models import TechnologiesToPlayers
-from technologies.serializers import TechnologiesToPlayersSerializer, TechnologiesSerializer
+from technologies.serializers import TechnologiesToPlayersSerializer
 
 
 class GenerateNickView(APIView):
