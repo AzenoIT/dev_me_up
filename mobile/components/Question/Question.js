@@ -1,6 +1,6 @@
 import {Card, Divider, Text, useTheme} from 'react-native-paper';
 import {StyleSheet, View} from "react-native";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import callApi from "../../helpers/api";
 import QuestionAnswers from "./QuestionAnswers";
 import QuestionReveal from "./QuestionReveal";
@@ -78,7 +78,13 @@ function Question() {
         },
         btn_container: {
             marginLeft: 20,
-            marginRight: 20
+            marginRight: 20,
+            flexDirection: "row",
+            justifyContent: "space-between"
+        },
+        btn: {
+            paddingLeft: 10,
+            paddingRight: 10
         }
     });
 

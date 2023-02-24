@@ -21,7 +21,7 @@ function Avatars() {
     return (
         <View style={styles.container}>
             <Avatar.Image
-                size={40}
+                size={80}
                 source={require('../../assets/avatar.jpeg')}
             />
             <View style={styles.versus}>
@@ -29,7 +29,7 @@ function Avatars() {
             </View>
 
             <Avatar.Image
-                size={40}
+                size={80}
                 source={require('../../assets/avatar.jpeg')}
             />
         </View>
@@ -43,7 +43,9 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     versus: {
-        margin: 10
+        marginLeft: 10,
+        marginRight: 10,
+        marginTop: 30
     }
 })
 

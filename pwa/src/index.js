@@ -22,9 +22,14 @@ import Battle from "./components/Battle/Battle";
 
 const router = createBrowserRouter([
 	{
-		path: '/start2',
-		element: <Start2/>
+		path: '/start',
+		element: <Start/>
 	},
+		{
+		path: '/login',
+		element: <Login/>
+	},
+
 	{
 		path: '/',
 		element: <Layout/>,
