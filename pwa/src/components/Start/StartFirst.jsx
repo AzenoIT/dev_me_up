@@ -1,5 +1,4 @@
-import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useContext, useEffect, useState} from "react";
 import {adjectives, animals, uniqueNamesGenerator} from "unique-names-generator";
 import {Button, Container, TextField, styled} from "@mui/material";
 import Typography from "@mui/material/Typography";
@@ -8,6 +7,7 @@ import Box from "@mui/material/Box";
 import '../../styles/main.scss'
 import logo from "../../images/logos/dev-me-up.svg"
 import {useLocalStorage} from "../../hooks/useLocalStorage";
+import {NavigateProvider} from "../../context/NavigateProvider";
 
 
 const ButtonCta = styled(Button)({
@@ -65,7 +65,7 @@ function Start() {
         'theme': true,
         'avatar': 'link.jpg'
     });
-    const navigate = useNavigate();
+    const navigate = useContext(NavigateProvider);
 
 
     useEffect(() => {

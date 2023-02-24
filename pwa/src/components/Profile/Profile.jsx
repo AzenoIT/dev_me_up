@@ -1,16 +1,16 @@
+import {useEffect, useState, useContext} from "react";
 import {Avatar, Button, Card, Container, Stack, styled, TextField} from "@mui/material";
-import avatar from '../../images/avatar/avatar1.svg';
 import Box from "@mui/material/Box";
-import AwardGold from '../../images/badges/AwardGold.svg';
-import AwardGold2 from '../../images/badges/AwardGold2.svg';
-import AwardSilver from '../../images/badges/AwardSilver.svg';
 import Switch from "@mui/material/Switch";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import {useLocalStorage} from "../../hooks/useLocalStorage";
-import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
 import Typography from "@mui/material/Typography";
+import {useLocalStorage} from "../../hooks/useLocalStorage";
+import NavigateContext from "../../context/NavigateProvider";
+import avatar from '../../images/avatar/avatar1.svg';
+import AwardGold from '../../images/badges/AwardGold.svg';
+import AwardGold2 from '../../images/badges/AwardGold2.svg';
+import AwardSilver from '../../images/badges/AwardSilver.svg';
 
 const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
@@ -129,7 +129,8 @@ const TabSubheadline = styled(Typography) ({
 function Profile() {
     const [profileState, setProfileState] = useState(useLocalStorage('profile')[0] || '');
     const setProfileLocalStorage = useLocalStorage('profile', '')[1];
-    const navigate = useNavigate();
+    const navigate = useContext(NavigateContext);
+
 
     useEffect(() => {
         if (!profileState) {

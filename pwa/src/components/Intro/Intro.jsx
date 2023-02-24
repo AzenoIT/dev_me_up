@@ -12,8 +12,9 @@ import {styled} from '@mui/material/styles';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import CachedIcon from '@mui/icons-material/Cached';
 import {adjectives, animals, uniqueNamesGenerator} from "unique-names-generator";
-import {useEffect, useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
+import {useEffect, useState, useContext} from "react";
+import {Link} from "react-router-dom";
+import NavigateContext from "../../context/NavigateProvider";
 
 import {useLocalStorage} from "../../hooks/useLocalStorage";
 
@@ -71,8 +72,8 @@ function Intro() {
         'theme': true,
         'avatar': 'link.jpg'
     });
-    const navigate = useNavigate();
 
+    const navigate = useContext(NavigateContext);
 
     useEffect(() => {
         if (!guestNick) {

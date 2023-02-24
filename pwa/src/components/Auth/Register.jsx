@@ -1,12 +1,11 @@
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useContext, useState} from "react";
+import NavigateContext from "../../context/NavigateProvider";
 
 function Register() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    const navigate = useNavigate();
+    const navigate = useContext(NavigateContext);
 
     async function handleRegistration() {
         const controller = new AbortController();
@@ -32,7 +31,7 @@ function Register() {
             console.log('Created')
         }
 
-        navigate('/login')
+        navigate('/login');
         return () => {
             controller.abort();
         }

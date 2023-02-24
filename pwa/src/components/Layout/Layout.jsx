@@ -3,6 +3,7 @@ import {ThemeProvider, createTheme} from '@mui/material/styles';
 
 import NavBar from "../NavBar/NavBar";
 import Box from "@mui/material/Box";
+import {NavigateProvider} from "../../context/NavigateProvider";
 
 
 const lightTheme = createTheme({
@@ -17,12 +18,15 @@ const lightTheme = createTheme({
 function Layout() {
     return (
         <>
-            <ThemeProvider theme={lightTheme}>
-                <Box sx={{backgroundColor: "#F6F6F6"}}>
-                    <NavBar/>
-                    <Outlet/>
-                </Box>
-            </ThemeProvider>
+            <NavigateProvider>
+                <ThemeProvider theme={lightTheme}>
+                    <Box sx={{backgroundColor: "#F6F6F6"}}>
+                        <NavBar/>
+                        <Outlet/>
+                    </Box>
+                </ThemeProvider>
+            </NavigateProvider>
+
         </>
     )
 }

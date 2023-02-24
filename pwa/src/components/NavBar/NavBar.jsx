@@ -5,20 +5,20 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import EventIcon from "@mui/icons-material/Event";
 import SearchIcon from "@mui/icons-material/Search";
 import {Container} from "@mui/material";
-import {useNavigate} from "react-router-dom";
+import {useContext} from "react";
+import NavigateContext from "../../context/NavigateProvider";
 
 export default function MenuAppBar() {
     const [auth, setAuth] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const navigate = useNavigate();
+    const navigate = useContext(NavigateContext);
+
 
     const handleChange = (event) => {
         setAuth(event.target.checked);

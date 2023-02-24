@@ -1,8 +1,9 @@
 import '../../styles/main.scss';
 import avatar from '../../images/avatar/avatar1.svg';
 import {Button, Container, Avatar, Stack, Box, Typography, styled} from "@mui/material";
-import {useState} from "react";
+import {useContext, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import NavigateContext from "../../context/NavigateProvider";
 
 
 const arrQuestions = [
@@ -141,7 +142,7 @@ const ButtonWrapper = styled(Box)({
 
 function Battle() {
     const [chosen, setChosen] = useState([]);
-    const navigate = useNavigate();
+    const navigate = useContext(NavigateContext);
 
     function handleAnswer(item, idx) {
         if (chosen.includes(idx)) {

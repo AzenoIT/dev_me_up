@@ -3,7 +3,8 @@ import Badge from '../../images/badges/AwardGold2.svg'
 import {ButtonProfile, TextLittle, TextPoints} from "../Profile/Profile";
 import avatar from '../../images/avatar/avatar1.svg';
 import {Legend, Line, Pie, PieChart} from "recharts";
-import {useNavigate} from "react-router-dom";
+import {useContext} from "react";
+import NavigateContext from "../../context/NavigateProvider";
 
 const data01 = [
     {
@@ -29,14 +30,14 @@ const AvatarVS = styled(Avatar)({
 })
 
 function BattleSummary() {
-    const navigate = useNavigate();
+    const navigate = useContext(NavigateContext);
 
     function handleNavigate(url) {
         navigate(url);
     }
     return (
         <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+            <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', marginTop: '20px'}}>
                 <AvatarVS src={avatar}/>
                 <Typography sx={{marginInline: '5px'}}>vs</Typography>
                 <AvatarVS/>

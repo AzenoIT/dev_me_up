@@ -4,6 +4,8 @@ import {Button, Container} from "@mui/material";
 import {styled} from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import {useContext} from "react";
+import NavigateContext from "../../context/NavigateProvider";
 
 const ButtonCta = styled(Button) ({
     textAlign: 'center',
@@ -32,6 +34,13 @@ const ButtonWrapper = styled(Box) ({
 })
 
 function Start() {
+    const navigate = useContext(NavigateContext);
+
+    function handleNavigate(url) {
+        return navigate(url);
+    }
+
+
     return (
         <Box sx={{backgroundColor: "#F6F6F6"}}>
         <Container
@@ -53,7 +62,7 @@ function Start() {
                         <TextSmall>Wyzwij znajomego na pojedynek</TextSmall>
                     </ButtonWrapper>
                     <ButtonWrapper>
-                        <ButtonCta>Graj</ButtonCta>
+                        <ButtonCta onClick={() => handleNavigate('/battle')}>Graj</ButtonCta>
                         <TextSmall>Szybka gra. Dopasujemy przeciwnika do Ciebie.
                         </TextSmall>
                     </ButtonWrapper>

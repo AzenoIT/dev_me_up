@@ -4,8 +4,9 @@ import React, {useState} from "react";
 import images from './photos'
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import {useNavigate} from "react-router-dom";
 import {useLocalStorage} from "../../hooks/useLocalStorage";
+import {useContext} from "react";
+import NavigateContext from "../../context/NavigateProvider";
 
 export const GridContainer = styled(Container)({
     marginTop: '20px',
@@ -54,22 +55,11 @@ const ButtonWrapper = styled(Box)({
     margin: "30px"
 })
 
-// {
-//     "id": 1,
-//     "name": "python",
-//     "level": "guru"
-// },
-// {
-//     "id": 2,
-//     "name": "html",
-//     "level": "junior"
-// }
-
 function Category() {
     const [profileState, setProfileState] = useState(useLocalStorage('profile') || '')[0];
     const [profileLocal, setProfileLocal] = useLocalStorage('profile')
     const [chosen, setChosen] = useState(profileState.technologies.map((el) => el.id));
-    const navigate = useNavigate();
+    const navigate = useContext(NavigateContext);
 
     const handleItemChoose = (item, idx) => {
         if (chosen.includes(idx)) {
