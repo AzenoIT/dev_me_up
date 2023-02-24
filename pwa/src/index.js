@@ -9,7 +9,6 @@ import {
 import Category from "./components/Category/Category";
 import Tutorial from "./components/Tutorial/Tutorial";
 import Layout from "./components/Layout/Layout";
-import Intro from "./components/Intro/Intro";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import Profile from "./components/Profile/Profile";
@@ -19,15 +18,12 @@ import Start2 from "./components/Start/Start2";
 import Friends from "./components/Rankings/Friends";
 import StartFirst from "./components/Start/StartFirst"
 import BattleSummary from "./components/Battle/BattleSummary";
+import Battle from "./components/Battle/Battle";
 
 const router = createBrowserRouter([
 	{
 		path: '/start2',
 		element: <Start2/>
-	},
-	{
-		path: "/tutorial",
-		element: <Tutorial/>
 	},
 	{
 		path: '/',
@@ -44,7 +40,7 @@ const router = createBrowserRouter([
 
 			},
 			{
-				path: "/profile",
+				path: "profile",
 				element: <Profile/>
 			},
 			{
@@ -66,7 +62,19 @@ const router = createBrowserRouter([
 			{
 				path: 'summary',
 				element: <BattleSummary/>
-			}
+			},
+			{
+				path: 'summary',
+				element: <BattleSummary/>
+			},
+			{
+				path: "tutorial",
+				element: <Tutorial/>
+			},
+			{
+				path: "battle",
+				element: <Battle/>
+			},
 		]
 	}
 ])

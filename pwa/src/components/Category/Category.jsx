@@ -133,7 +133,7 @@ function Category() {
                 {chosen.length ?
                     (
                         <ButtonWrapper>
-                            <ButtonCta onClick={() => handleNavigate('/profile')}>Przejdź dalej</ButtonCta>
+                            <ButtonCta onClick={() => handleNavigate('/battle')}>Przejdź dalej</ButtonCta>
                             <TextSmall>Jeśli wybrałeś już kategorie, których chcesz się uczyć</TextSmall>
                         </ButtonWrapper>
                     ) :

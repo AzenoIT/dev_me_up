@@ -3,6 +3,7 @@ import Badge from '../../images/badges/AwardGold2.svg'
 import {ButtonProfile, TextLittle, TextPoints} from "../Profile/Profile";
 import avatar from '../../images/avatar/avatar1.svg';
 import {Legend, Line, Pie, PieChart} from "recharts";
+import {useNavigate} from "react-router-dom";
 
 const data01 = [
     {
@@ -28,6 +29,11 @@ const AvatarVS = styled(Avatar)({
 })
 
 function BattleSummary() {
+    const navigate = useNavigate();
+
+    function handleNavigate(url) {
+        navigate(url);
+    }
     return (
         <Container sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
@@ -46,7 +52,9 @@ function BattleSummary() {
                 <TextPoints>2137</TextPoints>
                 <TextLittle>Twoje punkty</TextLittle>
             </Box>
-            <ButtonProfile variant="contained" sx={{px: '53px', py: '10px', marginTop: '24px'}}>
+            <ButtonProfile variant="contained" sx={{px: '53px', py: '10px', marginTop: '24px'}}
+            onClick={() => handleNavigate('/start')}
+            >
                 Gram dalej
             </ButtonProfile>
             <Box sx={{marginTop: '10px', marginBottom: '30px'}}>

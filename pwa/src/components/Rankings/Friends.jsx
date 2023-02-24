@@ -12,10 +12,9 @@ import {
 } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from '@mui/icons-material/Search';
+import {dark} from "@mui/material/styles/createPalette";
 
-const SearchBar = styled(TextField)({
-
-})
+const SearchBar = styled(TextField)({})
 
 const FriendCard = styled(Paper)({
     backgroundColor: '#FFFBFE',
@@ -32,7 +31,16 @@ const label = {inputProps: {'aria-label': 'Checkbox demo'}};
 
 function Friends() {
     return (
-        <Container sx={{marginTop: '20px', marginBottom: '10px', display: 'flex', flexDirection: 'column', height: '80vh'}}>
+
+        <Container sx={{
+            marginTop: '20px',
+            marginBottom: '10px',
+            display: 'flex',
+            flexDirection: 'column',
+            height: '80vh',
+            maxWidth: '600px',
+            minHeight: '10vh'
+        }}>
 
             <Box sx={{display: 'flex', justifyContent: 'center'}}>
 
@@ -42,8 +50,9 @@ function Friends() {
                             <SearchIcon/>
                         </IconButton>
                     </InputAdornment>
-                } label="Szukaj znajomych" style={{
-                    backgroundColor: '#f0e8f6', width: '100%', borderRadius: '24px'
+                } placeholder="Szukaj znajomych" style={{
+                    backgroundColor: '#f0e8f6', width: '100%', borderRadius: '24px',
+                    maxWidth: '370px'
                 }}/>
 
             </Box>
@@ -56,8 +65,8 @@ function Friends() {
 
                 <Box sx={{display: 'flex', flexDirection: 'column', paddingTop: '15px'}}>
 
-                    {Array.apply(null, {length: 5}).map((e, i) => (
-                        <FriendCard>
+                    {Array.apply(null, {length: 5}).map((el, idx) => (
+                        <FriendCard key={`${el}-${idx}`}>
                             <Avatar/>
                             <Typography>Andrzej Duda</Typography>
                             <Checkbox/>
