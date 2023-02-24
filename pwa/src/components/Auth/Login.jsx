@@ -6,7 +6,6 @@ import logo from "../../images/logos/dev-me-up.svg"
 
 
 function Login() {
-    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -30,23 +29,6 @@ function Login() {
 
     return (
         <>
-            {/* <div>
-                <h2>Login</h2>
-
-                <input
-                    type="text" placeholder={'email'}
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                />
-                <input
-                    type="password" placeholder={'password'}
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                />
-
-                <button type='button' onClick={handleLogin}>Login</button>
-            </div> */}
-
             <Box sx={{backgroundColor: "#F6F6F6"}}>
             <Container
                 sx={{
@@ -64,12 +46,12 @@ function Login() {
                 <Stack alignItems='center' sx={{margin: "0 auto", marginTop: "50px"}}>
                     <Box sx={{marginBottom: "20px"}}>
                         <TextField  id="outlined-basic" label="Nazwa użytkownika" variant="outlined" 
-                                    placeholder={'email'}
+                                    placeholder={'E-mail'}
                                     value={email}
                                     onChange={(event) => setEmail(event.target.value)} 
                                     sx={{width: "100%", marginBottom: "20px"}}/>
 
-                        <TextField  placeholder={'password'}
+                        <TextField  placeholder={'Hasło'}
                                     value={password}
                                     onChange={(event) => setPassword(event.target.value)} type="password" id="outlined-basic" label="Hasło" variant="outlined" sx={{width: "100%"}}/>
                     </Box>
