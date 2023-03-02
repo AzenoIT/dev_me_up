@@ -1,4 +1,4 @@
-import * as React from 'react';
+import {useState, useContext} from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,14 +11,12 @@ import Menu from '@mui/material/Menu';
 import EventIcon from "@mui/icons-material/Event";
 import SearchIcon from "@mui/icons-material/Search";
 import {Container} from "@mui/material";
-import {useContext} from "react";
 import NavigateContext from "../../context/NavigateProvider";
 
 export default function MenuAppBar() {
-    const [auth, setAuth] = React.useState(true);
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const navigate = useContext(NavigateContext);
-
+    const [auth, setAuth] = useState(true);
+    const [anchorEl, setAnchorEl] = useState(null);
+    const handleNavigate = useContext(NavigateContext);
 
     const handleChange = (event) => {
         setAuth(event.target.checked);
@@ -34,7 +32,7 @@ export default function MenuAppBar() {
 
     const handleClick = (navigateUrl) => {
         handleClose()
-        navigate(navigateUrl);
+        handleNavigate(navigateUrl);
     }
 
     return (
@@ -94,8 +92,8 @@ export default function MenuAppBar() {
                                         open={Boolean(anchorEl)}
                                         onClose={handleClose}
                                     >
-                                        <MenuItem onClick={handleClick}>Gra</MenuItem>
-                                        <MenuItem onClick={handleClick}>Lista gier</MenuItem>
+                                        <MenuItem onClick={() => handleClick('/battle')}>Gra</MenuItem>
+                                        <MenuItem onClick={() => handleClick('')}>Lista gier</MenuItem>
                                         <MenuItem onClick={() => handleClick('/profile')}>Profil</MenuItem>
                                     </Menu>
                                 </>
