@@ -8,10 +8,78 @@ import {useLocalStorage} from "../../hooks/useLocalStorage";
 import {useContext} from "react";
 import NavigateContext from "../../context/NavigateProvider";
 
-export const GridContainer = styled(Container)({
-    marginTop: '20px',
-    marginBottom: '10px'
-})
+function Category() {
+    const [profileState, setProfileState] = useState(useLocalStorage('profile', '') || '')[0];
+    const [profileLocal, setProfileLocal] = useLocalStorage('profile')
+    const [chosen, setChosen] = useState(profileState.technologies.map((el) => el.id));
+    const handleNavigate = useContext(NavigateContext);
+
+    const handleItemChoose = (item, idx) => {
+        if (chosen.includes(idx)) {
+            const newProfile = {
+                ...profileLocal,
+                technologies: [
+                    ...profileLocal.technologies.filter((el) => el.id !== idx),
+                ]
+            }
+            setProfileLocal(newProfile);
+            setProfileState(newProfile);
+
+            return setChosen(chosen.filter((el) => el !== idx));
+        }
+
+        const newProfile = {
+            ...profileLocal,
+            technologies: [
+                ...profileLocal.technologies,
+                {
+                    //antipractice, placeholder untill backend connected
+                    id: idx,
+                    name: `${item}`.split('/')[3].split('-')[0],
+                    level: 'guru'
+                }
+            ]
+        }
+        setProfileLocal(newProfile);
+        setProfileState(newProfile);
+
+        return setChosen([...chosen, idx]);
+    }
+
+    return (
+        <>
+            <Container
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    minHeight: '90vh',
+                    maxWidth: '600px',
+                    paddingTop: '50px',
+                    alignItems: 'center'
+                }}>
+                <Grid container rowSpacing={{xs: 2, sm: 2, md: 3}} columnSpacing={{xs: 2, sm: 2, md: 3}}>
+                    {images.map((item, idx) => (
+                        <Grid item xs={6} sm={4} md={3} key={`${item}${idx}`}>
+                            <Item onClick={() => handleItemChoose(item, idx)}
+                                  style={{backgroundColor: chosen.includes(idx) ? '#c3ffbb' : ''}}>
+                                <img src={item} alt="" style={{width: '90%', height: '90%',}}/>
+                            </Item>
+                        </Grid>
+                    ))}
+                </Grid>
+
+                {chosen.length ?
+                    (
+                        <ButtonWrapper>
+                            <ButtonCta onClick={() => handleNavigate('/battle')}>Przejdź dalej</ButtonCta>
+                            <TextSmall>Jeśli wybrałeś już kategorie, których chcesz się uczyć</TextSmall>
+                        </ButtonWrapper>
+                    ) :
+                    ''}
+            </Container>
+        </>
+    );
+}
 
 const Item = styled(Paper)({
     backgroundColor: '#FFFBFE',
@@ -55,82 +123,10 @@ const ButtonWrapper = styled(Box)({
     margin: "30px"
 })
 
-function Category() {
-    const [profileState, setProfileState] = useState(useLocalStorage('profile') || '')[0];
-    const [profileLocal, setProfileLocal] = useLocalStorage('profile')
-    const [chosen, setChosen] = useState(profileState.technologies.map((el) => el.id));
-    const navigate = useContext(NavigateContext);
 
-    const handleItemChoose = (item, idx) => {
-        if (chosen.includes(idx)) {
-            const newProfile = {
-                ...profileLocal,
-                technologies: [
-                    ...profileLocal.technologies.filter((el) => el.id !== idx),
-                ]
-            }
-            setProfileLocal(newProfile);
-            setProfileState(newProfile);
-
-            return setChosen(chosen.filter((el) => el !== idx));
-        }
-
-        const newProfile = {
-            ...profileLocal,
-            technologies: [
-                ...profileLocal.technologies,
-                {
-                    //antipractice, placeholder untill backend connected
-                    id: idx,
-                    name: `${item}`.split('/')[3].split('-')[0],
-                    level: 'guru'
-                }
-            ]
-        }
-        setProfileLocal(newProfile);
-        setProfileState(newProfile);
-
-        return setChosen([...chosen, idx]);
-    }
-
-    const handleNavigate = (url) => {
-        navigate(url)
-    }
-
-
-    return (
-        <>
-            <Container
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    minHeight: '90vh',
-                    maxWidth: '600px',
-                    paddingTop: '50px',
-                    alignItems: 'center'
-                }}>
-                <Grid container rowSpacing={{xs: 2, sm: 2, md: 3}} columnSpacing={{xs: 2, sm: 2, md: 3}}>
-                    {images.map((item, idx) => (
-                        <Grid item xs={6} sm={4} md={3} key={`${item}${idx}`}>
-                            <Item onClick={() => handleItemChoose(item, idx)}
-                                  style={{backgroundColor: chosen.includes(idx) ? '#c3ffbb' : ''}}>
-                                <img src={item} alt="" style={{width: '90%', height: '90%',}}/>
-                            </Item>
-                        </Grid>
-                    ))}
-                </Grid>
-
-                {chosen.length ?
-                    (
-                        <ButtonWrapper>
-                            <ButtonCta onClick={() => handleNavigate('/battle')}>Przejdź dalej</ButtonCta>
-                            <TextSmall>Jeśli wybrałeś już kategorie, których chcesz się uczyć</TextSmall>
-                        </ButtonWrapper>
-                    ) :
-                    ''}
-            </Container>
-        </>
-    );
-}
+export const GridContainer = styled(Container)({
+    marginTop: '20px',
+    marginBottom: '10px'
+})
 
 export default Category;

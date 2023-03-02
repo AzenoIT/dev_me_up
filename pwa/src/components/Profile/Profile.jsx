@@ -13,14 +13,13 @@ import AwardGold2 from '../../images/badges/AwardGold2.svg';
 import AwardSilver from '../../images/badges/AwardSilver.svg';
 
 function Profile() {
-    const [profileState, setProfileState] = useState(useLocalStorage('profile')[0] || '');
+    const [profileState, setProfileState] = useState(useLocalStorage('profile', '')[0] || '');
     const setProfileLocalStorage = useLocalStorage('profile', '')[1];
-    const navigate = useContext(NavigateContext);
-
+    const handleNavigate = useContext(NavigateContext);
 
     useEffect(() => {
         if (!profileState) {
-            navigate('/startfirst');
+            handleNavigate('/startfirst');
         }
     }, [])
 
@@ -39,10 +38,6 @@ function Profile() {
         setProfileState(updatedProfile);
     }
 
-    const handleNavigate = (url) => {
-        navigate(url)
-    }
-
     return (
         <Container>
             <Stack direction='column' alignItems='center'>
@@ -54,17 +49,17 @@ function Profile() {
                     <TextLittle>Twoje punkty</TextLittle>
                 </Box>
                 <BadgesContainer>
-                <BadgesBox>
-                    <img src={AwardGold} alt=""/>
-                    <img src={AwardGold2} alt=""/>
-                    <img src={AwardSilver} alt=""/>
-                </BadgesBox>
-                <TextLittle>Twoje plakietki</TextLittle>
+                    <BadgesBox>
+                        <img src={AwardGold} alt=""/>
+                        <img src={AwardGold2} alt=""/>
+                        <img src={AwardSilver} alt=""/>
+                    </BadgesBox>
+                    <TextLittle>Twoje plakietki</TextLittle>
                 </BadgesContainer>
-                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}>
+                <ButtonProfile variant="contained" sx={{px: '24px', py: '10px'}}>
                     Twoje statystyki
                 </ButtonProfile>
-                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}
+                <ButtonProfile variant="contained" sx={{px: '24px', py: '10px'}}
                                onClick={() => handleNavigate('/category')}>
                     Wybierz technologię
                 </ButtonProfile>
@@ -100,7 +95,8 @@ function Profile() {
                         </Box>
                         <Box>
                             <TabHeadline variant='title1'>Ranking</TabHeadline>
-                            <TabSubheadline variant='subtitle2'>Czy chcesz być dodany do rankingu globalnego</TabSubheadline>
+                            <TabSubheadline variant='subtitle2'>Czy chcesz być dodany do rankingu
+                                globalnego</TabSubheadline>
                         </Box>
                     </PreferencesCard>
                     <PreferencesCard>
@@ -116,7 +112,7 @@ function Profile() {
                             </FormGroup>
                         </Box>
                         <Box>
-                            <TabHeadline variant='title1' variant=''>Dark Mode</TabHeadline>
+                            <TabHeadline variant='title1'>Dark Mode</TabHeadline>
                         </Box>
                     </PreferencesCard>
                 </Box>
@@ -128,7 +124,7 @@ function Profile() {
 
 const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
-))(({ theme }) => ({
+))(({theme}) => ({
     width: 42,
     height: 26,
     padding: 0,
@@ -177,37 +173,37 @@ const IOSSwitch = styled((props) => (
     },
 }));
 
-const AvatarProfile = styled(Avatar) ({
+const AvatarProfile = styled(Avatar)({
     width: '120px',
     height: "120px",
     rounded: 'full',
     marginBottom: 20
 })
 
-export const TextPoints = styled(Typography) ({
+export const TextPoints = styled(Typography)({
     fontSize: "45px",
     fontWeight: "600",
     marginBottom: -10,
     marginTop: 20
 })
 
-export const TextLittle = styled(Typography) ({
+export const TextLittle = styled(Typography)({
     fontSize: "12px",
     textAlign: "center",
 })
 
-const BadgesContainer = styled(Box) ({
+const BadgesContainer = styled(Box)({
     marginBottom: 20,
     marginTop: 10
 })
 
-const BadgesBox = styled(Box) ({
+const BadgesBox = styled(Box)({
     display: 'flex',
     gap: '10px',
     marginTop: 20,
 })
 
-const BadgeImg = styled(Image) ({
+const BadgeImg = styled(Image)({
     width: '500px'
 })
 
@@ -224,19 +220,20 @@ export const ButtonProfile = styled(Button)({
     }
 })
 
-const PreferencesCard = styled(Card) ({
+const PreferencesCard = styled(Card)({
     display: 'flex',
     padding: 10,
     alignItems: 'center',
     marginBottom: 15
 })
 
-const TabHeadline = styled(Typography) ({
+const TabHeadline = styled(Typography)({
+    fontFamily: 'sans-serif',
     fontWeight: '500',
     fontSize: '16px'
 })
 
-const TabSubheadline = styled(Typography) ({
+const TabSubheadline = styled(Typography)({
     fontSize: '14px'
 })
 
