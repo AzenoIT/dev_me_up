@@ -12,6 +12,120 @@ import AwardGold from '../../images/badges/AwardGold.svg';
 import AwardGold2 from '../../images/badges/AwardGold2.svg';
 import AwardSilver from '../../images/badges/AwardSilver.svg';
 
+function Profile() {
+    const [profileState, setProfileState] = useState(useLocalStorage('profile')[0] || '');
+    const setProfileLocalStorage = useLocalStorage('profile', '')[1];
+    const navigate = useContext(NavigateContext);
+
+
+    useEffect(() => {
+        if (!profileState) {
+            navigate('/startfirst');
+        }
+    }, [])
+
+    function handleUserNameChange(event) {
+        setProfileState({...profileState, username: event.target.value});
+        setProfileLocalStorage({...profileState, username: event.target.value});
+    }
+
+    function handleCheckBoxes(key, checked) {
+        const updatedProfile = {
+            ...profileState,
+            [key]: checked
+        }
+
+        setProfileLocalStorage(updatedProfile);
+        setProfileState(updatedProfile);
+    }
+
+    const handleNavigate = (url) => {
+        navigate(url)
+    }
+
+    return (
+        <Container>
+            <Stack direction='column' alignItems='center'>
+                <AvatarProfile src={avatar}/>
+                <TextField id="outlined-basic" label='username' variant="outlined" value={profileState?.username}
+                           onChange={(event) => handleUserNameChange(event)}/>
+                <Box>
+                    <TextPoints>{profileState?.score}</TextPoints>
+                    <TextLittle>Twoje punkty</TextLittle>
+                </Box>
+                <BadgesContainer>
+                <BadgesBox>
+                    <img src={AwardGold} alt=""/>
+                    <img src={AwardGold2} alt=""/>
+                    <img src={AwardSilver} alt=""/>
+                </BadgesBox>
+                <TextLittle>Twoje plakietki</TextLittle>
+                </BadgesContainer>
+                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}>
+                    Twoje statystyki
+                </ButtonProfile>
+                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}
+                               onClick={() => handleNavigate('/category')}>
+                    Wybierz technologię
+                </ButtonProfile>
+                <Box>
+                    <PreferencesCard>
+                        <Box>
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    checked={profileState?.isSearchVisible}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('isSearchVisible', checked)
+                                    }}
+                                />
+                            </FormGroup>
+                        </Box>
+                        <Box>
+                            <TabHeadline variant='title1'>Czy chcesz być wyszukiwany?</TabHeadline>
+                            <TabSubheadline variant='subtitle2'>Szybciej zagrasz ze znajomymi</TabSubheadline>
+                        </Box>
+                    </PreferencesCard>
+                    <PreferencesCard>
+                        <Box>
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    checked={profileState?.isRankingVisible}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('isRankingVisible', checked)
+                                    }}
+                                />
+                            </FormGroup>
+                        </Box>
+                        <Box>
+                            <TabHeadline variant='title1'>Ranking</TabHeadline>
+                            <TabSubheadline variant='subtitle2'>Czy chcesz być dodany do rankingu globalnego</TabSubheadline>
+                        </Box>
+                    </PreferencesCard>
+                    <PreferencesCard>
+                        <Box>
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<IOSSwitch sx={{m: 1}}/>}
+                                    checked={profileState?.theme}
+                                    onChange={(event, checked) => {
+                                        handleCheckBoxes('theme', checked)
+                                    }}
+                                />
+                            </FormGroup>
+                        </Box>
+                        <Box>
+                            <TabHeadline variant='title1' variant=''>Dark Mode</TabHeadline>
+                        </Box>
+                    </PreferencesCard>
+                </Box>
+            </Stack>
+        </Container>
+    );
+}
+
+
 const IOSSwitch = styled((props) => (
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
 ))(({ theme }) => ({
@@ -126,119 +240,5 @@ const TabSubheadline = styled(Typography) ({
     fontSize: '14px'
 })
 
-function Profile() {
-    const [profileState, setProfileState] = useState(useLocalStorage('profile')[0] || '');
-    const setProfileLocalStorage = useLocalStorage('profile', '')[1];
-    const navigate = useContext(NavigateContext);
-
-
-    useEffect(() => {
-        if (!profileState) {
-            navigate('/startfirst');
-        }
-    }, [])
-
-    function handleUserNameChange(event) {
-        setProfileState({...profileState, username: event.target.value});
-        setProfileLocalStorage({...profileState, username: event.target.value});
-    }
-
-    function handleCheckBoxes(key, checked) {
-        const updatedProfile = {
-            ...profileState,
-            [key]: checked
-        }
-
-        setProfileLocalStorage(updatedProfile);
-        setProfileState(updatedProfile);
-    }
-
-    const handleNavigate = (url) => {
-        navigate(url)
-    }
-
-    return (
-        <Container>
-            <Stack direction='column' alignItems='center'>
-                <AvatarProfile src={avatar}/>
-                <TextField id="outlined-basic" label='username' variant="outlined" value={profileState?.username}
-                           onChange={(event) => handleUserNameChange(event)}/>
-                <Box>
-                    <TextPoints>{profileState?.score}</TextPoints>
-                    <TextLittle>Twoje punkty</TextLittle>
-                </Box>
-                <BadgesContainer>
-                <BadgesBox>
-                    <img src={AwardGold} alt=""/>
-                    <img src={AwardGold2} alt=""/>
-                    <img src={AwardSilver} alt=""/>
-                </BadgesBox>
-                <TextLittle>Twoje plakietki</TextLittle>
-                </BadgesContainer>
-                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}>
-                    Twoje statystyki
-                </ButtonProfile>
-                <ButtonProfile variant="contained" sx={{ px: '24px', py: '10px'}}
-                               onClick={() => handleNavigate('/category')}>
-                    Wybierz technologię
-                </ButtonProfile>
-                <Box>
-                    <PreferencesCard>
-                        <Box>
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<IOSSwitch sx={{m: 1}}/>}
-                                    checked={profileState?.isSearchVisible}
-                                    onChange={(event, checked) => {
-                                        handleCheckBoxes('isSearchVisible', checked)
-                                    }}
-                                />
-                            </FormGroup>
-                        </Box>
-                        <Box>
-                            <TabHeadline variant='title1'>Czy chcesz być wyszukiwany?</TabHeadline>
-                            <TabSubheadline variant='subtitle2'>Szybciej zagrasz ze znajomymi</TabSubheadline>
-                        </Box>
-                    </PreferencesCard>
-                    <PreferencesCard>
-                        <Box>
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<IOSSwitch sx={{m: 1}}/>}
-                                    checked={profileState?.isRankingVisible}
-                                    onChange={(event, checked) => {
-                                        handleCheckBoxes('isRankingVisible', checked)
-                                    }}
-                                />
-                            </FormGroup>
-                        </Box>
-                        <Box>
-                            <TabHeadline variant='title1'>Ranking</TabHeadline>
-                            <TabSubheadline variant='subtitle2'>Czy chcesz być dodany do rankingu globalnego</TabSubheadline>
-                        </Box>
-                    </PreferencesCard>
-                    <PreferencesCard>
-                        <Box>
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<IOSSwitch sx={{m: 1}}/>}
-                                    checked={profileState?.theme}
-                                    onChange={(event, checked) => {
-                                        handleCheckBoxes('theme', checked)
-                                    }}
-                                />
-                            </FormGroup>
-                        </Box>
-                        <Box>
-                            <TabHeadline variant='title1' variant=''>Dark Mode</TabHeadline>
-                        </Box>
-                    </PreferencesCard>
-                </Box>
-
-            </Stack>
-
-        </Container>
-    );
-}
 
 export default Profile;
